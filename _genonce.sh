@@ -6,7 +6,7 @@ curl -sSf tx.fhir.org > /dev/null
 
 if [ $? -eq 0 ]; then
 	echo "Online"
-	txoption="-tx n/a"
+	txoption=""
 else
 	echo "Offline"
 	txoption="-tx n/a"
