@@ -1,0 +1,50 @@
+name: SUSHI Publish NHSE
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+  
+    steps:
+      - uses: actions/checkout@v3
+  
+      - name: Install Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'current'
+  
+      - name: Install SUSHI
+        run: npm install -g fsh-sushi
+      
+      - name: Install Publisher
+        run: ./_updatePublisher.sh -y
+
+      - name: Install Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+
+      - name: Install Ruby
+        run: sudo apt install ruby ruby-all-dev -y
+
+      - name: Install Jekyll
+        run: sudo gem install jekyll jekyll-plantuml
+
+      - name: Build IG
+        run: ./_genonce.sh
+
+      - name: Publish IG Artefact
+        uses: actions/upload-artifact@v3
+        with:
+          name: IG Archive
+          path: ./output/
+
+      - name: Cache Node modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}--build-cache-npm-packages-${{ hashFiles('**/package-lock.json') }}

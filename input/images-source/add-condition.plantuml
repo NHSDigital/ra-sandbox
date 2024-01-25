@@ -1,0 +1,25 @@
+@startuml
+
+|Patient|
+start
+:Patient presents 
+for appointment;
+|#81BEF7|Practitioner|
+:Practitioner examines patient;
+if (condition 
+  exists) then (Yes)
+if (Patient 
+consents) then (Yes)
+|API|
+:Condition recorded;
+stop
+else (No)
+|#81BEF7|Practitioner|
+stop
+endif
+else (No)
+|#81BEF7|Practitioner|
+stop
+endif
+
+@enduml

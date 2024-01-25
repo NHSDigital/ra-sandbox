@@ -1,0 +1,34 @@
+@startuml
+
+autonumber
+
+activate Practitioner
+
+Practitioner -> App: Enter condition(s) and submit
+
+activate App
+activate API
+
+deactivate Practitioner
+
+alt single condition
+App -> API: POST <base>/fhir/Condition
+API --> App: OperationOutcome
+else multiple condition
+App -> API: POST <base>/fhir
+API --> App: OperationOutcome
+end
+
+activate Practitioner
+deactivate API
+
+alt valid
+App --> Practitioner: Success confirmation
+else invalid
+App --> Practitioner: Content rejected
+end
+
+deactivate App
+deactivate Practitioner
+
+@enduml
