@@ -7,5 +7,5 @@
 ##### Draw.io
 
 <div>
-    <img style="max-width: 70%" alt="Activity created in draw.io!" src="retrieve.drawio.png"/>
+    <img style="max-width: 70%" alt="Activity created in draw.io!" src="retrievecondition.drawio.png"/>
 </div>Todo
