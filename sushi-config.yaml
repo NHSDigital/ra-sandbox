@@ -77,13 +77,15 @@ publisher:
 menu:
   Home: index.html
   Sitemap: toc.html
+  Data Model: todo.html
   Use Cases:
-    Add Condition(s): add-condition.html
-    Add Adjustment(s): todo.html
-    Retrieve Condition(s): todo.html
-    Retrieve Adjustment(s): todo.html
-    Remove Condition(s): todo.html
-    Remove Adjustment(s): todo.html
+    Add RA Record: add-ra-record.html
+    Retrieve RA Record: todo.html
+    Remove RA Record: todo.html
+  Server Examples:
+    Add RA Record: todo.html
+    Retrieve RA Record: todo.html
+    Remove RA Record: todo.html
   Artifacts: artifacts.html
   Contact Us: todo.html
   Downloads: todo.html

@@ -1,0 +1,438 @@
+{
+  "resourceType": "Bundle",
+  "id": "QUERY-OUTPUT_add-condition-transaction-example-2",
+  "meta": {
+    "lastUpdated": "2024-01-28T19:09:44.567+00:00"
+  },
+  "type": "searchset",
+  "total": 1,
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://localhost:8080/fhir/Patient?_revinclude=Consent%3Apatient&_revinclude=Flag%3Apatient&_revinclude=Condition%3Apatient&identifier=9912003888"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "http://localhost:8080/fhir/Patient/patient-example-1",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-example-1",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2024-01-28T19:08:07.658+00:00",
+          "source": "#V7kv4U026HZWdmCo"
+        },
+        "identifier": [
+          {
+            "system": "https://fhir.nhs.uk/Id/nhs-number",
+            "value": "9912003888"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Duck",
+            "given": [
+              "Donald"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1970-01-01"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://localhost:8080/fhir/Flag/fba99f70-fe1d-42e2-b77a-916e44b53c19",
+      "resource": {
+        "resourceType": "Flag",
+        "id": "fba99f70-fe1d-42e2-b77a-916e44b53c19",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2024-01-28T19:08:07.658+00:00",
+          "source": "#V7kv4U026HZWdmCo"
+        },
+        "contained": [
+          {
+            "resourceType": "Provenance",
+            "id": "4c75ce1f-1ad7-4391-b5f6-104754c7e904",
+            "target": [
+              {
+                "reference": "#"
+              }
+            ],
+            "recorded": "2024-01-01T11:00:00+00:00",
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1",
+                        "code": "R0260",
+                        "display": "General Medical Practitioner"
+                      }
+                    ]
+                  }
+                ],
+                "who": {
+                  "reference": "https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9"
+                },
+                "onBehalfOf": {
+                  "reference": "https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7"
+                }
+              }
+            ]
+          }
+        ],
+        "status": "active",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "https://fhir.nhs.uk/STU3/CodeSystem/RARecord-FlagCategory-1",
+                "code": "NRAF",
+                "display": "National Reasonable Adjustments Flag"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "https://fhir.nhs.uk/STU3/CodeSystem/RARecord-FlagCategory-1",
+              "code": "NRAF",
+              "display": "National Reasonable Adjustments Flag"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-example-1"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://localhost:8080/fhir/Flag/04adcb5b-3de7-4f67-97f0-b2fdf941ba85",
+      "resource": {
+        "resourceType": "Flag",
+        "id": "04adcb5b-3de7-4f67-97f0-b2fdf941ba85",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2024-01-28T19:08:07.658+00:00",
+          "source": "#V7kv4U026HZWdmCo"
+        },
+        "contained": [
+          {
+            "resourceType": "Provenance",
+            "id": "ddb4df1c-d15a-4d02-9346-c034732c5a37",
+            "target": [
+              {
+                "reference": "#"
+              }
+            ],
+            "recorded": "2024-01-01T11:00:00+00:00",
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1",
+                        "code": "R0260",
+                        "display": "General Medical Practitioner"
+                      }
+                    ]
+                  }
+                ],
+                "who": {
+                  "reference": "https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9"
+                },
+                "onBehalfOf": {
+                  "reference": "https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7"
+                }
+              }
+            ]
+          }
+        ],
+        "status": "active",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "https://fhir.nhs.uk/STU3/CodeSystem/RARecord-FlagCategory-1",
+                "code": "NRAF",
+                "display": "National Reasonable Adjustments Flag"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "https://fhir.nhs.uk/STU3/CodeSystem/RARecord-AdjustmentCategory-1",
+              "code": "001",
+              "display": "Communication support"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-example-1"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://localhost:8080/fhir/Consent/consent-example-1",
+      "resource": {
+        "resourceType": "Consent",
+        "id": "consent-example-1",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2024-01-28T19:08:07.658+00:00",
+          "source": "#V7kv4U026HZWdmCo"
+        },
+        "status": "active",
+        "scope": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/consentscope",
+              "code": "patient-privacy"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "https://fhir.nhs.uk/STU3/CodeSystem/RARecord-FlagCategory-1",
+                "code": "NRAF",
+                "display": "National Reasonable Adjustments Flag"
+              }
+            ]
+          }
+        ],
+        "patient": {
+          "reference": "Patient/patient-example-1"
+        },
+        "policy": [
+          {
+            "authority": "https://www.gov.uk/",
+            "uri": "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/535024/data-security-review.pdf"
+          }
+        ],
+        "provision": {
+          "purpose": [
+            {
+              "system": "https://snomed.info/sct",
+              "code": "370856009",
+              "display": "Limiting access to confidential patient information"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://localhost:8080/fhir/Condition/condition-example-1",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-example-1",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2024-01-28T19:08:07.658+00:00",
+          "source": "#V7kv4U026HZWdmCo"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-ConditionCategory-1",
+                "code": "issue",
+                "display": "Issue"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "https://fhir.nhs.uk/STU3/CodeSystem/RARecord-ConditionCode-1",
+              "code": "5",
+              "display": "Learning or understanding or concentrating"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-example-1"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://localhost:8080/fhir/Condition/b19124e9-f742-49b4-9247-5c2d58ac1ef4",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "b19124e9-f742-49b4-9247-5c2d58ac1ef4",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2024-01-28T19:09:16.662+00:00",
+          "source": "#QUnyPAEZVJlFEvsn"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-ConditionCategory-1",
+                "code": "issue",
+                "display": "Issue"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "https://snomed.info/sct",
+              "code": "73618009",
+              "display": "Autistic spectrum disorder with isolated skills"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-example-1"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    },
+    {
+      "fullUrl": "http://localhost:8080/fhir/Flag/212c1018-f52a-4db7-9bc2-59a88622eb4f",
+      "resource": {
+        "resourceType": "Flag",
+        "id": "212c1018-f52a-4db7-9bc2-59a88622eb4f",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2024-01-28T19:09:16.662+00:00",
+          "source": "#QUnyPAEZVJlFEvsn"
+        },
+        "contained": [
+          {
+            "resourceType": "Provenance",
+            "id": "55ac7111-dbd1-42f2-906c-a167b04d47ce",
+            "target": [
+              {
+                "reference": "#"
+              }
+            ],
+            "recorded": "2024-01-01T11:00:00+00:00",
+            "activity": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+                  "code": "CREATE",
+                  "display": "create"
+                }
+              ]
+            },
+            "agent": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "system": "https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1",
+                        "code": "R0260",
+                        "display": "General Medical Practitioner"
+                      }
+                    ]
+                  }
+                ],
+                "who": {
+                  "reference": "https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9"
+                },
+                "onBehalfOf": {
+                  "reference": "https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7"
+                }
+              }
+            ]
+          }
+        ],
+        "status": "active",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "https://fhir.nhs.uk/STU3/CodeSystem/RARecord-FlagCategory-1",
+                "code": "NRAF",
+                "display": "National Reasonable Adjustments Flag"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "https://fhir.nhs.uk/STU3/CodeSystem/RARecord-AdjustmentCategory-1",
+              "code": "001",
+              "display": "Communication support"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-example-1"
+        }
+      },
+      "search": {
+        "mode": "include"
+      }
+    }
+  ]
+}

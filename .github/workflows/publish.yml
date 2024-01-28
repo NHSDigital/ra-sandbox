@@ -10,7 +10,7 @@ jobs:
   
     steps:
       - uses: actions/checkout@v3
-  
+
       - name: Install Node
         uses: actions/setup-node@v3
         with:
@@ -36,6 +36,23 @@ jobs:
 
       - name: Download and unpack font-awesome
         run: wget https://fontawesome.com/v4/assets/font-awesome-4.7.0.zip; unzip font-awesome-4.7.0.zip
+
+      - name: Run FHIR server (TODO - load package from vars and validate - maybe just let the publisher handle that...)
+        run: docker run -d -p 8080:8080 -e hapi.fhir.daoconfig_client_id_strategy=UUID -e hapi.fhir.client_id_strategy=ANY hapiproject/hapi:latest
+
+      - name: Convert FSH to JSON and set up resources folder in input
+        run: sushi .; mkdir -p input/resources
+
+      - name: Sleep to give server time to start
+        run: sleep 90
+
+      - name: Load and query add-condition-transaction-example-1
+        run: curl -X POST -H "Content-type:application/fhir+json;fhirVersion=4.0" -d @fsh-generated/resources/Bundle-add-condition-transaction-example-1.json http://localhost:8080/fhir; \
+             curl $(cat input/queries/get-flags-associated-with-patient.md) | jq '.id = "QUERY-OUTPUT_add-condition-transaction-example-1"' > input/resources/QUERY-OUTPUT_add-condition-transaction-example-1.json
+
+      - name: Load and query add-condition-transaction-example-2
+        run: curl -X POST -H "Content-type:application/fhir+json;fhirVersion=4.0" -d @fsh-generated/resources/Bundle-add-condition-transaction-example-2.json http://localhost:8080/fhir; \
+             curl $(cat input/queries/get-flags-associated-with-patient.md) | jq '.id = "QUERY-OUTPUT_add-condition-transaction-example-2"' > input/resources/QUERY-OUTPUT_add-condition-transaction-example-2.json
 
       - name: Build IG
         run: ./_genonce.sh
