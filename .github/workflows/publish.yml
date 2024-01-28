@@ -48,11 +48,11 @@ jobs:
 
       - name: Load and query add-condition-transaction-example-1
         run: curl -X POST -H "Content-type:application/fhir+json;fhirVersion=4.0" -d @fsh-generated/resources/Bundle-add-condition-transaction-example-1.json http://localhost:8080/fhir; \
-             curl $(cat input/queries/get-flags-associated-with-patient.md) | jq '.id = "QUERY-OUTPUT_add-condition-transaction-example-1"' > input/resources/QUERY-OUTPUT_add-condition-transaction-example-1.json
+             curl $(cat input/queries/get-flags-associated-with-patient.md) | jq '.id = "QUERY-OUTPUT--add-condition-transaction-example-1"' > input/resources/QUERY-OUTPUT_add-condition-transaction-example-1.json
 
       - name: Load and query add-condition-transaction-example-2
         run: curl -X POST -H "Content-type:application/fhir+json;fhirVersion=4.0" -d @fsh-generated/resources/Bundle-add-condition-transaction-example-2.json http://localhost:8080/fhir; \
-             curl $(cat input/queries/get-flags-associated-with-patient.md) | jq '.id = "QUERY-OUTPUT_add-condition-transaction-example-2"' > input/resources/QUERY-OUTPUT_add-condition-transaction-example-2.json
+             curl $(cat input/queries/get-flags-associated-with-patient.md) | jq '.id = "QUERY-OUTPUT--add-condition-transaction-example-2"' > input/resources/QUERY-OUTPUT_add-condition-transaction-example-2.json
 
       - name: Build IG
         run: ./_genonce.sh
