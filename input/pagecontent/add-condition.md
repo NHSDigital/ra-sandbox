@@ -51,7 +51,7 @@ The master Flag and condition Flag (and associated Condition) resources are incl
 This example simply adds conditions to the previous transaction resource to demonstrate the ability to add new conditions to the same data structure and reply in an idempotent way.  The request entry in the transaction Bundle for the second condition uses the uuid from the fullUrl on the Bundle entry to use in the URL for the PUT method.  The first uses the patient uuid as a search parameter for the PUT.  A uuid would be the preferred method to construct the uuid for the fullUrl in the Bundle entry, so this should be a reasonable example.  This example is just to demonstrate ReSTful capabilities of the FHIR spec.
 </p>
 
-[Example: Addition condition to previous Transaction](Bundle-add-condition-transaction-example-1.html).  
+[Example: Addition condition to previous Transaction](Bundle-add-condition-transaction-example-2.html).  
 
 <p>
 <b>TODO:</b> maybe cover other ways of doing this, all POST's, if-match, X-provenance, batch tranaction etc...
