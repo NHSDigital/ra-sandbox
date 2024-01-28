@@ -4,7 +4,7 @@ Alias: $sct = https://snomed.info/sct
 Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
 Alias: $CareConnect-ConditionCategory-1 = https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-ConditionCategory-1
 Alias: $RARecord-ConditionCode-1 = https://fhir.nhs.uk/STU3/CodeSystem/RARecord-ConditionCode-1
-Alias: $DataOperation = http://hl7.org/fhir/v3/DataOperation
+Alias: $DataOperation = http://terminology.hl7.org/CodeSystem/v3-DataOperation
 Alias: $CareConnect-SDSJobRoleName-1 = https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1
 Alias: $RARecord-AdjustmentCategory-1 = https://fhir.nhs.uk/STU3/CodeSystem/RARecord-AdjustmentCategory-1
 
@@ -32,10 +32,10 @@ Usage: #example
 * entry[=].resource = condition-flag-example-1
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Flag/04adcb5b-3de7-4f67-97f0-b2fdf941ba85"
-* entry[+].fullUrl = "urn:uuid:09264d2-3986-458b-91eb-e7482b4c3025"
+* entry[+].fullUrl = "urn:uuid:b19124e9-f742-49b4-9247-5c2d58ac1ef4"
 * entry[=].resource = condition-example-2
 * entry[=].request.method = #PUT
-* entry[=].request.url = "Condition/09264d2-3986-458b-91eb-e7482b4c3025"
+* entry[=].request.url = "Condition/b19124e9-f742-49b4-9247-5c2d58ac1ef4"
 * entry[+].fullUrl = "urn:uuid:212c1018-f52a-4db7-9bc2-59a88622eb4f"
 * entry[=].resource = condition-flag-example-2
 * entry[=].request.method = #PUT
@@ -57,6 +57,7 @@ Usage: #inline
 * category = $RARecord-FlagCategory-1#NRAF "National Reasonable Adjustments Flag"
 * subject = Reference(urn:uuid:6253c43b-5cc8-4645-93b1-38e41be82a77)
 * contained.resourceType = "Provenance"
+* contained.id = "55ac7111-dbd1-42f2-906c-a167b04d47ce"
 * contained.target.reference = "#"
 * contained.recorded = "2024-01-01T11:00:00+00:00"
 * contained.activity = $DataOperation#CREATE "create"

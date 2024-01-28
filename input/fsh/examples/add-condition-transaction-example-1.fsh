@@ -4,7 +4,7 @@ Alias: $sct = https://snomed.info/sct
 Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
 Alias: $CareConnect-ConditionCategory-1 = https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-ConditionCategory-1
 Alias: $RARecord-ConditionCode-1 = https://fhir.nhs.uk/STU3/CodeSystem/RARecord-ConditionCode-1
-Alias: $DataOperation = http://hl7.org/fhir/v3/DataOperation
+Alias: $DataOperation = http://terminology.hl7.org/CodeSystem/v3-DataOperation
 Alias: $CareConnect-SDSJobRoleName-1 = https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1
 Alias: $RARecord-AdjustmentCategory-1 = https://fhir.nhs.uk/STU3/CodeSystem/RARecord-AdjustmentCategory-1
 
@@ -56,14 +56,6 @@ Usage: #inline
 * policy.authority = "https://www.gov.uk/"
 * policy.uri = "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/535024/data-security-review.pdf"
 
-Instance: condition-example-1
-InstanceOf: Condition
-Usage: #inline
-* clinicalStatus = $condition-clinical#active
-* category = $CareConnect-ConditionCategory-1#issue "Issue"
-* code = $RARecord-ConditionCode-1#5 "Learning or understanding or concentrating"
-* subject = Reference(urn:uuid:6253c43b-5cc8-4645-93b1-38e41be82a77)
-
 Instance: master-flag-example-1
 InstanceOf: Flag
 Usage: #inline
@@ -72,12 +64,21 @@ Usage: #inline
 * category = $RARecord-FlagCategory-1#NRAF "National Reasonable Adjustments Flag"
 * subject = Reference(urn:uuid:6253c43b-5cc8-4645-93b1-38e41be82a77)
 * contained.resourceType = "Provenance"
+* contained.id = "4c75ce1f-1ad7-4391-b5f6-104754c7e904"
 * contained.target.reference = "#"
 * contained.recorded = "2024-01-01T11:00:00+00:00"
 * contained.activity = $DataOperation#CREATE "create"
 * contained.agent.role = $CareConnect-SDSJobRoleName-1#R0260 "General Medical Practitioner"
 * contained.agent.who.reference = "https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9"
 * contained.agent.onBehalfOf.reference = "https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7"
+
+Instance: condition-example-1
+InstanceOf: Condition
+Usage: #inline
+* clinicalStatus = $condition-clinical#active
+* category = $CareConnect-ConditionCategory-1#issue "Issue"
+* code = $RARecord-ConditionCode-1#5 "Learning or understanding or concentrating"
+* subject = Reference(urn:uuid:6253c43b-5cc8-4645-93b1-38e41be82a77)
 
 Instance: condition-flag-example-1
 InstanceOf: Flag
@@ -87,6 +88,7 @@ Usage: #inline
 * category = $RARecord-FlagCategory-1#NRAF "National Reasonable Adjustments Flag"
 * subject = Reference(urn:uuid:6253c43b-5cc8-4645-93b1-38e41be82a77)
 * contained.resourceType = "Provenance"
+* contained.id = "ddb4df1c-d15a-4d02-9346-c034732c5a37"
 * contained.target.reference = "#"
 * contained.recorded = "2024-01-01T11:00:00+00:00"
 * contained.activity = $DataOperation#CREATE "create"
