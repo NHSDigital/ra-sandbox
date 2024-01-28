@@ -8,7 +8,7 @@ Alias: $DataOperation = http://hl7.org/fhir/v3/DataOperation
 Alias: $CareConnect-SDSJobRoleName-1 = https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1
 Alias: $RARecord-AdjustmentCategory-1 = https://fhir.nhs.uk/STU3/CodeSystem/RARecord-AdjustmentCategory-1
 
-Instance: add-condition-transaction-example-1
+Instance: add-condition-transaction-example-2
 InstanceOf: Bundle
 Usage: #example
 * type = #transaction
@@ -40,67 +40,6 @@ Usage: #example
 * entry[=].resource = condition-flag-example-2
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Flag/212c1018-f52a-4db7-9bc2-59a88622eb4f"
-
-Instance: patient-example-1
-InstanceOf: Patient
-Usage: #inline
-* identifier.system = "https://fhir.nhs.uk/Id/nhs-number"
-* identifier.value = "9912003888"
-* active = true
-* name.use = #official
-* name.family = "Duck"
-* name.given = "Donald"
-* gender = #male
-* birthDate = "1970-01-01"
-
-Instance: consent-example-1
-InstanceOf: Consent
-Usage: #inline
-* status = #active
-* scope = $consentscope#patient-privacy
-* category = $RARecord-FlagCategory-1#NRAF "National Reasonable Adjustments Flag"
-* provision.purpose = $sct#370856009 "Limiting access to confidential patient information"
-* patient = Reference(urn:uuid:6253c43b-5cc8-4645-93b1-38e41be82a77)
-* policy.authority = "https://www.gov.uk/"
-* policy.uri = "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/535024/data-security-review.pdf"
-
-Instance: condition-example-1
-InstanceOf: Condition
-Usage: #inline
-* clinicalStatus = $condition-clinical#active
-* category = $CareConnect-ConditionCategory-1#issue "Issue"
-* code = $RARecord-ConditionCode-1#5 "Learning or understanding or concentrating"
-* subject = Reference(urn:uuid:6253c43b-5cc8-4645-93b1-38e41be82a77)
-
-Instance: master-flag-example-1
-InstanceOf: Flag
-Usage: #inline
-* status = #active
-* code = $RARecord-FlagCategory-1#NRAF "National Reasonable Adjustments Flag"
-* category = $RARecord-FlagCategory-1#NRAF "National Reasonable Adjustments Flag"
-* subject = Reference(urn:uuid:6253c43b-5cc8-4645-93b1-38e41be82a77)
-* contained.resourceType = "Provenance"
-* contained.target.reference = "#"
-* contained.recorded = "2024-01-01T11:00:00+00:00"
-* contained.activity = $DataOperation#CREATE "create"
-* contained.agent.role = $CareConnect-SDSJobRoleName-1#R0260 "General Medical Practitioner"
-* contained.agent.who.reference = "https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9"
-* contained.agent.onBehalfOf.reference = "https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7"
-
-Instance: condition-flag-example-1
-InstanceOf: Flag
-Usage: #inline
-* status = #active
-* code = $RARecord-AdjustmentCategory-1#001 "Communication support"
-* category = $RARecord-FlagCategory-1#NRAF "National Reasonable Adjustments Flag"
-* subject = Reference(urn:uuid:6253c43b-5cc8-4645-93b1-38e41be82a77)
-* contained.resourceType = "Provenance"
-* contained.target.reference = "#"
-* contained.recorded = "2024-01-01T11:00:00+00:00"
-* contained.activity = $DataOperation#CREATE "create"
-* contained.agent.role = $CareConnect-SDSJobRoleName-1#R0260 "General Medical Practitioner"
-* contained.agent.who.reference = "https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9"
-* contained.agent.onBehalfOf.reference = "https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7"
 
 Instance: condition-example-2
 InstanceOf: Condition
