@@ -16,6 +16,14 @@ To pull the latest image, run
 docker pull hapiproject/hapi:latest
 ```
 
+#### Swagger
+
+The HAPI starter project provides an OAS interface to the supported FHIR API.  Assuming the above docker command is used, this would be available at
+
+```
+http://localhost:8080/fhir/swagger-ui/index.html
+```
+
 #### CI Build
 
 These examples are loaded into a running FHIR server during the IG build.  Some resources (queries) are dynamically generated and added to the IG at build time.  (TODO add a list of dynamically generated resources somewhere).  
