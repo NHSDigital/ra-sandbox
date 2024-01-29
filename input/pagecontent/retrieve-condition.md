@@ -4,6 +4,8 @@
 
 #### Workflow
 
+A patient presents to be examined by a practitioner. The Practioner perofrms an examination and retrieve Patient's RA Record.
+
 ##### Draw.io
 
 <div>
