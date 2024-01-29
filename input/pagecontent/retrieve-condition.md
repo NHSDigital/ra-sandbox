@@ -9,5 +9,5 @@ A patient presents to be examined by a practitioner. The Practioner perofrms an 
 ##### Condition Retrieved
 
 <div>
-    <img style="max-width: 70%" alt="Activity created in draw.io!" src="retrievecondition.drawio.png"/>
+    <img style="max-width: 70%" alt="Activity created in draw.io!" src="Retrieve-Condition.drawio.png"/>
 </div>Todo
