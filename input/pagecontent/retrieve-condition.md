@@ -1,6 +1,6 @@
 ### Summary
 
-<p>Practioner wishes to read/retrieve Condition information</p>    
+<p>Practioner wishes to read/retrieve RA Record</p>    
 
 #### Workflow
 
