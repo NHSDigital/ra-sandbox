@@ -10,6 +10,9 @@ HEADERS="Content-type:application/fhir+json;fhirVersion=4.0"
 # TODO - Make the script runnable from any path
 SCRIPT_ROOT=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P );
 
+# Make resources folder if it doesn't already exist
+mkdir -p ./input/resources
+
 for EXAMPLE in ./input/fsh/examples/*; do
 
   # Get the filename from the path

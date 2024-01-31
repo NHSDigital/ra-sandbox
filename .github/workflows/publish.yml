@@ -38,7 +38,7 @@ jobs:
         run: docker run -d -p 8080:8080 -e hapi.fhir.daoconfig_client_id_strategy=UUID -e hapi.fhir.client_id_strategy=ANY hapiproject/hapi:latest
 
       - name: Convert FSH to JSON and set up resources folder in input
-        run: sushi .; mkdir -p input/resources
+        run: sushi .
 
       - name: Sleep to give server time to start
         run: sleep 90
