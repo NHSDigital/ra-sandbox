@@ -38,22 +38,13 @@ jobs:
         run: docker run -d -p 8080:8080 -e hapi.fhir.daoconfig_client_id_strategy=UUID -e hapi.fhir.client_id_strategy=ANY hapiproject/hapi:latest
 
       - name: Convert FSH to JSON and set up resources folder in input
-        run: sushi .; mkdir -p input/resources
+        run: sushi .
 
       - name: Sleep to give server time to start
         run: sleep 90
 
-      - name: Load add-condition-transaction-example-1
-        run: curl -X POST -H "Content-type:application/fhir+json;fhirVersion=4.0" -d @fsh-generated/resources/Bundle-add-condition-transaction-example-1.json http://localhost:8080/fhir; 
-
-      - name: Query add-condition-transaction-example-1
-        run: sleep 10; curl $(cat input/queries/get-flags-associated-with-patient.md) | jq '.id = "QUERY-OUTPUT--add-condition-transaction-example-1"' > input/resources/QUERY-OUTPUT--add-condition-transaction-example-1.json
-
-      - name: Load add-condition-transaction-example-2
-        run: curl -X POST -H "Content-type:application/fhir+json;fhirVersion=4.0" -d @fsh-generated/resources/Bundle-add-condition-transaction-example-2.json http://localhost:8080/fhir; \
-
-      - name: Query add-condition-transaction-example-2
-        run: sleep 10; curl $(cat input/queries/get-flags-associated-with-patient.md) | jq '.id = "QUERY-OUTPUT--add-condition-transaction-example-2"' > input/resources/QUERY-OUTPUT--add-condition-transaction-example-2.json
+      - name: Load examples and run queries to be added to IG
+        run: ./scripts/run-examples.sh
 
       - name: Build IG
         run: ./_genonce.sh
