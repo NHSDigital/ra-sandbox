@@ -8,7 +8,7 @@ Alias: $DataOperation = http://terminology.hl7.org/CodeSystem/v3-DataOperation
 Alias: $CareConnect-SDSJobRoleName-1 = https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1
 Alias: $RARecord-AdjustmentCategory-1 = https://fhir.nhs.uk/STU3/CodeSystem/RARecord-AdjustmentCategory-1
 
-Instance: add-condition-transaction-example-2
+Instance: 0002-add-condition-transaction-example.2
 InstanceOf: Bundle
 Usage: #example
 * type = #transaction

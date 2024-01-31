@@ -14,7 +14,7 @@ SCRIPT_ROOT=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P );
 for EXAMPLE in ./input/fsh/examples/*; do
 
   # Get the filename from the path
-  EXAMPLE=$(echo $EXAMPLE | awk -F '/' '{print $5}');
+  EXAMPLE=$(echo $EXAMPLE | awk -F '/' '{print $5}' | awk -F '.' '{print $1}');
 
   # This relies on SUSHI having been ran to generate JSON representations of the resources.
   GENERATED=$(echo ./fsh-generated/resources/*${EXAMPLE%.*}*);
