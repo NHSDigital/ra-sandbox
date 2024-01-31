@@ -27,7 +27,7 @@ Based on the example transaction Bundles given in the use case [Add RA Record](a
 <base>/Patient?identifier=9912003888&_revinclude=Consent:patient&_revinclude=Flag:patient&_revinclude=Condition:patient  
 ```
 
-This query will return the Patient resource using the patients NHS number (TODO will be profiled to check for this, reference this later).  The assocaited resources that make up the RA are also returned, which are all using default Patient SearchParameters define in the base specification for each resource.   
+This query will return the Patient resource using the patients NHS number.  The assocaited resources that make up the RA are also returned, which are all using default Patient SearchParameters define in the base specification for each resource.   
 
 For the [first transaction example](Bundle-0001-add-condition-transaction-example.html), this is the [output of the query](Bundle-QUERY-OUTPUT--0001-add-condition-transaction-example.1.html).  
 
