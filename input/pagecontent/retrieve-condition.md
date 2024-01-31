@@ -15,4 +15,22 @@ A patient presents to be examined by a practitioner. The Practioner perofrms an 
 
 <div>
     <img style="max-width: 70%" alt="Activity created in draw.io!" src="Retrieve-Condition.drawio.png"/>
-</div>Todo
+</div>
+
+#### Example  
+
+Examples to retrieve RA Record : 
+
+Based on the example transaction Bundles given in the use case [Add RA Record](add-ra-record.html#workflow), for each transaction, the following query will performed (dynamically during the IG build)  
+
+```
+<base>/Patient?identifier=9912003888&_revinclude=Consent:patient&_revinclude=Flag:patient&_revinclude=Condition:patient  
+```
+
+This query will return the Patient resource using the patients NHS number (TODO will be profiled to check for this, reference this later).  The assocaited resources that make up the RA are also returned, which are all using default Patient SearchParameters define in the base specification for each resource.   
+
+For the [first transaction example](Bundle-add-condition-transaction-example-1.html), this is the [output of the query](Bundle-QUERY-OUTPUT--add-condition-transaction-example-1.html).  
+
+For the [second transaction example](Bundle-add-condition-transaction-example-2.html), where a Condition and adjustment (Flag) is added, this is the [output of the query](Bundle-QUERY-OUTPUT--add-condition-transaction-example-2.html).  
+
+See the [Data Model](data-model.html) for details on the relationships between the resources.
