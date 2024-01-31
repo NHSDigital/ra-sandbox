@@ -1,1 +1,1 @@
-Patient?identifier=9912003888&_revinclude=Consent:patient
+Flag?patient:Patient.identifier=9912003888
