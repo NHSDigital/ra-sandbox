@@ -41,7 +41,7 @@ The practioner decides to record a condition.  This could be done with individua
 The master Flag and condition Flag (and associated Condition) resources are included and have the Provence resource as contained resources.  This example could be modified to include a new condition just by adding the new Condition and Flag resource as this transaction is fully idempotent.  The next example will show this.
 </p>
 
-[Example Transaction: Add condition resources in a Transaction](Bundle-add-condition-transaction-example-1.html).  
+[Example Transaction: Add condition resources in a Transaction](Bundle-0001-add-condition-transaction-example.html).  
 
 <p>
 <b>NOTE</b>: TODO discuss how provenace could be added after (i.e. not contained), but not in a transaction.  If provence needed to be linked to a versioned resource (seems reasonable), this isn't supported https://build.fhir.org/bundle.html#references.  Also see https://chat.fhir.org/#narrow/stream/179166-implementers/topic/Provenance.20in.20a.20bundle.  Using an etag would work.  If the provenance was created after and took the etag of the resource from the response, which should come back for each resource in transaction, the provenance.target could then be set to a versioned url (assuming this was required).  Benefits of this would be ability to expand the scope of the provenace.  If it really doesn't have a lifetime outside of the resource, contained is probably tidier but definetly less flexible.  More discussion here ttps://chat.fhir.org/#narrow/stream/179166-implementers/topic/Transaction.20Bundle.20with.20Provenance/near/402326516.
@@ -51,7 +51,7 @@ The master Flag and condition Flag (and associated Condition) resources are incl
 <a href="server-example-add-ra-record.html#example-2">The second example</a> given here simply adds conditions to the previous transaction resource to demonstrate the ability to add new conditions to the same data structure and reply in an idempotent way.  The request entry in the transaction Bundle for the second condition uses the uuid from the fullUrl on the Bundle entry to use in the URL for the PUT method.  The first uses the patient uuid as a search parameter for the PUT.  A uuid would be the preferred method to construct the uuid for the fullUrl in the Bundle entry, so this should be a reasonable example.  This example is just to demonstrate ReSTful capabilities of the FHIR spec.
 </p>
 
-[Example Transaction: Additional condition and flag added to previous Transaction](Bundle-add-condition-transaction-example-2.html).  
+[Example Transaction: Additional condition and flag added to previous Transaction](Bundle-0001-add-condition-transaction-example.html).  
 
 <p>
 <b>TODO:</b> maybe cover other ways of doing this, all POST's, if-match, X-provenance, batch tranaction etc...
