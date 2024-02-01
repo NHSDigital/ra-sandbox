@@ -34,13 +34,13 @@ All examples are available in a [Postman collection](assets/postman/postman_coll
 
 ### Examples
 
-The examples here describe the API options related to the workflow given in the use case [Add RA Record](add-ra-record.html#workflow).
+The examples here describe the API options related to the workflow given in the use case [Add RA Record](add-ra-record.html).
 
 See the [Data Model](data-model.html) for details on the relationships between the resources.  
 
 #### Add RA Record
 
-This section provides examples for those given in the use case [Add RA Record](add-ra-record.html#workflow).
+This section provides examples for those given in the use case [Add RA Record](add-ra-record.html).
 
 ##### Example 1
 
@@ -64,7 +64,7 @@ The transactions are using PUT's to provide (upsert)[https://hl7.org/fhir/http.h
 
 #### Retrieve RA Record
 
-This section provides examples for those given in the use case [Retrieve RA Record](retrieve-ra-record.html#workflow).
+This section provides examples for those given in the use case [Retrieve RA Record](retrieve-ra-record.html).
 
 ##### Example 1
 
@@ -111,27 +111,27 @@ GET <base>/Flag
 
 #### Get Flag by Category
 
-**Note:** this requires a [custom SearchParameter](0000-flag-category.searchparameter.html)
+**Note:** this requires a [custom SearchParameter](SearchParameter-0000-flag-category-searchparameter.html)
 
 Query:
 ```
-GET <base>/Flag?category=NRAF
+GET <base>/Flag?category=NRAF  
 ```
-* [Query output](Bundle-QUERY-OUTPUT--READ-0002-get-flag-by-category.html)
+* [Query output](Bundle-QUERY-OUTPUT--READ-0002-get-flag-by-category.html)  
 
 #### Get Flag by Category and Code
 
-**Note:** this requires a [custom SearchParameter](0000-flag-category.searchparameter.html)
+**Note:** this requires a [custom SearchParameter](SearchParameter-0000-flag-code-searchparameter.html)
 
-Query:
-```
-GET <base>/Flag?category=NRAF&code=001
-```
-* [Query output](Bundle-QUERY-OUTPUT--READ-0002-get-flag-by-category-and-code.html)
+Query:  
+```  
+GET <base>/Flag?category=NRAF&code=001  
+```  
+* [Query output](Bundle-QUERY-OUTPUT--READ-0003-get-flag-by-category-and-code.html)  
 
 #### Get Flag by Category and Code and supporting resources
 
-**Note:** this requires [an extension] to link to the supporting resources and a [custom SearchParameter](0000-flag-category.searchparameter.html) to allow for the use of [_include parameters](https://www.hl7.org/fhir/search.html#include)
+**Note:** this requires [an extension] to link to the supporting resources and a [custom SearchParameter](todo.html) to allow for the use of [_include parameters](https://www.hl7.org/fhir/search.html#include)
 
 * [Query output](todo.html)
 
