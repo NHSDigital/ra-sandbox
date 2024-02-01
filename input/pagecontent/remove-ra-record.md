@@ -11,4 +11,6 @@ A patient presents to be examined by a practitioner. The Practioner perofrms an 
     <img style="max-width: 70%" alt="Activity created in draw.io!" src="Remove-RA.drawio.png"/>
 </div>
 
-#### Condition Retrieved
+#### Patient's RA Record Removed
+
+
