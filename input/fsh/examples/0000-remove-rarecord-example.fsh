@@ -1,7 +1,7 @@
 Alias: $RARecord-RemovalReason-1 = https://fhir.nhs.uk/STU3/CodeSystem/RARecord-RemovalReason-1
 
 Instance: 0000-remove-rarecord-example
-InstanceOf: Delete
+InstanceOf: Parameters
 Usage: #example
 * parameter.name = "removeRARecord"
 * parameter.part[0].name = "nhsNumber"
