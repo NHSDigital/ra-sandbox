@@ -1,1 +1,1 @@
-
+Delete /Flag/$removerarecord
