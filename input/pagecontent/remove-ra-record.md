@@ -13,4 +13,8 @@ A patient presents to be examined by a practitioner. The Practioner perofrms an 
 
 #### Patient's RA Record Removed
 
+<div>
+    <img style="max-width: 70%" alt="Activity created in draw.io!" src="remove-rarecord.drawio.png"/>
+</div>
+
 
