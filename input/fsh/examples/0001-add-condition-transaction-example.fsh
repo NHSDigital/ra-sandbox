@@ -83,15 +83,6 @@ Usage: #inline
 Instance: condition-flag-example-1
 InstanceOf: Flag
 Usage: #inline
-* extension[0].url = "http://hl7.org/fhir/StructureDefinition/flag-detail"
-* extension[=].reference.reference = "urn:uuid:41a84a93-1c95-4162-b13c-1c617509e6e2"
-* extension[=].reference.type = "Condition"
-* extension[+].url = "http://hl7.org/fhir/StructureDefinition/flag-detail"
-* extension[=].reference.reference = "urn:uuid:959fbc3c-0907-419e-aa3d-ab88f2d90c5e"
-* extension[=].reference.type = "Consent"
-* extension[+].url = "http://hl7.org/fhir/StructureDefinition/flag-detail"
-* extension[=].reference.reference = "urn:uuid:fba99f70-fe1d-42e2-b77a-916e44b53c19"
-* extension[=].reference.type = "Flag"
 * status = #active
 * code = $RARecord-AdjustmentCategory-1#001 "Communication support"
 * category = $RARecord-FlagCategory-1#NRAF "National Reasonable Adjustments Flag"
