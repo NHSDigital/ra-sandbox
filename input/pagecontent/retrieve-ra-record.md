@@ -6,8 +6,8 @@
 
 A patient presents to be examined by a practitioner. The Practioner perofrms an examination and retrieve Patient's RA Record.
 
-##### Condition Retrieved
+##### Patients RA Record Retrieved
 
 <div>
-    <img style="max-width: 70%" alt="Activity created in draw.io!" src="Retrieve-Condition.drawio.png"/>
+    <img style="max-width: 70%" alt="Patients RA Record Retrieved" src="retrieve-condition.drawio.png"/>
 </div>Todo

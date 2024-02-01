@@ -36,7 +36,7 @@ The practioner decides to record a condition.  This could be done with individua
 #### Example 2  
 
 <p>
-<a href="server-example-add-ra-record.html#example-2">The first example</a> given here shows the use of a transaction to add all required resources to add a Consent, a Condition and associated adjustments (Flag) resources for a patient.  
+<a href="server-examples.html#example-2">The first example</a> given here shows the use of a transaction to add all required resources to add a Consent, a Condition and associated adjustments (Flag) resources for a patient.  
 
 The master Flag and condition Flag (and associated Condition) resources are included and have the Provence resource as contained resources.  This example could be modified to include a new condition just by adding the new Condition and Flag resource as this transaction is fully idempotent.  The next example will show this.
 </p>
@@ -48,7 +48,7 @@ The master Flag and condition Flag (and associated Condition) resources are incl
 </p>
 
 <p>
-<a href="server-example-add-ra-record.html#example-2">The second example</a> given here simply adds conditions to the previous transaction resource to demonstrate the ability to add new conditions to the same data structure and reply in an idempotent way.  The request entry in the transaction Bundle for the second condition uses the uuid from the fullUrl on the Bundle entry to use in the URL for the PUT method.  The first uses the patient uuid as a search parameter for the PUT.  A uuid would be the preferred method to construct the uuid for the fullUrl in the Bundle entry, so this should be a reasonable example.  This example is just to demonstrate ReSTful capabilities of the FHIR spec.
+<a href="server-examples.html#example-2">The second example</a> given here simply adds conditions to the previous transaction resource to demonstrate the ability to add new conditions to the same data structure and reply in an idempotent way.  The request entry in the transaction Bundle for the second condition uses the uuid from the fullUrl on the Bundle entry to use in the URL for the PUT method.  The first uses the patient uuid as a search parameter for the PUT.  A uuid would be the preferred method to construct the uuid for the fullUrl in the Bundle entry, so this should be a reasonable example.  This example is just to demonstrate ReSTful capabilities of the FHIR spec.
 </p>
 
 [Example Transaction: Additional condition and flag added to previous Transaction](Bundle-0001-add-condition-transaction-example.html).  
