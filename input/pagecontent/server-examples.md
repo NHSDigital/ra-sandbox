@@ -144,9 +144,13 @@ GET <base>/Flag/04adcb5b-3de7-4f67-97f0-b2fdf941ba85
 
 * [Query output](OperationOutcome-QUERY-OUTPUT--DELETE-0008-delete-flag-by-id.html)
 
-#### POST to /Resource Delete supporting resource
+#### POST to /Resource 
 
-<span style="background-color: #FFFF00">Not sure what this mean, is this beyond a transaction, i.e. use a post to delete, its not defined in FHIR and not really considered valid in REST either...</span>
+TODO
+
+#### Delete supporting resource
+
+<span style="background-color: #FFFF00">will be covered by remove RA record</span>
 
 #### Delete a resource using it's ID
 
