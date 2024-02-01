@@ -1,1 +1,1 @@
-Delete /Flag/$removerarecord
+Post <base>/Flag/$removerarecord  
