@@ -14,7 +14,11 @@ A patient presents to be examined by a practitioner. The Practioner perofrms an 
 #### Patient's RA Record Removed
 
 <div>
-    <img style="max-width: 70%" alt="Activity created in draw.io!" src="remove-rarecord.drawio.png"/>
+    <img style="max-width: 70%" alt="Patient's RA Record Removed" src="remove-rarecord.drawio.png"/>
 </div>
 
+#### Example
 
+To remove a flag you must provide a reason for it being removed, for example the flag may have been created in error, or the flag may no longer apply to the patient.
+
+For a patient it is represented as RARecord-RemovalReason-1. This triggers the system to inactivate all Reasonable Adjustment Flag resources contained within the patient record.
