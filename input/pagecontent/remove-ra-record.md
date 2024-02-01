@@ -35,9 +35,10 @@ Below are the codes defined by RARecord-RemovalReason-1:
 
 System: https://fhir.nhs.uk/STU3/CodeSystem/RARecord-RemovalReason-1
 
-Code	                    Description
-Error	           The Reasonable Adjustment Flag was created in error
-PatientDissent	   The patient has dissented to the creation of the Reasonable Adjustment Flag
-ProxyDissent	   The patient’s legal proxy has dissented to the creation of the Reasonable Adjustment Flag
-DoesntApply	       The Reasonable Adjustment Flag no longer applies to the patient
-BestInterest	   A best interest decision was taken to remove the Reasonable Adjustments Flag
+¦Code¦                    ¦Description¦
+--------------      ----------------------------------------------------------------------------------------
+¦Error¦	           ¦The Reasonable Adjustment Flag was created in error¦
+¦PatientDissent¦	   ¦The patient has dissented to the creation of the Reasonable Adjustment Flag¦
+¦ProxyDissent¦	   ¦The patient’s legal proxy has dissented to the creation of the Reasonable Adjustment Flag¦
+¦DoesntApply¦	       ¦The Reasonable Adjustment Flag no longer applies to the patient¦
+¦BestInterest¦	   ¦A best interest decision was taken to remove the Reasonable Adjustments Flag¦
