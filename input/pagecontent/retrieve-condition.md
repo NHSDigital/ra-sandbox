@@ -14,7 +14,7 @@ A patient presents to be examined by a practitioner. The Practioner perofrms an 
 ##### Patient's RA Record Retrieved
 
 <div>
-    <img style="max-width: 70%" alt="Activity created in draw.io!" src="Retrieve-Condition.drawio.png"/>
+    <img style="max-width: 70%" alt="Patient's RA Record Retrieved" src="Retrieve-Condition.drawio.png"/>
 </div>
 
 #### Example  
