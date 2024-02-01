@@ -31,14 +31,14 @@ Post <Base>/Flag/$removerarecord
 
 This Query will delete the Patient's RA Record using this Request Body (todo)
 
-Below are the codes defined by RARecord-RemovalReason-1:
+Below link has the codes defined by RARecord-RemovalReason-1:
 
 System: https://fhir.nhs.uk/STU3/CodeSystem/RARecord-RemovalReason-1
 
-¦Code¦                    ¦Description¦
---------------      ----------------------------------------------------------------------------------------
-¦Error¦	           ¦The Reasonable Adjustment Flag was created in error¦
-¦PatientDissent¦	   ¦The patient has dissented to the creation of the Reasonable Adjustment Flag¦
-¦ProxyDissent¦	   ¦The patient’s legal proxy has dissented to the creation of the Reasonable Adjustment Flag¦
-¦DoesntApply¦	       ¦The Reasonable Adjustment Flag no longer applies to the patient¦
-¦BestInterest¦	   ¦A best interest decision was taken to remove the Reasonable Adjustments Flag¦
+The Second Query which we can perform is a Delete Transaction :
+
+---
+Post <BASE_FHIRENDPOINT>
+---
+This Query will delete the Patient's RA Record using this Request Body [Bundle transaction](Bundle-0001-remove-rarecord-transaction-example.html)
+
