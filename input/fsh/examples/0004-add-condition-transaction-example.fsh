@@ -6,7 +6,7 @@ Alias: $RARecord-FlagCategory-1 = https://fhir.nhs.uk/STU3/CodeSystem/RARecord-F
 Alias: $v3-DataOperation = http://terminology.hl7.org/CodeSystem/v3-DataOperation
 Alias: $CareConnect-SDSJobRoleName-1 = https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1
 
-Instance: 0002-add-condition-transaction-example
+Instance: 0004-add-condition-transaction-example
 InstanceOf: Bundle
 Usage: #example
 * type = #transaction

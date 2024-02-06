@@ -1,4 +1,4 @@
-Instance: 0000-flag-category-searchparameter
+Instance: 0001-flag-category-searchparameter
 InstanceOf: SearchParameter
 Usage: #definition
 * url = "http://localhost:8080/fhir/SearchParameter/FlagCategory"

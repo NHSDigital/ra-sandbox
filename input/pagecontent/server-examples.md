@@ -48,7 +48,7 @@ TODO
 
 ##### Example 2
 
-The first example [Bundle transaction](Bundle-0001-add-condition-transaction-example.html) adds an RA record consisting of 
+The first example [Bundle transaction](Bundle-0003-add-condition-transaction-example.html) adds an RA record consisting of 
 * a Patient resource
 * a Consent resource 
 * a (master) Flag resource (<span style="background-color: #FFFF00">is this really needed?</span>) 
@@ -58,7 +58,7 @@ These resources are contained in a transaction Bundle, which provides atomicity 
 
 Each Flag resource (<span style="background-color: #FFFF00">TODO embed in all or make separate</>)has a Provenance resource embedded in it.  (<span style="background-color: #FFFF00">TODO maybe a futher discussion section somewhere on options for provenance, i.e. linking to versions, _history and transaction considerations, options to use etag or X-provenance</span>).  
 
-Another example [Bundle transaction](Bundle-0002-add-condition-transaction-example.html) modifies the first transaction by adding additional resources for another Condition and adjustment (Flag).  
+Another example [Bundle transaction](Bundle-0004-add-condition-transaction-example.html) modifies the first transaction by adding additional resources for another Condition and adjustment (Flag).  
 
 The transactions are using PUT's to provide (upsert)[https://hl7.org/fhir/http.html#upsert] functionality.  The HAPI Starter Server (provided via docker) supports this part of the specification.
 
@@ -81,12 +81,12 @@ This query will return the Patient resource using the patients NHS number (<span
 which are all returned using default Patient SearchParameters (defined in the base specification).   
 
 First Bundle example:  
-* [Bundle transaction](Bundle-0001-add-condition-transaction-example.html)  
-* [Query output](Bundle-QUERY-OUTPUT--0001-add-condition-transaction-example.1.html)  
+* [Bundle transaction](Bundle-0003-add-condition-transaction-example.html)  
+* [Query output](Bundle-QUERY-OUTPUT--0005-add-condition-transaction-example.html)  
 
 Second Bundle example:  
-* [Bundle transaction](Bundle-0002-add-condition-transaction-example.html)  
-* [Query output](Bundle-QUERY-OUTPUT--0002-add-condition-transaction-example.2.html)  
+* [Bundle transaction](Bundle-0004-add-condition-transaction-example.html)  
+* [Query output](Bundle-QUERY-OUTPUT--0006-add-condition-transaction-example.html)  
 
 #### Remove RA Record
 
@@ -107,27 +107,27 @@ Query:
 GET <base>/Flag
 ```
 
-* [Query output](Bundle-QUERY-OUTPUT--READ-0001-get-all-flags.html)
+* [Query output](Bundle-QUERY-OUTPUT--0008-get-all-flags.html)
 
 #### Get Flag by Category
 
-**Note:** this requires a [custom SearchParameter](SearchParameter-0000-flag-category-searchparameter.html)
+**Note:** this requires a [custom SearchParameter](SearchParameter-0001-flag-category-searchparameter.html)
 
 Query:
 ```
 GET <base>/Flag?category=NRAF  
 ```
-* [Query output](Bundle-QUERY-OUTPUT--READ-0002-get-flag-by-category.html)  
+* [Query output](Bundle-QUERY-OUTPUT--0009-get-flag-by-category.html)  
 
 #### Get Flag by Category and Code
 
-**Note:** this requires a [custom SearchParameter](SearchParameter-0000-flag-code-searchparameter.html)
+**Note:** this requires a [custom SearchParameter](SearchParameter-0002-flag-code-searchparameter.html)
 
 Query:  
 ```  
 GET <base>/Flag?category=NRAF&code=001  
 ```  
-* [Query output](Bundle-QUERY-OUTPUT--READ-0003-get-flag-by-category-and-code.html)  
+* [Query output](Bundle-QUERY-OUTPUT--0010-get-flag-by-category-and-code.html)  
 
 #### Get Flag by Category and Code and supporting resources
 
@@ -142,7 +142,7 @@ Query:
 GET <base>/Flag/04adcb5b-3de7-4f67-97f0-b2fdf941ba85
 ```
 
-* [Query output](OperationOutcome-QUERY-OUTPUT--DELETE-0008-delete-flag-by-id.html)
+* [Query output](OperationOutcome-QUERY-OUTPUT--0011-delete-flag-by-id.html)
 
 #### POST to /Resource 
 
