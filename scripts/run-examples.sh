@@ -13,8 +13,10 @@ sushi .
 SERVER_BASE="http://localhost:8080/fhir/"
 HEADERS="Content-type:application/fhir+json;fhirVersion=4.0"
 
-FSH_EXAMPLES_DIR=fsh-generated/resources
-QUERIES_DIR=input/queries
+# TODO Parameterise this to make it general for sushi and standalone hl7 publisher, few other things would need tweaked as well...
+FSH_EXAMPLES_DIR=input/fsh/examples
+FSH_GENERATED_DIR=fsh-generated/resources
+QUERIES_DIR=input/fsh/queries
 
 # Make resources folder if it doesn't already exist
 mkdir -p ./input/resources
@@ -23,8 +25,11 @@ for file in $(find {$FSH_EXAMPLES_DIR,$QUERIES_DIR} -type f | sort -t\/ -k3); do
   case $(dirname $file) in
 
     $FSH_EXAMPLES_DIR)
+      # Construct path to generated JSON resource
+      GENERATED=$(echo ./$FSH_GENERATED_DIR/*$(basename ${file%.*})*);
+
       # Sushi will prepend the name of the Resource, which will be used in the server calls.
-      RESOURCE_NAME=$(echo $file | awk -F '/' '{print $4}' | awk -F '-' '{print $1}');
+      RESOURCE_NAME=$(echo $GENERATED | awk -F '/' '{print $4}' | awk -F '-' '{print $1}');
 
       # Assumption here that Bundle examples will be transactions, guessing it'll fail if not...
       # Set RESOURCE_NAME to empty string so post is made to the base server url.
@@ -32,8 +37,7 @@ for file in $(find {$FSH_EXAMPLES_DIR,$QUERIES_DIR} -type f | sort -t\/ -k3); do
         RESOURCE_NAME=""
       fi;
 
-      # Post the resource
-      curl -X POST -H $HEADERS -d @${$file} $SERVER_BASE$RESOURCE_NAME;
+      curl -X POST -H $HEADERS -d @$GENERATED $SERVER_BASE$RESOURCE_NAME;
       ;;
 
     $QUERIES_DIR)
