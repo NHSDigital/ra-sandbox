@@ -31,15 +31,4 @@ This Query will delete the Patient's RA Record.These Particular resources will b
 * Flag resources  
 * Condition resources  
 
-This will be the following Request body :
-
-<div class="tab">
-  <button class="tablinks active" onclick="openTab(event, 'JSON')">JSON</button>
-  <button class="tablinks" onclick="openTab(event, 'XML')">XML</button>
-</div>
-<div id="XML" class="tabcontent">
-{{xml:0012-RemoveRARecordExample.fsh}}
-</div>
-<div id="JSON" class="tabcontent" style="display:block">
-{{json:0012-RemoveRARecordExample.fsh}}
-</div>
+This will be the following Request body [Bundle transaction](Bundle-RemoveRARecordExample.html)
