@@ -48,25 +48,19 @@ TODO
 
 ##### Example 2
 
-<<<<<<< HEAD
 The first example [Bundle transaction](Bundle-AddConditionTransactionExample1.html) adds an RA record consisting of 
-=======
-The first example [Bundle transaction](Bundle-0001-add-condition-transaction-example.html) adds an RA record consisting of 
->>>>>>> ed1f9cf6d55d845bc0b9520199f79d6cd37838a1
+
 * a Patient resource
 * a Consent resource 
 * a (master) Flag resource (<span style="background-color: #FFFF00">is this really needed?</span>) 
 * a Condition resource (associated with the following Flag)
 * a Flag resource (associated with the Condition)
+
 These resources are contained in a transaction Bundle, which provides atomicity as well as a more network efficent call.  
 
 Each Flag resource (<span style="background-color: #FFFF00">TODO embed in all or make separate</>)has a Provenance resource embedded in it.  (<span style="background-color: #FFFF00">TODO maybe a futher discussion section somewhere on options for provenance, i.e. linking to versions, _history and transaction considerations, options to use etag or X-provenance</span>).  
 
-<<<<<<< HEAD
 Another example [Bundle transaction](Bundle-AddConditionTransactionExample2.html) modifies the first transaction by adding additional resources for another Condition and adjustment (Flag).  
-=======
-Another example [Bundle transaction](Bundle-0002-add-condition-transaction-example.html) modifies the first transaction by adding additional resources for another Condition and adjustment (Flag).  
->>>>>>> ed1f9cf6d55d845bc0b9520199f79d6cd37838a1
 
 The transactions are using PUT's to provide (upsert)[https://hl7.org/fhir/http.html#upsert] functionality.  The HAPI Starter Server (provided via docker) supports this part of the specification.
 
