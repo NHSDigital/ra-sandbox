@@ -40,5 +40,5 @@ The Second Query which we can perform is a Delete Transaction :
 ---
 Post <BASE_FHIRENDPOINT>
 ---
-This Query will delete the Patient's RA Record using this Request Body [Bundle transaction](Bundle-0001-remove-rarecord-transaction-example.html)
+This Query will delete the Patient's RA Record using this Request Body [Bundle transaction](Bundle-RemoveRARecordExample.html)
 

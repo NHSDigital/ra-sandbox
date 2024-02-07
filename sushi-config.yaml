@@ -80,12 +80,9 @@ menu:
   Data Model: data-model.html
   Use Cases:
     Add RA Record: add-ra-record.html
-    Retrieve RA Record: retrieve-condition.html
+    Retrieve RA Record: retrieve-ra-record.html
     Remove RA Record: remove-ra-record.html
-  Server Examples:
-    Add RA Record: server-example-add-ra-record.html
-    Retrieve RA Record: server-example-retrieve-ra-record.html
-    Remove RA Record: todo.html
+  Server Examples: server-examples.html
   Artifacts: artifacts.html
   Contact Us: todo.html
   Downloads: todo.html
