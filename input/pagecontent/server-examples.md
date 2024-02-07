@@ -117,47 +117,29 @@ Query:
 GET <base>/Flag
 ```
 
-<<<<<<< HEAD
 * [Query output](Bundle-QUERY-OUTPUT--0008-get-all-flags.html)
 
 #### Get Flag by Category
 
 **Note:** this requires a [custom SearchParameter](SearchParameter-FlagCategory.html)
-=======
-* [Query output](Bundle-QUERY-OUTPUT--READ-0001-get-all-flags.html)
-
-#### Get Flag by Category
-
-**Note:** this requires a [custom SearchParameter](SearchParameter-0000-flag-category-searchparameter.html)
->>>>>>> ed1f9cf6d55d845bc0b9520199f79d6cd37838a1
 
 Query:
 ```
 GET <base>/Flag?category=NRAF  
 ```
-<<<<<<< HEAD
+
 * [Query output](Bundle-QUERY-OUTPUT--0009-get-flag-by-category.html)  
 
 #### Get Flag by Category and Code
 
 **Note:** this requires a [custom SearchParameter](SearchParameter-FlagCode.html)
-=======
-* [Query output](Bundle-QUERY-OUTPUT--READ-0002-get-flag-by-category.html)  
-
-#### Get Flag by Category and Code
-
-**Note:** this requires a [custom SearchParameter](SearchParameter-0000-flag-code-searchparameter.html)
->>>>>>> ed1f9cf6d55d845bc0b9520199f79d6cd37838a1
 
 Query:  
 ```  
 GET <base>/Flag?category=NRAF&code=001  
 ```  
-<<<<<<< HEAD
+
 * [Query output](Bundle-QUERY-OUTPUT--0010-get-flag-by-category-and-code.html)  
-=======
-* [Query output](Bundle-QUERY-OUTPUT--READ-0003-get-flag-by-category-and-code.html)  
->>>>>>> ed1f9cf6d55d845bc0b9520199f79d6cd37838a1
 
 #### Get Flag by Category and Code and supporting resources
 
@@ -172,11 +154,7 @@ Query:
 GET <base>/Flag/04adcb5b-3de7-4f67-97f0-b2fdf941ba85
 ```
 
-<<<<<<< HEAD
 * [Query output](OperationOutcome-QUERY-OUTPUT--0011-delete-flag-by-id.html)
-=======
-* [Query output](OperationOutcome-QUERY-OUTPUT--DELETE-0008-delete-flag-by-id.html)
->>>>>>> ed1f9cf6d55d845bc0b9520199f79d6cd37838a1
 
 #### POST to /Resource 
 
