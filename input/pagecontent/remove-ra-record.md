@@ -19,3 +19,43 @@ A patient presents to be examined by a practitioner. The Practioner perofrms an 
 
 #### Example
 
+for the delete transaction example provided below, the following query will performed (dynamically during the IG build)
+
+```
+POST /Fhir_Server_ENDPOINT
+```
+
+This Query will delete the Patient's RA Record.These Particular resources will be deleted with the whole RA Record Removal :
+
+-> Consent Resource
+-> Condition Resource
+-> Flag Resource
+
+This will be the following Request body :
+
+{
+  "resourceType": "Bundle",
+  "id": "RemoveRARecordExample",
+  "type": "transaction",
+  "entry": [
+    {
+      "request": {
+        "method": "DELETE",
+        "url": "Flag/fba99f70-fe1d-42e2-b77a-916e44b53c19"
+      }
+    },
+    {
+      "request": {
+        "method": "DELETE",
+        "url": "Consent/consent-example-1"
+      }
+    },
+    {
+      "request": {
+        "method": "DELETE",
+        "url": "Condition/condition-example-1"
+      }
+    }
+  ]
+}
+
