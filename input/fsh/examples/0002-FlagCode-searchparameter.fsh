@@ -1,4 +1,4 @@
-Instance: 0000-flag-code-searchparameter
+Instance: FlagCode
 InstanceOf: SearchParameter
 Usage: #definition
 * url = "http://localhost:8080/fhir/SearchParameter/FlagCode"
