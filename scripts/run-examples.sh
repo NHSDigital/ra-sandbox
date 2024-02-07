@@ -16,7 +16,7 @@ HEADERS="Content-type:application/fhir+json;fhirVersion=4.0"
 # TODO Parameterise this to make it general for sushi and standalone hl7 publisher, few other things would need tweaked as well...
 FSH_EXAMPLES_DIR=input/fsh/examples
 FSH_GENERATED_DIR=fsh-generated/resources
-QUERIES_DIR=input/fsh/queries
+QUERIES_DIR=input/ci/queries
 
 # Make resources folder if it doesn't already exist
 mkdir -p ./input/resources
@@ -25,9 +25,12 @@ for file in $(find {$FSH_EXAMPLES_DIR,$QUERIES_DIR} -type f | sort -t\/ -k3); do
   case $(dirname $file) in
 
     $FSH_EXAMPLES_DIR)
-      # Construct path to generated JSON resource
-      GENERATED=$(echo ./$FSH_GENERATED_DIR/*$(basename ${file%.*})*);
+      # Get the example ID from the filename
+      EXAMPLE_ID=$(basename ${file%.*} | awk -F '-' '{print $2}');
 
+      # Construct path to generated JSON resource - TODO this implies the id will be unique and not a subset of another...
+      GENERATED=$(echo ./$FSH_GENERATED_DIR/*$EXAMPLE_ID*);
+      
       # Sushi will prepend the name of the Resource, which will be used in the server calls.
       RESOURCE_NAME=$(echo $GENERATED | awk -F '/' '{print $4}' | awk -F '-' '{print $1}');
 
@@ -44,8 +47,8 @@ for file in $(find {$FSH_EXAMPLES_DIR,$QUERIES_DIR} -type f | sort -t\/ -k3); do
       # Get HTTP verb and Query path
       QUERY=$(cat $file);
 
-      # Tokinise the query string
-      QUERY_TOKENS=(${QUERY//^/ })
+      # Tokinise the query string, ReST verb and path separated by space
+      QUERY_TOKENS=(${QUERY// / })
 
       # Strip the path and the extension
       QUERY_FILE=$(basename $file | awk -F '.' '{print $1}');
