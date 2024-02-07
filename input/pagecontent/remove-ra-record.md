@@ -27,8 +27,8 @@ POST /Fhir_Server_ENDPOINT
 
 This Query will delete the Patient's RA Record.These Particular resources will be deleted with the whole RA Record Removal :
 
-->Consent Resource
-->Condition Resource
-->Flag Resource
+* Consent resources
+* Flag resources  
+* Condition resources  
 
 This will be the following Request body [Bundle transaction](Bundle-0012-RemoveRARecordExample.html)
