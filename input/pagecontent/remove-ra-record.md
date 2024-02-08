@@ -19,26 +19,16 @@ A patient presents to be examined by a practitioner. The Practioner perofrms an 
 
 #### Example
 
-To remove a flag you must provide a reason for it being removed, for example the flag may have been created in error, or the flag may no longer apply to the patient.
-
-For a patient it is represented as RARecord-RemovalReason-1. This triggers the system to inactivate all Reasonable Adjustment Flag resources contained within the patient record.
-
-For Removing a RA Record this query will be performed :
+for the delete transaction example provided below, the following query will performed (dynamically during the IG build)
 
 ```
-Post <Base>/Flag/$removerarecord  
+POST /Fhir_Server_ENDPOINT
 ```
 
-This Query will delete the Patient's RA Record using this Request Body (todo)
+This Query will delete the Patient's RA Record.These Particular resources will be deleted with the whole RA Record Removal :
 
-Below link has the codes defined by RARecord-RemovalReason-1:
+* Consent resources
+* Flag resources  
+* Condition resources  
 
-System: https://fhir.nhs.uk/STU3/CodeSystem/RARecord-RemovalReason-1
-
-The Second Query which we can perform is a Delete Transaction :
-
----
-Post <BASE_FHIRENDPOINT>
----
-This Query will delete the Patient's RA Record using this Request Body [Bundle transaction](Bundle-RemoveRARecordExample.html)
-
+This will be the following Request body [Bundle transaction](Bundle-RemoveRARecordExample.html)
