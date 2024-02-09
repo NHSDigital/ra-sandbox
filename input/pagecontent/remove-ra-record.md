@@ -27,7 +27,6 @@ POST /
 
 This Query will delete the Patient's RA Record.These Particular resources will be deleted with the whole RA Record Removal :
 
-* Consent resources
 * Flag resources  
 * Condition resources  
 
