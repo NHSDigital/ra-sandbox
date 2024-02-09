@@ -4,7 +4,7 @@
 
 #### Workflow
 <p>
-A patient presents to be examined by a practitioner. The Practioner perofrms an examination and retrieve Patient's RA Record.After that , Practitioner make a request to remove RA Record as it's no longer needed and inactivates all Reasonable Adjustment resources for Patient.
+A patient presents to be examined by a practitioner. The practitioner performs an examination and retrieves the patients RA record. The practitioner then decides to remove an RA record for a patient.
 </p>
 
 <div>
