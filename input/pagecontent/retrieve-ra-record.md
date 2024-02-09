@@ -26,7 +26,7 @@ For each transaction example provided in the previous section, the following que
 GET /Patient?identifier=9912003888&_revinclude=Consent:patient&_revinclude=Flag:patient&_revinclude=Condition:patient  
 ```
 
-This query will return the Patient resource using the patients NHS number (<span style="background-color: #FFFF00">TODO will be profiled to check for this, reference this later</span>).  The assocaited resources that make up the RA are also returned, such as  
+This query will return the Patient resource using the patients NHS number (<span style="background-color: #FFFF00">TODO will be profiled to check for this, reference this later</span>).  The assocaited resources that make up the RA Record are also returned, such as  
 * Consent resources (<span style="background-color: #FFFF00">maybe link to profiles here</span>)  
 * Flag resources  
 * Condition resources  
