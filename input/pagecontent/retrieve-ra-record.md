@@ -4,7 +4,7 @@
 
 #### Workflow
 <p>
-A patient presents to be examined by a practitioner. The Practioner perofrms an examination and retrieve Patient's RA Record.
+A patient presents to be examined by a practitioner. The practitioner perofrms an examination and retrieve Patient's RA Record.
 
 </p>
 
