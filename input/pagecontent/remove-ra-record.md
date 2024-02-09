@@ -22,7 +22,7 @@ A patient presents to be examined by a practitioner. The practitioner performs a
 for the delete transaction example provided below, the following query will performed (dynamically during the IG build)
 
 ```
-POST /Fhir_Server_ENDPOINT
+POST /
 ```
 
 This Query will delete the Patient's RA Record.These Particular resources will be deleted with the whole RA Record Removal :
