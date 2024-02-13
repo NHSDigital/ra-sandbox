@@ -25,7 +25,7 @@ for the delete transaction example provided below, the following query will perf
 POST /
 ```
 
-This Query will delete the Patient's RA Record.These Particular resources will be deleted with the whole RA Record Removal :
+This query will delete the patient's RA record, i.e. the resources contained in the transaction.
 
 * Flag resources  
 * Condition resources  
