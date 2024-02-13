@@ -21,7 +21,7 @@ QUERIES_DIR=input/ci/queries
 # Make resources folder if it doesn't already exist
 mkdir -p ./input/resources
 
-for file in $(find {$FSH_EXAMPLES_DIR,$QUERIES_DIR} -type f | sort -t\/ -k3); do 
+for file in $(find {$FSH_EXAMPLES_DIR,$QUERIES_DIR} -type f | sort -t\/ -k4); do 
   case $(dirname $file) in
 
     $FSH_EXAMPLES_DIR)

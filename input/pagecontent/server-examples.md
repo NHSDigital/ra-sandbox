@@ -73,7 +73,7 @@ This section provides examples for those given in the use case [Retrieve RA Reco
 For each transaction example provided in the previous section, the following query will performed (dynamically during the IG build)  
 
 ```
-<base>/Patient?identifier=9912003888&_revinclude=Consent:patient&_revinclude=Flag:patient&_revinclude=Condition:patient  
+GET /Patient?identifier=9912003888&_revinclude=Consent:patient&_revinclude=Flag:patient&_revinclude=Condition:patient  
 ```
 
 This query will return the Patient resource using the patients NHS number (<span style="background-color: #FFFF00">TODO will be profiled to check for this, reference this later</span>).  The assocaited resources that make up the RA are also returned, such as  
@@ -108,7 +108,7 @@ These queries are ran after all other write (Create, Update) examples and corres
 
 Query:
 ```
-GET <base>/Flag
+GET /Flag
 ```
 
 * [Query output](Bundle-QUERY-OUTPUT--0008-get-all-flags.html)
@@ -119,7 +119,7 @@ GET <base>/Flag
 
 Query:
 ```
-GET <base>/Flag?category=NRAF  
+GET /Flag?category=NRAF  
 ```
 
 * [Query output](Bundle-QUERY-OUTPUT--0009-get-flag-by-category.html)  
@@ -130,7 +130,7 @@ GET <base>/Flag?category=NRAF
 
 Query:  
 ```  
-GET <base>/Flag?category=NRAF&code=001  
+GET /Flag?category=NRAF&code=001  
 ```  
 
 * [Query output](Bundle-QUERY-OUTPUT--0010-get-flag-by-category-and-code.html)  
@@ -145,7 +145,7 @@ GET <base>/Flag?category=NRAF&code=001
 
 Query:
 ```
-GET <base>/Flag/04adcb5b-3de7-4f67-97f0-b2fdf941ba85
+GET /Flag/04adcb5b-3de7-4f67-97f0-b2fdf941ba85
 ```
 
 * [Query output](OperationOutcome-QUERY-OUTPUT--0011-delete-flag-by-id.html)
