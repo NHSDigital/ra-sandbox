@@ -1,6 +1,6 @@
-CodeSystem: Adjustment Category
-Id: Adjustment Category
-Title: "Adjustment Category"
+CodeSystem: Reasonable Adjustments Record Adjustment Category
+Id: Reasonable Adjustments Record Adjustment Category
+Title: "Reasonable Adjustments Record Adjustment Category"
 Description: "A CodeSystem to identify the category of the Adjustment required"
 * ^url = "https://fhir.nhs.uk/STU3/CodeSystem/RARecord-AdjustmentCategory-1"
 * ^version = "1.0.0"
