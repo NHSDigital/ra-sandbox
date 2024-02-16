@@ -1,5 +1,5 @@
-ValueSet: Reasonable Adjustments Record Flag Category
-Id: Reasonable Adjustments Record Flag Category
+ValueSet: ValueSet-England-FlagCategory
+Id: ValueSet-England-FlagCategory
 Title: "Reasonable Adjustments Record Flag Category"
 Description: "A ValueSet to identify the type/category of Flag."
 * ^url = "https://fhir.nhs.uk/STU3/ValueSet/RARecord-FlagCategory-1"
