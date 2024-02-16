@@ -1,5 +1,5 @@
-ValueSet: Reasonable Adjustments Record Flag Code
-Id: Reasonable Adjustments Record Flag Code
+ValueSet: ValueSet-England-FlagCode
+Id: ValueSet-England-FlagCode
 Title: "Reasonable Adjustments Record Flag Code"
 Description: "A ValueSet to identify codes representing Adjustments required for a patient"
 * ^url = "https://fhir.nhs.uk/STU3/ValueSet/RARecord-FlagCode-1"
