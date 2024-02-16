@@ -1,5 +1,5 @@
-CodeSystem: Care Connect Condition Category
-Id: Care Connect Condition Category
+CodeSystem: CodeSystem-England-ConditionCategory
+Id: CodeSystem-England-ConditionCategory
 Title: "Care Connect Condition Category"
 Description: " A CodeSystem to identify the category of a condition.."
 * ^url = "https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-ConditionCategory-1"
