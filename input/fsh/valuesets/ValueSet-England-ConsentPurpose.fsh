@@ -1,5 +1,5 @@
-ValueSet: Reasonable Adjustments Consent Purpose
-Id: Reasonable Adjustments Consent Purpose
+ValueSet: ValueSet-England-ConsentPurpose
+Id: ValueSet-England-ConsentPurpose
 Title: "Reasonable Adjustments Consent Purpose"
 Description: " A ValueSet to identify the purpose of a consent given."
 * ^url = "https://fhir.nhs.uk/STU3/ValueSet/RARecord-ConsentPurpose-1"
