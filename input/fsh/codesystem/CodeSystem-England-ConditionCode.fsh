@@ -1,5 +1,5 @@
-CodeSystem: Reasonable Adjustments Record Condition Code
-Id: Reasonable Adjustments Record Condition Code
+CodeSystem: CodeSystem-England-ConditionCode
+Id: CodeSystem-England-ConditionCode
 Title: "Reasonable Adjustments Record Condition Code"
 Description: "A CodeSystem to identify the SNOMED-CT concept representing an Impairment recorded as part of a Reasonable Adjustment"
 * ^url = "https://fhir.nhs.uk/STU3/CodeSystem/RARecord-ConditionCode-1"
