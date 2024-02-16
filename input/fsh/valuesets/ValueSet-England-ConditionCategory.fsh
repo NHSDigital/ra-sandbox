@@ -1,6 +1,6 @@
-ValueSet: Care Connect Condition Category
-Id: Care Connect Condition Category
-Title: "Care Connect Condition Category"
+ValueSet: ValueSet-England-ConditionCategory
+Id: ValueSet-England-ConditionCategoryy
+Title: "ValueSet-England-ConditionCategory"
 Description: " A ValueSet to identify the category of a condition."
 * ^url = "https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ConditionCategory-1"
 * ^version = "1.0.0"
