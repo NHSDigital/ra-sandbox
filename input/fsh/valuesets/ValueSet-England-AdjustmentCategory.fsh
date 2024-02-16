@@ -1,5 +1,5 @@
-ValueSet: Reasonable Adjustments Record Adjustment Category
-Id: Reasonable Adjustments Record Adjustment Category
+ValueSet: ValueSet-England-AdjustmentCategory
+Id: ValueSet-England-AdjustmentCategory
 Title: "Reasonable Adjustments Record Adjustment Category"
 Description: "A ValueSet to identify the category of a Reasonable Adjustment"
 * ^url = "https://fhir.nhs.uk/STU3/ValueSet/RARecord-AdjustmentCategory-1"
