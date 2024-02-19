@@ -2,7 +2,7 @@ ValueSet: RA-ConsentPurpose
 Id: RA-ConsentPurpose
 Title: "Reasonable Adjustments Consent Purpose"
 Description: " A ValueSet to identify the purpose of a consent given."
-* ^url = "https://fhir.nhs.uk/England/ValueSet/RA-ConsentPurpose-"
+* ^url = "https://fhir.nhs.uk/England/ValueSet/RA-ConsentPurpose"
 * ^version = "1.0.0"
 * ^status = #draft
 * ^date = "2024-02-14"
