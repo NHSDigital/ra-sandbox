@@ -1,6 +1,6 @@
 CodeSystem: RA-ConditionCategory
 Id: RA-ConditionCategory
-Title: "Care Connect Condition Category"
+Title: "Reasonable Adjustments Record Condition Category"
 Description: " A CodeSystem to identify the category of a condition.."
 * ^url = "https://fhir.hl7.org.uk/England/CodeSystem/RA-ConditionCategory"
 * ^version = "1.0.0"
