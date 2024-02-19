@@ -1,8 +1,8 @@
-ValueSet: ValueSet-England-ConditionCategory
-Id: ValueSet-England-ConditionCategoryy
-Title: "Care Connect Condition Category"
+ValueSet: RA-ConditionCategoryy
+Id: RA-ConditionCategory
+Title: "Reasonable Adjustments Record Condition Category"
 Description: " A ValueSet to identify the category of a condition."
-* ^url = "https://fhir.hl7.org.uk/England/ValueSet/CareConnect-ConditionCategory"
+* ^url = "https://fhir.hl7.org.uk/England/ValueSet/RA-ConditionCategory"
 * ^version = "1.0.0"
 * ^status = #draft
 * ^date = "2024-02-14"
