@@ -13,6 +13,13 @@ sushi .
 SERVER_BASE="http://localhost:8080/fhir/"
 HEADERS="Content-type:application/fhir+json;fhirVersion=4.0"
 
+# SearchParameters need to be loaded first, otherwise its likely they'll not have been indexed by the HAPI server
+SEARCHPARAMETERS_DIR=fsh-generated/resources/SearchParameter*
+
+for file in $SEARCHPARAMETERS_DIR; do
+  curl -X POST -H $HEADERS -d @$file $SERVER_BASE/SearchParameter;
+done
+
 # TODO Parameterise this to make it general for sushi and standalone hl7 publisher, few other things would need tweaked as well...
 FSH_EXAMPLES_DIR=input/fsh/examples
 FSH_GENERATED_DIR=fsh-generated/resources
@@ -30,6 +37,9 @@ for file in $(find {$FSH_EXAMPLES_DIR,$QUERIES_DIR} -type f | sort -t\/ -k4); do
 
       # Construct path to generated JSON resource - TODO this implies the id will be unique and not a subset of another...
       GENERATED=$(echo ./$FSH_GENERATED_DIR/*$EXAMPLE_ID*);
+      echo "---------------------";
+      echo $GENERATED;
+      echo "---------------------";
       
       # Sushi will prepend the name of the Resource, which will be used in the server calls.
       RESOURCE_NAME=$(echo $GENERATED | awk -F '/' '{print $4}' | awk -F '-' '{print $1}');
