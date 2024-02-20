@@ -41,6 +41,9 @@ for file in $(find {$FSH_EXAMPLES_DIR,$QUERIES_DIR} -type f | sort -t\/ -k4); do
       fi;
 
       curl -X POST -H $HEADERS -d @$GENERATED $SERVER_BASE$RESOURCE_NAME;
+
+      # Give the HAPI server a nudge to index SearchParameters
+      curl -X POST $SERVER_BASE\$mark-all-resources-for-reindexing
       ;;
 
     $QUERIES_DIR)
