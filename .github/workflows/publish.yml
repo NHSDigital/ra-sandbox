@@ -61,7 +61,7 @@ jobs:
           chmod -c -R +rX "_site/" | while read line; do
             echo "::warning title=Invalid file permissions automatically fixed::$line"
           done
-          
+
       - name: Publish IG to GitHub Pages
         uses: actions/upload-pages-artifact@v3
 
@@ -75,7 +75,8 @@ jobs:
   deploy:
     # Add a dependency to the build job
     needs: build
-
+    # Only deploy on development branch
+    if: github.ref == 'refs/heads/development'
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
       pages: write      # to deploy to Pages
