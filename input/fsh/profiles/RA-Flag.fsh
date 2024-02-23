@@ -1,3 +1,6 @@
+Alias: $RAFlagCategory =  https://fhir.nhs.uk/STU3/ValueSet/RA-FlagCategory
+Alias: $RAFlagCode =  https://fhir.nhs.uk/England/ValueSet/RA-FlagCode
+
 Profile: RA-Flag
 Parent: Flag
 Id: RA-Flag
@@ -14,11 +17,10 @@ Description: "To (optionally) record an individual Adjustment for a Reasonable A
 * ^contact.telecom.rank = 1
 * ^copyright = "© 2024 NHS England"
 * identifier ..0
-* category 1..
-* category ^binding.strength = #required
-* category ^binding.valueSetReference.reference = "https://fhir.nhs.uk/STU3/ValueSet/RA-FlagCategory"
-* code ^binding.strength = #extensible
-* code ^binding.valueSetReference.reference = "https://fhir.nhs.uk/England/ValueSet/RA-FlagCode"
+* category 1.. MS
+* category from $RAFlagCategory (required)
+* code MS
+* code from $RAFlagCode (extensible)
 * subject only Reference
 * subject.id ..0
 * subject.identifier ..0
