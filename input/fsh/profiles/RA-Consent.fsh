@@ -31,7 +31,7 @@ Description: "To record consent to capture Reasonable Adjustments and Reasons fo
 * policy 1..1
 * policy.uri 1..
 * policyRule 1..
-* policyRule from https://fhir.nhs.uk/England/ValueSet/RA-ProxyRole (extensible)
+* policyRule from RA-ProxyRole (extensible)
 * performer ..1
 * performer only Reference(Organization or Patient or Practitioner)
 * provision.purpose 1..1
