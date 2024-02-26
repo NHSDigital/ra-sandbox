@@ -3,7 +3,7 @@ Id: RA-FlagCode
 Title: "Reasonable Adjustments Record Flag Code"
 Description: "A ValueSet to identify codes representing Adjustments required for a patient"
 * ^url = "https://fhir.nhs.uk/England/ValueSet/RA-FlagCode"
-* ^version = "1.0.0"
+* ^version = "0.1.0"
 * ^status = #draft
 * ^date = "2024-02-14"
 * ^publisher = "NHS England"
