@@ -12,6 +12,12 @@ Description: "To (optionally) record an individual Condition for a Reasonable Ad
 * ^status = #draft
 * ^date = "2024-02-14"
 
+* contained ^slicing.discriminator.type = #profile
+* contained ^slicing.rules = #open
+* contained ^slicing.discriminator.path = "contained"
+* contained contains provenance 1..1
+* contained[provenance] only RA-Provenance
+
 * insert NHSEngland-PublisherContactCopyright
 
 * category 1.. MS
