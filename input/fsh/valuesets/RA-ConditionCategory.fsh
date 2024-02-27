@@ -1,9 +1,9 @@
 ValueSet: RA-ConditionCategoryy
 Id: RA-ConditionCategory
 Title: "Reasonable Adjustments Record Condition Category"
-Description: " A ValueSet to identify the category of a condition."
+Description: "A ValueSet to identify the category of a condition."
 
-* ^name = "Reasonable Adjustments Record Condition Category"
+* ^name = "ReasonableAdjustmentsConditionCategory"
 * ^url = "https://fhir.nhs.uk/England/ValueSet/RA-ConditionCategory"
 * ^version = "0.1.0"
 * ^status = #draft

@@ -3,7 +3,7 @@ Id: RA-AdjustmentCategory
 Title: "Reasonable Adjustments Record Adjustment Category"
 Description: "A ValueSet to identify the category of a Reasonable Adjustment"
 
-* ^name = "Reasonable Adjustments Record Adjustment Category"
+* ^name = "ReasonableAdjustmentsCategory"
 * ^url = "https://fhir.nhs.uk/England/ValueSet/RA-AdjustmentCategory"
 * ^version = "0.1.0"
 * ^status = #draft

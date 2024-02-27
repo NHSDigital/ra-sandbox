@@ -4,6 +4,7 @@ Id: RA-Consent
 Title: "Reasonable Adjustments Consent Profile"
 Description: "To record consent to capture Reasonable Adjustments and Reasons for Reasonable Adjustments data"
 
+* ^name = "ReasonableAdjustmentsConsent"
 * ^url = "https://fhir.nhs.uk/England/StructureDefinition/RA-Consent"
 * ^version = "0.1.0"
 * ^status = #draft

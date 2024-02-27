@@ -3,7 +3,7 @@ Id: RA-ConditionCode
 Title: "Reasonable Adjustments Record Condition Code"
 Description: "A ValueSet to identify the SNOMED-CT concept representing an Impairment recorded as part of a Reasonable Adjustment"
 
-* ^name = "Reasonable Adjustments Record Condition Code"
+* ^name = "ReasonableAdjustmentsConditionCode"
 * ^url = "https://fhir.nhs.uk/England/ValueSet/RA-ConditionCode"
 * ^version = "0.1.0"
 * ^status = #draft

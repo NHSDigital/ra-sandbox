@@ -7,6 +7,7 @@ Id: RA-Condition
 Title: "Reasonable Adjustments Condition Profile"
 Description: "To (optionally) record an individual Condition for a Reasonable Adjustment Flag"
 
+* ^name = "ReasonableAdjustmentsCondition"
 * ^url = "https://fhir.nhs.uk/England/StructureDefinition/RA-Condition"
 * ^version = "0.1.0"
 * ^status = #draft
