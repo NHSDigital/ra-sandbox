@@ -1,7 +1,3 @@
-Alias: $ValueSetRAFlagCategory =  https://fhir.nhs.uk/England/ValueSet/RA-FlagCategory
-Alias: $ValueSetRAFlagCode =  https://fhir.nhs.uk/England/ValueSet/RA-FlagCode
-Alias: $ExtensionFlagDetail =  http://hl7.org/fhir/StructureDefinition/flag-detail
-
 Profile: RA-Flag
 Parent: Flag
 Id: RA-Flag

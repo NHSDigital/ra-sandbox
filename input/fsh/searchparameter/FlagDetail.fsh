@@ -4,7 +4,7 @@ Title: "SearchParameter for Condition, Flag or Consent resources in the flag-det
 Usage: #definition
 Description: "Search using extension for flag detail extension in Flag resource"
 
-* name = "SearchParameter for flag detail extension used in Flag"
+* name = "SearchParameterFlagDetailExtension"
 * url = "https://fhir.nhs.uk/England/SearchParameter/FlagDetail"
 * version = "0.1.0"
 * status = #active

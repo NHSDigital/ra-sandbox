@@ -8,6 +8,7 @@ Description: "A ValueSet to identify the type/category of Flag."
 * ^version = "0.1.0"
 * ^status = #draft
 * ^date = "2024-02-14"
+* ^experimental = false
 
 * insert NHSEngland-PublisherContactCopyright
 

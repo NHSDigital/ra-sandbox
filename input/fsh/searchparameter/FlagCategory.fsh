@@ -4,7 +4,7 @@ Title: "SearchParameter for Category in Flag"
 Usage: #definition
 Description: "Search by category in the Flag resource"
 
-* name = "SearchParameter for Category in Flag"
+* name = "SearchParameterFlagCategory"
 * url = "https://fhir.nhs.uk/England/SearchParameter/FlagCategory"
 * version = "0.1.0"
 * status = #active

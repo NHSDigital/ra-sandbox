@@ -1,13 +1,6 @@
-Alias: $contractsignertypecodes = http://www.hl7.org/fhir/contractsignertypecodes
-Alias: $RoleClass = http://terminology.hl7.org/CodeSystem/v3-RoleClass
-Alias: $RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
-Alias: $ParticipationFunction = http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction
-Alias: $ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
-Alias: $extra-security-role-type = http://terminology.hl7.org/CodeSystem/extra-security-role-type
-Alias: $CareConnect-SDSJobRoleName-1 = https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1
-
 ValueSet: RA-ProvenanceRole
 Id: RA-ProvenanceRole
+Title: "ReasonableAdjustmentsProvenanceRole"
 Description: "A ValueSet to identify the role in which someone recording provenance is acting"
 
 * ^name = "ReasonableAdjustmentsProvenanceRole"
@@ -15,6 +8,7 @@ Description: "A ValueSet to identify the role in which someone recording provena
 * ^version = "0.1.0"
 * ^status = #draft
 * ^date = "2024-02-14"
+* ^experimental = false
 
 * insert NHSEngland-PublisherContactCopyright
 

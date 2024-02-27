@@ -1,7 +1,3 @@
-Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
-Alias: $sct = https://snomed.info/sct
-Alias: $v3-DataOperation = http://terminology.hl7.org/CodeSystem/v3-DataOperation
-
 Instance: AddConditionTransactionExample2
 InstanceOf: Bundle
 Usage: #example

@@ -1,6 +1,3 @@
-Alias: $ValueSetRAConditionCategory =  https://fhir.nhs.uk/England/ValueSet/RA-ConditionCategory
-Alias: $ValueSetRAConditionCode =  https://fhir.nhs.uk/England/ValueSet/RA-ConditionCode
-
 Profile: RA-Condition
 Parent: Condition
 Id: RA-Condition

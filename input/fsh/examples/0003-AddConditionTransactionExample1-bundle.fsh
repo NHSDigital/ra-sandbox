@@ -1,8 +1,3 @@
-Alias: $consentscope = http://terminology.hl7.org/CodeSystem/consentscope
-Alias: $sct = https://snomed.info/sct
-Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
-Alias: $v3-DataOperation = http://terminology.hl7.org/CodeSystem/v3-DataOperation
-
 Instance: AddConditionTransactionExample1
 InstanceOf: Bundle
 Usage: #example

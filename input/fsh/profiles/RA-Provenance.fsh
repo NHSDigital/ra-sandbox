@@ -1,5 +1,3 @@
-Alias: $ValueSetRAProvenanceRole =  https://fhir.nhs.uk/England/ValueSet/RA-ProvenanceRole
-
 Profile: RA-Provenance
 Parent: Provenance
 Id: RA-Provenance
