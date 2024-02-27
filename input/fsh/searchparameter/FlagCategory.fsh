@@ -5,7 +5,7 @@ Usage: #definition
 Description: "Search by category in the Flag resource"
 
 * name = "SearchParameter for Category in Flag"
-* url = "http://localhost:8080/fhir/SearchParameter/FlagCategory"
+* url = "https://fhir.nhs.uk/England/SearchParameter/FlagCategory"
 * version = "0.1.0"
 * status = #active
 * date = "2024-02-14"

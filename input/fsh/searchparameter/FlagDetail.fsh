@@ -5,7 +5,7 @@ Usage: #definition
 Description: "Search using extension for flag detail extension in Flag resource"
 
 * name = "SearchParameter for flag detail extension used in Flag"
-* url = "http://localhost:8080/fhir/SearchParameter/FlagDetail"
+* url = "https://fhir.nhs.uk/England/SearchParameter/FlagDetail"
 * version = "0.1.0"
 * status = #active
 * date = "2024-02-14"
