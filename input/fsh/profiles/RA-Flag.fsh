@@ -1,13 +1,10 @@
-Alias: $ValueSetRAFlagCategory =  https://fhir.nhs.uk/England/ValueSet/RA-FlagCategory
-Alias: $ValueSetRAFlagCode =  https://fhir.nhs.uk/England/ValueSet/RA-FlagCode
-Alias: $ExtensionFlagDetail =  http://hl7.org/fhir/StructureDefinition/flag-detail
-
 Profile: RA-Flag
 Parent: Flag
 Id: RA-Flag
 Title: "Reasonable Adjustments Flag Profile"
 Description: "To (optionally) record an individual Adjustment for a Reasonable Adjustment Flag"
 
+* ^name = "ReasonableAdjustmentsFlag"
 * ^url = "https://fhir.nhs.uk/England/StructureDefinition/RA-Flag"
 * ^version = "0.1.0"
 * ^status = #draft

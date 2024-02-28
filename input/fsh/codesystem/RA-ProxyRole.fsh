@@ -3,11 +3,12 @@ Id: RA-ProxyRole
 Title: "Reasonable Adjustments Record Proxy Role"
 Description: "A CodeSystem to identify the type/role of the proxy involved"
 
-* ^name = "Reasonable Adjustments Record Proxy Role"
+* ^name = "ReasonableAdjustmentsProxyRole"
 * ^url = "https://fhir.nhs.uk/England/CodeSystem/RA-ProxyRole"
 * ^version = "0.1.0"
 * ^status = #draft
 * ^date = "2024-02-14"
+* ^experimental = false
 
 * insert NHSEngland-PublisherContactCopyright
 

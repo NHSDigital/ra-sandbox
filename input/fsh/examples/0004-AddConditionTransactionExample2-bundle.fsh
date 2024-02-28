@@ -1,11 +1,3 @@
-Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
-Alias: $CareConnect-ConditionCategory-1 = https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-ConditionCategory-1
-Alias: $sct = https://snomed.info/sct
-Alias: $RARecord-AdjustmentCategory-1 = https://fhir.nhs.uk/STU3/CodeSystem/RARecord-AdjustmentCategory-1
-Alias: $RARecord-FlagCategory-1 = https://fhir.nhs.uk/STU3/CodeSystem/RARecord-FlagCategory-1
-Alias: $v3-DataOperation = http://terminology.hl7.org/CodeSystem/v3-DataOperation
-Alias: $CareConnect-SDSJobRoleName-1 = https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1
-
 Instance: AddConditionTransactionExample2
 InstanceOf: Bundle
 Usage: #example
@@ -43,7 +35,7 @@ Instance: condition-example-2
 InstanceOf: Condition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active
-* category = $CareConnect-ConditionCategory-1#issue "Issue"
+* category = RA-ConditionCategory#issue "Issue"
 * code = $sct#73618009 "Autistic spectrum disorder with isolated skills"
 * subject = Reference(urn:uuid:6253c43b-5cc8-4645-93b1-38e41be82a77)
 
@@ -51,8 +43,8 @@ Instance: condition-flag-example-2
 InstanceOf: Flag
 Usage: #inline
 * status = #active
-* code = $RARecord-AdjustmentCategory-1#001 "Communication support"
-* category = $RARecord-FlagCategory-1#NRAF "National Reasonable Adjustments Flag"
+* code = RA-AdjustmentCategory#001 "Communication support"
+* category = RA-FlagCategory#NRAF "National Reasonable Adjustments Flag"
 * subject = Reference(urn:uuid:6253c43b-5cc8-4645-93b1-38e41be82a77)
 * contained.resourceType = "Provenance"
 * contained.id = "55ac7111-dbd1-42f2-906c-a167b04d47ce"
