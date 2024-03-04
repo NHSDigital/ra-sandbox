@@ -23,7 +23,7 @@ If the patient does not have the capacity to consent, then a patient advocate ma
 
 If consent is not given, then this will be recorded.  If there was previous consent to record adjustments, but the consent is then revoked, then all adjustment records must also be removed.
 
-<!--
+
 #### Activty diagram (plantuml)
 
 <div style="text-align: left;">
@@ -33,7 +33,7 @@ If consent is not given, then this will be recorded.  If there was previous cons
 </div>
 
 #### BPMN (bpmn.io / BPMN 2.0)
--->
+
 
 <div>
     <img style="max-width: 100%" alt="Activity created in draw.io!" src="consent-to-treatment.svg"/>
