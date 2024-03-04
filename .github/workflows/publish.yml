@@ -76,7 +76,7 @@ jobs:
     # Add a dependency to the build job
     needs: build
     # Only deploy on development branch
-    if: github.ref == 'refs/heads/development'
+    # if: github.ref == 'refs/heads/development'
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
       pages: write      # to deploy to Pages

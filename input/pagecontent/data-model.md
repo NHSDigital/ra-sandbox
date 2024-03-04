@@ -7,3 +7,23 @@ The RA record is made up of Consent, Condition, Flag and Provenances resources. 
 <div>
     <img style="max-width: 70%" alt="RA Record Data Model" src="data-model-contained-provenance.drawio.png"/>
 </div>
+
+<div class="mermaid">
+erDiagram
+
+  Patient ||..|| Consent : provides
+  Patient ||--o{ Condition : has
+  Patient ||--o| "Master Flag" : "has"
+  Patient ||--o{ "Adjustment Flag" : has
+
+  Consent ||--|| Provenance : contains
+  Condition ||--|| Provenance : contains
+  "Master Flag" ||--|| Provenance : contains
+  "Adjustment Flag" ||--|| Provenance : contains
+</div>
+
+<div style="text-align: left;">
+
+{%include data-model.svg%}
+
+</div>
