@@ -6,9 +6,7 @@ In some cases consent can also be obtained from a lasting power of attorney for 
 
 ### Use Case Illustration
 
-As capacity can sometimes change over time, it should be assessed at the time that consent is required.
-
-This will usually be done by an appropriately trained and experienced healthcare professional (i.e. Practitioner) who's either:
+As capacity can sometimes change over time, it should be assessed at the time that consent is required. This will usually be done by an appropriately trained and experienced healthcare professional (i.e. Practitioner) who's either:
 
 * recommending the treatment or investigation
 * involved in carrying it out
