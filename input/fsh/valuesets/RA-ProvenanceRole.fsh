@@ -458,7 +458,6 @@ Description: "A ValueSet to identify the role in which someone recording provena
 * $ParticipationType#INF
 * $ParticipationType#IRCP
 * $ParticipationType#LA
-* $ParticipationType#IRCP
 * $ParticipationType#TRC
 * $ParticipationType#WIT
 * DCM#110150
