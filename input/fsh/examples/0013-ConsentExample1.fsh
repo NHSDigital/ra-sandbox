@@ -1,6 +1,10 @@
 Instance: ConsentExample1
 InstanceOf: Consent
 Usage: #example
+* extension[0].url = "https://fhir.nhs.uk/England/StructureDefinition/Extension-ConsentCreateSummary"
+* extension[=].valueAnnotation.text = "Example of consent create summary extension text"
+* extension[+].url = "https://fhir.nhs.uk/England/StructureDefinition/Extension-ConsentRemoveSummary"
+* extension[=].valueAnnotation.text = "Example of consent remove summary extension text"
 * status = #active
 * scope = $consentscope#patient-privacy
 * category = RA-FlagCategory#NRAF "National Reasonable Adjustments Flag"
@@ -8,6 +12,7 @@ Usage: #example
 * patient = Reference(Patient/PatientExample1)
 * policy.authority = "https://www.gov.uk/"
 * policy.uri = "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/535024/data-security-review.pdf"
+* policyRule = RA-ProxyRole#001
 * contained.resourceType = "Provenance"
 * contained.id = "4c75ce1f-1ad7-4391-b5f6-104754c7e904"
 * contained.target.reference = "#"

@@ -27,8 +27,7 @@ alt Consent has been given
   pra <-- api : OperationOutcome
 else Consent has not been given/been revoked
   pra ->  api : Record consent was not given
-  api ->  con : Create/update resource
-  con ->  con : Validate
+  api ->  con : Delete adjustment consent
   api <-- con : return
   api ->  mas : Delete adjustment master flag
   api <-- mas : return
