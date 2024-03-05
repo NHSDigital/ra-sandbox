@@ -1,11 +1,11 @@
-Profile: RA-Flag
+Profile: RA-MasterFlag
 Parent: Flag
-Id: RA-Flag
-Title: "Reasonable Adjustments Flag Profile"
-Description: "To (optionally) record an individual Adjustment for a Reasonable Adjustment Flag"
+Id: RA-MasterFlag
+Title: "Reasonable Adjustments Master Flag Profile"
+Description: "To record whether Reasonable Adjustment Flags exist"
 
-* ^name = "ReasonableAdjustmentsFlag"
-* ^url = "https://fhir.nhs.uk/England/StructureDefinition/RA-Flag"
+* ^name = "ReasonableAdjustmentsMasterFlag"
+* ^url = "https://fhir.nhs.uk/England/StructureDefinition/RA-MasterFlag"
 * ^version = "0.1.0"
 * ^status = #draft
 * ^date = "2024-02-14"
@@ -19,7 +19,7 @@ Description: "To (optionally) record an individual Adjustment for a Reasonable A
 * extension[adjustmentNotes].value[x] only Annotation
 * extension[adjustmentNotes].valueAnnotation 1..
 
-* extension[flagDetail].valueReference only Reference(RA-Flag or RA-Consent or RA-Provenance)
+* extension[flagDetail].valueReference only Reference(RA-AdjustmentFlag or RA-Consent or RA-Provenance)
 
 * contained ^slicing.discriminator.type = #profile
 * contained ^slicing.rules = #open

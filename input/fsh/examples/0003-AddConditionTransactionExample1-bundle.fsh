@@ -23,18 +23,6 @@ Usage: #example
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Flag/04adcb5b-3de7-4f67-97f0-b2fdf941ba85"
 
-Instance: PatientExample1
-InstanceOf: Patient
-Usage: #inline
-* identifier.system = "https://fhir.nhs.uk/Id/nhs-number"
-* identifier.value = "9912003888"
-* active = true
-* name.use = #official
-* name.family = "Duck"
-* name.given = "Donald"
-* gender = #male
-* birthDate = "1970-01-01"
-
 Instance: ConditionExample1
 InstanceOf: Condition
 Usage: #inline

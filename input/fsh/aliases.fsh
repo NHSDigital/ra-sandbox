@@ -15,6 +15,7 @@ Alias: $CareConnect-SDSJobRoleName-1 = https://fhir.hl7.org.uk/STU3/CodeSystem/C
 Alias: $ValueSetRAConditionCategory =  https://fhir.nhs.uk/England/ValueSet/RA-ConditionCategory
 Alias: $ValueSetRAConditionCode =  https://fhir.nhs.uk/England/ValueSet/RA-ConditionCode
 Alias: $ValueSetRAFlagCategory =  https://fhir.nhs.uk/England/ValueSet/RA-FlagCategory
+Alias: $ValueSetRAAdjustmentCategory =  https://fhir.nhs.uk/England/ValueSet/RA-AdjustmentCategory
 Alias: $ValueSetRAFlagCode =  https://fhir.nhs.uk/England/ValueSet/RA-FlagCode
 Alias: $ExtensionFlagDetail =  http://hl7.org/fhir/StructureDefinition/flag-detail
 Alias: $ValueSetRAProvenanceRole =  https://fhir.nhs.uk/England/ValueSet/RA-ProvenanceRole
