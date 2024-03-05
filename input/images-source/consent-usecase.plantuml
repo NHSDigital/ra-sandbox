@@ -10,8 +10,8 @@ package Consenter {
 
 usecase "Consent to share information" as CON
 
-pat --> CON
-pad --> CON
-pra --> CON
+pat -- CON
+pad -- CON
+pra -- CON
 
 @enduml
