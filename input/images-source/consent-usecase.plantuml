@@ -8,7 +8,7 @@ package Consenter {
   actor Patient as pat
 }
 
-usecase "Consent to treatment" as CON
+usecase "Consent to share information" as CON
 
 pat --> CON
 pad --> CON
