@@ -18,9 +18,7 @@ As capacity can sometimes change over time, it should be assessed at the time th
 If the patient does not have the capacity to consent, then a patient advocate may provide consent for them.
 
 <div style="text-align: left;">
-
   {%include consent-usecase.svg%}
-
 </div>
 
 #### Scenarios
