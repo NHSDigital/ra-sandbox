@@ -13,10 +13,10 @@ Description: "To (optionally) record an individual Adjustment for a Reasonable A
 * insert NHSEngland-PublisherContactCopyright
 
 * extension contains
-    Extension-AdjustmentNotes named adjustmentNotes 0..1 
+    Extension-FlagNotes named flagNotes 0..1 
 
-* extension[adjustmentNotes].value[x] only Annotation
-* extension[adjustmentNotes].valueAnnotation 1..
+* extension[flagNotes].value[x] only Annotation
+* extension[flagNotes].valueAnnotation 1..
 
 * category ^slicing.discriminator.type = #profile
 * category ^slicing.rules = #open

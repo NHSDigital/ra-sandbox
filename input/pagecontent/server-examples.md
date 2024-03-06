@@ -34,13 +34,13 @@ All examples are available in a [Postman collection](assets/postman/postman_coll
 
 ### Examples
 
-The examples here describe the API options related to the workflow given in the use case [Add RA Record](add-ra-record.html).
+The examples here describe the API options related to the workflow given in the use case [Add RA Record](add-reasonable-adjustment-record.html).
 
 See the [Data Model](data-model.html) for details on the relationships between the resources.  
 
 #### Add RA Record
 
-This section provides examples for those given in the use case [Add RA Record](add-ra-record.html).
+This section provides examples for those given in the use case [Add RA Record](add-reasonable-adjustment-record.html).
 
 ##### Example 1
 

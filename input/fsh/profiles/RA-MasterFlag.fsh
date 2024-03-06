@@ -13,11 +13,11 @@ Description: "To record whether Reasonable Adjustment Flags exist"
 * insert NHSEngland-PublisherContactCopyright
 
 * extension contains
-    Extension-AdjustmentNotes named adjustmentNotes 0..1 and
+    Extension-FlagNotes named flagNotes 0..1 and
     $ExtensionFlagDetail named flagDetail 0..*
 
-* extension[adjustmentNotes].value[x] only Annotation
-* extension[adjustmentNotes].valueAnnotation 1..
+* extension[flagNotes].value[x] only Annotation
+* extension[flagNotes].valueAnnotation 1..
 
 * extension[flagDetail].valueReference only Reference(RA-AdjustmentFlag or RA-Consent or RA-Provenance)
 
