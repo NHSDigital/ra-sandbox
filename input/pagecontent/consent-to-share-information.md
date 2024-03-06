@@ -8,7 +8,7 @@ In some cases consent can also be obtained from a lasting power of attorney for 
 
 As an example of best practice, existing guiduance using a 'best interest decision' can be found in the defintion for [consent to treatment](https://www.nhs.uk/conditions/consent-to-treatment). This describe cases where a patient advocate may provide consent when the patient [does not have the capacity to do so](https://www.nhs.uk/conditions/consent-to-treatment/capacity). 
 
-### Use Case Illustration
+### Use Case
 
 As capacity can sometimes change over time, it should be assessed at the time that consent is required. This will usually be done by an appropriately trained and experienced healthcare professional (i.e. Practitioner) who's either:
 
@@ -18,12 +18,39 @@ As capacity can sometimes change over time, it should be assessed at the time th
 If the patient does not have the capacity to consent, then a patient advocate may provide consent for them.
 
 <div style="text-align: left;">
-
-{%include consent-usecase.svg%}
-
+  {%include consent-usecase.svg%}
 </div>
 
-### Workflow Illustration
+#### Scenarios
+
+```gherkin
+Given a practitioner has received consent from a patient
+And the consent is for reasonable adjustments
+When a practioner records the consent
+Then details of who obtained the consent will be recorded
+And the consent will be linked to the patient
+
+Given a patient or their advocate provides consent
+And the consent is for reasonable adjustments
+When a practioner records the consent
+Then consent will be marked as active
+And the consent will be linked to the patient
+
+Given a patient or their advocate does not provide consent
+And the consent is for reasonable adjustments
+When a practioner records the consent
+Then consent will be marked as inactive
+And the consent will be linked to the patient
+
+Given a patient or their advocate revokes consent
+And the consent is for reasonable adjustments
+When a practioner records the consent
+Then consent will be marked as inactive
+And all flags will be deleted
+And all conditions will be deleted
+```
+
+### Workflow
 
 If consent is not given, then this will be recorded.  If there was previous consent to record adjustments, but the consent is then revoked, then all adjustment records must also be removed.
 
