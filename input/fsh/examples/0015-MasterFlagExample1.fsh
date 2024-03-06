@@ -2,7 +2,7 @@ Instance: MasterFlagExample1
 InstanceOf: Flag
 Usage: #example
 * extension[0].url = "https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes"
-* extension[=].valueAnnotation.text = "Example of adjustment notes extension text in master flag"
+* extension[=].valueAnnotation.text = "Example of flag notes extension text in master flag"
 * status = #active
 * category = RA-FlagCategory#NRAF "National Reasonable Adjustments Flag"
 * code = RA-FlagCategory#NRAF "National Reasonable Adjustments Flag"
