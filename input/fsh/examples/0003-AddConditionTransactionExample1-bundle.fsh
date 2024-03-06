@@ -3,27 +3,27 @@ InstanceOf: Bundle
 Usage: #example
 * type = #transaction
 * entry[0].fullUrl = "urn:uuid:6253c43b-5cc8-4645-93b1-38e41be82a77"
-* entry[=].resource = patient-example-1
+* entry[=].resource = PatientExample1
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Patient?identifier=9912003888"
 * entry[+].fullUrl = "urn:uuid:959fbc3c-0907-419e-aa3d-ab88f2d90c5e"
-* entry[=].resource = consent-example-1
+* entry[=].resource = ConsentExample1
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Consent?patient=urn:uuid:6253c43b-5cc8-4645-93b1-38e41be82a77"
 * entry[+].fullUrl = "urn:uuid:41a84a93-1c95-4162-b13c-1c617509e6e2"
-* entry[=].resource = condition-example-1
+* entry[=].resource = ConditionExample1
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Condition?patient=urn:uuid:6253c43b-5cc8-4645-93b1-38e41be82a77"
 * entry[+].fullUrl = "urn:uuid:fba99f70-fe1d-42e2-b77a-916e44b53c19"
-* entry[=].resource = master-flag-example-1
+* entry[=].resource = MasterFlagExample1
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Flag/fba99f70-fe1d-42e2-b77a-916e44b53c19"
 * entry[+].fullUrl = "urn:uuid:04adcb5b-3de7-4f67-97f0-b2fdf941ba85"
-* entry[=].resource = condition-flag-example-1
+* entry[=].resource = ConditionFlagExample1
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Flag/04adcb5b-3de7-4f67-97f0-b2fdf941ba85"
 
-Instance: patient-example-1
+Instance: PatientExample1
 InstanceOf: Patient
 Usage: #inline
 * identifier.system = "https://fhir.nhs.uk/Id/nhs-number"
@@ -35,18 +35,7 @@ Usage: #inline
 * gender = #male
 * birthDate = "1970-01-01"
 
-Instance: consent-example-1
-InstanceOf: Consent
-Usage: #inline
-* status = #active
-* scope = $consentscope#patient-privacy
-* category = RA-FlagCategory#NRAF "National Reasonable Adjustments Flag"
-* provision.purpose = $sct#370856009 "Limiting access to confidential patient information"
-* patient = Reference(urn:uuid:6253c43b-5cc8-4645-93b1-38e41be82a77)
-* policy.authority = "https://www.gov.uk/"
-* policy.uri = "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/535024/data-security-review.pdf"
-
-Instance: condition-example-1
+Instance: ConditionExample1
 InstanceOf: Condition
 Usage: #inline
 * clinicalStatus = $condition-clinical#active
@@ -54,7 +43,7 @@ Usage: #inline
 * code = RA-ConditionCode#5 "Learning or understanding or concentrating"
 * subject = Reference(urn:uuid:6253c43b-5cc8-4645-93b1-38e41be82a77)
 
-Instance: master-flag-example-1
+Instance: MasterFlagExample1
 InstanceOf: Flag
 Usage: #inline
 * status = #active
@@ -70,7 +59,7 @@ Usage: #inline
 * contained.agent.who.reference = "https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9"
 * contained.agent.onBehalfOf.reference = "https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7"
 
-Instance: condition-flag-example-1
+Instance: ConditionFlagExample1
 InstanceOf: Flag
 Usage: #inline
 * status = #active

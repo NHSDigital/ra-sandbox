@@ -1,0 +1,41 @@
+@startuml
+
+skinparam actorStyle hollow
+
+actor        "Practitioner"     as pra
+actor        "Patient"          as pat
+actor        "Patient Advocate" as pad
+participant  "FHIR API"         as api
+entity       "Consent"          as con
+entity       "Master Flag"      as mas
+entity       "Adjustment Flag"  as adj
+entity       "Condition"        as cod
+
+alt Patient provides consent
+  pra ->  pat : Request consent
+  pra <-- pat : Provide consent
+else Advocate provides consent
+  pra ->  pad : Request Consent
+  pra <-- pad : Provide consent
+end
+
+alt Consent has been given
+  pra ->  api : Record consent given
+  api ->  con : Create/update resource
+  con ->  con : Validate
+  api <-- con : return
+  pra <-- api : OperationOutcome
+else Consent has not been given/been revoked
+  pra ->  api : Record consent was not given
+  api ->  con : Delete adjustment consent
+  api <-- con : return
+  api ->  mas : Delete adjustment master flag
+  api <-- mas : return
+  api ->  adj : Delete adjustment flag(s)
+  api <-- adj : return
+  api ->  cod : Delete condition flag(s)
+  api <-- cod : return
+  pra <-- api : OperationOutcome
+end
+
+@enduml

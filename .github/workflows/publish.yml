@@ -34,6 +34,9 @@ jobs:
       - name: Install Jekyll
         run: sudo gem install jekyll jekyll-plantuml
 
+      - name: Install Graphvix
+        run: sudo apt install graphviz
+
       - name: Run FHIR server (TODO - load package from vars and validate - maybe just let the publisher handle that...)
         run: docker run -d -p 8080:8080 -e hapi.fhir.daoconfig_client_id_strategy=UUID -e hapi.fhir.client_id_strategy=ANY hapiproject/hapi:latest
 
@@ -76,7 +79,7 @@ jobs:
     # Add a dependency to the build job
     needs: build
     # Only deploy on development branch
-    if: github.ref == 'refs/heads/development'
+    # if: github.ref == 'refs/heads/development'
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
       pages: write      # to deploy to Pages

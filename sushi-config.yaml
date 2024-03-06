@@ -79,9 +79,10 @@ menu:
   Sitemap: toc.html
   Data Model: data-model.html
   Use Cases:
-    Add RA Record: add-ra-record.html
-    Retrieve RA Record: retrieve-ra-record.html
-    Remove RA Record: remove-ra-record.html
+    Consent to Share Information: consent-to-share-information.html
+    Add Reasonable Adjustment Record: add-ra-record.html
+    Retrieve Reasonable Adjustment Record: retrieve-ra-record.html
+    Remove Reasonable Adjustment Record: remove-ra-record.html
   Server Examples: server-examples.html
   Artifacts: artifacts.html
   Contact Us: todo.html
