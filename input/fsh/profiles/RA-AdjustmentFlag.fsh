@@ -23,7 +23,7 @@ Description: "To (optionally) record an individual Adjustment for a Reasonable A
 * category ^slicing.discriminator.path = "system"
 
 * category contains masterFlag 1.. MS
-* category[masterFlag] from $ValueSetRAFlagCategory (required)
+* category[masterFlag] from $ValueSetPatientFlagCategory (required)
 
 * category contains adjustmentFlag 1.. MS
 * category[adjustmentFlag] from $ValueSetRAAdjustmentCategory (required)

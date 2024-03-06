@@ -4,7 +4,7 @@ Usage: #example
 * extension[0].url = "https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes"
 * extension[=].valueAnnotation.text = "Example of adjustment notes extension text in adjustment flag"
 * status = #active
-* category[0] = RA-FlagCategory#NRAF "National Reasonable Adjustments Flag"
+* category[0] = PatientFlagCategory#NRAF "National Reasonable Adjustments Flag"
 * category[+] = RA-AdjustmentCategory#011 "Bespoke Reasonable adjustments"
 * code = $sct#73618009 "Autistic spectrum disorder with isolated skills"
 * subject = Reference(Patient/PatientExample1)

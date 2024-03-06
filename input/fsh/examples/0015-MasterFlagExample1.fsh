@@ -4,8 +4,7 @@ Usage: #example
 * extension[0].url = "https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes"
 * extension[=].valueAnnotation.text = "Example of flag notes extension text in master flag"
 * status = #active
-* category = RA-FlagCategory#NRAF "National Reasonable Adjustments Flag"
-* code = RA-FlagCategory#NRAF "National Reasonable Adjustments Flag"
+* code = PatientFlagCategory#NRAF "National Reasonable Adjustments Flag"
 * subject = Reference(Patient/PatientExample1)
 * contained.resourceType = "Provenance"
 * contained.id = "4c75ce1f-1ad7-4391-b5f6-104754c7e904"

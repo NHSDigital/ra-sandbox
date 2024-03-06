@@ -28,7 +28,7 @@ Description: "To record consent to capture Reasonable Adjustments and Reasons fo
 * contained contains provenance 1..1
 * contained[provenance] only RA-Provenance
 
-* category from $ValueSetRAFlagCategory (extensible)
+* category from $ValueSetPatientFlagCategory (extensible)
 * policy 1..1
 * policy.uri 1..
 * policyRule 1..

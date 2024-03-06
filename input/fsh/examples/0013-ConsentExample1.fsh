@@ -7,7 +7,7 @@ Usage: #example
 * extension[=].valueAnnotation.text = "Example of consent remove summary extension text"
 * status = #active
 * scope = $consentscope#patient-privacy
-* category = RA-FlagCategory#NRAF "National Reasonable Adjustments Flag"
+* category = PatientFlagCategory#NRAF "National Reasonable Adjustments Flag"
 * provision.purpose = $sct#370856009 "Limiting access to confidential patient information"
 * patient = Reference(Patient/PatientExample1)
 * policy.authority = "https://www.gov.uk/"

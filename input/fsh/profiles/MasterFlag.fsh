@@ -1,11 +1,11 @@
-Profile: RA-MasterFlag
+Profile: MasterFlag
 Parent: Flag
-Id: RA-MasterFlag
-Title: "Reasonable Adjustments Master Flag Profile"
-Description: "To record whether Reasonable Adjustment Flags exist"
+Id: MasterFlag
+Title: "Patient Master Flag Profile"
+Description: "To record whether a Patient Flags exists"
 
-* ^name = "ReasonableAdjustmentsMasterFlag"
-* ^url = "https://fhir.nhs.uk/England/StructureDefinition/RA-MasterFlag"
+* ^name = "MasterFlag"
+* ^url = "https://fhir.nhs.uk/England/StructureDefinition/MasterFlag"
 * ^version = "0.1.0"
 * ^status = #draft
 * ^date = "2024-02-14"
@@ -28,6 +28,6 @@ Description: "To record whether Reasonable Adjustment Flags exist"
 * contained[provenance] only RA-Provenance
 
 * category 1.. MS
-* category from $ValueSetRAFlagCategory (required)
+* category from $ValueSetPatientFlagCategory (required)
 * code MS
 * code from $ValueSetRAFlagCode (extensible)
