@@ -18,9 +18,9 @@ Description: "Record an individual flag for an NHS England programme."
 * extension[flagNotes].value[x] only Annotation
 * extension[flagNotes].valueAnnotation 1..
 
-* category ^slicing.discriminator.type = #type
+* category ^slicing.discriminator.type = #pattern
 * category ^slicing.rules = #open
-* category ^slicing.discriminator.path = "system"
+* category ^slicing.discriminator.path = "$this"
 
 * category contains patientFlag 1.. MS
 * category[patientFlag] from $ValueSetPatientFlagCategory (required)

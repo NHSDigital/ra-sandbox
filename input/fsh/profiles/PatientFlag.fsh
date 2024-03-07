@@ -24,6 +24,7 @@ Description: "To record whether a Patient Flags exists"
 * contained ^slicing.discriminator.type = #profile
 * contained ^slicing.rules = #open
 * contained ^slicing.discriminator.path = "contained"
+
 * contained contains provenance 1..1
 * contained[provenance] only FlagProvenance
 

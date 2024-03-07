@@ -5,7 +5,8 @@ Usage: #example
 * meta.profile = "https://fhir.nhs.uk/England/StructureDefinition/FlagCondition"
 
 * clinicalStatus = $condition-clinical#active
-* category = RA-ConditionCategory#issue "Issue"
+* category[0] = PatientFlagCategory#NRAF "National Reasonable Adjustments Flag"
+* category[+] = RA-ConditionCategory#issue "Issue"
 * code = RA-ConditionCode#5 "Learning or understanding or concentrating"
 * subject = Reference(Patient/PatientExample1)
 
