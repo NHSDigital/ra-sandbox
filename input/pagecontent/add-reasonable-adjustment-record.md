@@ -108,7 +108,7 @@ The following set of examples constitute the individual associated resources wit
 A transaction Bundle is also given that allows these resources (plus the patient) to be entered in an atomic traction.  It uses PUTs, where in the case of an intial update, it may be done as a [conditional update](https://www.hl7.org/fhir/http.html#cond-update)
 
 * [Consent](Consent-ConsentExample1.html)
-* [Master flag](Flag-MasterFlagExample1.html)
+* [Master flag](Flag-RAMasterFlagExample1.html)
 * [Adjustment flag 1](Flag-RAFlagExample1.html)
 * [Condition 1](Condition-ConditionExample1.html)
 * [Transaction Bundle 1](Bundle-AddConditionTransactionExample1.html)

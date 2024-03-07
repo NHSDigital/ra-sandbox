@@ -1,4 +1,4 @@
-Instance: MasterFlagExample1
+Instance: RAMasterFlagExample1
 InstanceOf: Flag
 Usage: #example
 * extension[0].url = "https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes"
