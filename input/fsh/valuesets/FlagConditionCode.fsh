@@ -1,7 +1,7 @@
 ValueSet: FlagConditionCode
 Id: FlagConditionCode
-Title: "NHS England Flag Condition Code"
-Description: "A ValueSet to identify the SNOMED-CT concept representing a condition code in a flag within NHS England"
+Title: "NHSE Flag Condition Code"
+Description: "A ValueSet to identify a condition."
 
 * ^name = "ReasonableAdjustmentsConditionCode"
 * ^url = "https://fhir.nhs.uk/England/ValueSet/FlagConditionCode"

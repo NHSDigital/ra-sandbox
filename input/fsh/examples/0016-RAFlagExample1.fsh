@@ -1,14 +1,18 @@
 Instance: RAFlagExample1
 InstanceOf: Flag
-Title: "Example 1 of a Flag resource for Reasonable Adjustments"
+Title: "RA Example 1 of a Flag resource for Reasonable Adjustments"
 Usage: #example
+* meta.profile = "https://fhir.nhs.uk/England/StructureDefinition/ProgrammeFlag"
+
 * extension[0].url = "https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes"
 * extension[=].valueAnnotation.text = "Example of flag notes extension text in adjustment flag"
+
 * status = #active
 * category[0] = PatientFlagCategory#NRAF "National Reasonable Adjustments Flag"
 * category[+] = RA-FlagCategory#001 "Communication support"
 * code = $sct#1082681000000103 "Requires support for receptive communication needs"
 * subject = Reference(Patient/PatientExample1)
+
 * contained.resourceType = "Provenance"
 * contained.id = "4c75ce1f-1ad7-4391-b5f6-104754c7e904"
 * contained.target.reference = "#"

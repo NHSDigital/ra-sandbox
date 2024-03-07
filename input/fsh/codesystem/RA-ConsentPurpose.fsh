@@ -1,7 +1,7 @@
 CodeSystem: RA-ConsentPurpose
 Id: RA-ConsentPurpose
-Title: "Reasonable Adjustments Record Consent Purpose"
-Description: "A CodeSystem to identify the purpose of the consent given"
+Title: "RA Record Consent Purpose"
+Description: "A CodeSystem to identify the purpose of the consent given within Reasonable Adjustments"
 
 * ^name = "ReasonableAdjustmentsConsentPurpose"
 * ^url = "https://fhir.nhs.uk/England/CodeSystem/RA-ConsentPurpose"

@@ -1,7 +1,7 @@
 ValueSet: FGM-FlagCode
 Id: FGM-FlagCode
-Title: "Female Genital Mutilation Flag Code"
-Description: "A ValueSet containing flag codes for the FGM NHS England Programme"
+Title: "FGM Flag Code"
+Description: "A ValueSet containing flag codes for the Female Genital Mutilation NHS England Programme"
 
 * ^name = "FGMFlagCode"
 * ^url = "https://fhir.nhs.uk/England/ValueSet/FGM-FlagCode"

@@ -1,6 +1,6 @@
 Instance: FlagCode
 InstanceOf: SearchParameter
-Title: "SearchParameter for Code in Flag"
+Title: "Search for Code in Flag"
 Usage: #definition
 Description: "Search by code in the Flag resource"
 

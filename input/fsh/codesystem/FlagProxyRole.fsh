@@ -1,10 +1,10 @@
-CodeSystem: RA-ProxyRole
-Id: RA-ProxyRole
-Title: "Reasonable Adjustments Record Proxy Role"
+CodeSystem: FlagProxyRole
+Id: FlagProxyRole
+Title: "NHSE Flag Proxy Role"
 Description: "A CodeSystem to identify the type/role of the proxy involved"
 
-* ^name = "ReasonableAdjustmentsProxyRole"
-* ^url = "https://fhir.nhs.uk/England/CodeSystem/RA-ProxyRole"
+* ^name = "FlagProxyRole"
+* ^url = "https://fhir.nhs.uk/England/CodeSystem/FlagProxyRole"
 * ^version = "0.1.0"
 * ^status = #draft
 * ^date = "2024-02-14"

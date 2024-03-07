@@ -6,7 +6,7 @@ Usage: #example
 * identifier.value = "9912003888"
 * active = true
 * name.use = #official
-* name.family = "Marks"
-* name.given = "Sahil"
+* name.family = "Mann"
+* name.given = "Alan"
 * gender = #male
 * birthDate = "1970-01-01"

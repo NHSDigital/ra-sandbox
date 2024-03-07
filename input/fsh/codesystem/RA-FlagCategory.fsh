@@ -1,7 +1,7 @@
 CodeSystem: RA-FlagCategory
 Id: RA-FlagCategory
-Title: "Reasonable Adjustments Record Adjustment Category"
-Description: "A CodeSystem to identify the category of the Adjustment required"
+Title: "RA Adjustment Category"
+Description: "A CodeSystem to identify the category of the adjustments required"
 
 * ^name = "ReasonableAdjustmentsCategory"
 * ^url = "https://fhir.nhs.uk/England/CodeSystem/RA-FlagCategory"

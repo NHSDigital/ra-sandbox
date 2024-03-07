@@ -52,7 +52,7 @@ The first example [Bundle transaction](Bundle-AddRARecordTransactionExample1.htm
 
 * a Patient resource
 * a Consent resource 
-* a (master) Flag resource (<span style="background-color: #FFFF00">is this really needed?</span>) 
+* a (patient) Flag resource (<span style="background-color: #FFFF00">is this really needed?</span>) 
 * a Condition resource (associated with the following Flag)
 * a Flag resource (associated with the Condition)
 

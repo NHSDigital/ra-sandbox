@@ -1,11 +1,11 @@
-Profile: MasterFlag
+Profile: PatientFlag
 Parent: Flag
-Id: MasterFlag
-Title: "NHS England Patient Master Flag Profile"
+Id: PatientFlag
+Title: "NHSE Patient Flag Profile"
 Description: "To record whether a Patient Flags exists"
 
-* ^name = "MasterFlag"
-* ^url = "https://fhir.nhs.uk/England/StructureDefinition/MasterFlag"
+* ^name = "PatientFlag"
+* ^url = "https://fhir.nhs.uk/England/StructureDefinition/PatientFlag"
 * ^version = "0.1.0"
 * ^status = #draft
 * ^date = "2024-02-14"
@@ -19,13 +19,13 @@ Description: "To record whether a Patient Flags exists"
 * extension[flagNotes].value[x] only Annotation
 * extension[flagNotes].valueAnnotation 1..
 
-* extension[flagDetail].valueReference only Reference(ProgrammeFlag or RA-Consent or RA-Provenance)
+* extension[flagDetail].valueReference only Reference(ProgrammeFlag or FlagConsent or FlagProvenance)
 
 * contained ^slicing.discriminator.type = #profile
 * contained ^slicing.rules = #open
 * contained ^slicing.discriminator.path = "contained"
 * contained contains provenance 1..1
-* contained[provenance] only RA-Provenance
+* contained[provenance] only FlagProvenance
 
 * category 1.. MS
 * category from $ValueSetPatientFlagCategory (required)

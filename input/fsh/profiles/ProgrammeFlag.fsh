@@ -1,7 +1,7 @@
 Profile: ProgrammeFlag
 Parent: Flag
 Id: ProgrammeFlag
-Title: "NHS England Programme Flag Profile"
+Title: "NHSE Programme Flag Profile"
 Description: "Record an individual flag for an NHS England programme."
 
 * ^name = "ProgrammeFlag"

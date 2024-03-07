@@ -1,7 +1,7 @@
 Profile: FlagCondition
 Parent: Condition
 Id: FlagCondition
-Title: "Condition Profile for flags in NHS England"
+Title: "NHSE Condition Profile for flags"
 Description: "Record an individual condition for a flag in NHS England"
 
 * ^name = "ReasonableAdjustmentsCondition"
@@ -14,13 +14,13 @@ Description: "Record an individual condition for a flag in NHS England"
 * contained ^slicing.rules = #open
 * contained ^slicing.discriminator.path = "contained"
 * contained contains provenance 1..1
-* contained[provenance] only RA-Provenance
+* contained[provenance] only FlagProvenance
 
 * insert NHSEngland-PublisherContactCopyright
 
-* category ^slicing.discriminator.type = #type
+* category ^slicing.discriminator.type = #pattern
 * category ^slicing.rules = #open
-* category ^slicing.discriminator.path = "system"
+* category ^slicing.discriminator.path = "$this"
 
 * category contains patientFlag 1.. MS
 * category[patientFlag] from $ValueSetPatientFlagCategory (required)

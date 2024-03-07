@@ -19,7 +19,7 @@ entity "Condition" as cod {
   *contained : Provenance
 }
 
-entity "Master Flag" as mas {
+entity "Patient Flag" as pfg {
   *patient : Patient
   *code : CodeableConcept
   *category : CodeableConcept
@@ -40,11 +40,11 @@ entity "Provenance" as pro {
 
 pat ||..|| con : provides
 pat ||--o{ cod : has
-pat ||--o| mas : "has"
+pat ||--o| pfg : "has"
 pat ||--o{ adj : has
 con ||--|| pro : contains
 cod ||--|| pro : contains
-mas ||--|| pro : contains
+pfg ||--|| pro : contains
 adj ||--|| pro : contains
 
 @enduml

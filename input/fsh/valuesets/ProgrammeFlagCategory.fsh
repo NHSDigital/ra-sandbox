@@ -1,7 +1,7 @@
 ValueSet: ProgrammeFlagCategory
 Id: ProgrammeFlagCategory
-Title: "NHS England Programme Flag Category"
-Description: "A ValueSet to identify the flag category of an NHS England programme"
+Title: "NHSE Programme Flag Category"
+Description: "A ValueSet to identify the flag category."
 
 * ^name = "ProgrammeFlagCategory"
 * ^url = "https://fhir.nhs.uk/England/ValueSet/ProgrammeFlagCategory"

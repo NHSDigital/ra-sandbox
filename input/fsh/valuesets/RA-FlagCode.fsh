@@ -1,7 +1,7 @@
 ValueSet: RA-FlagCode
 Id: RA-FlagCode
-Title: "Reasonable Adjustments Flag Code"
-Description: "A ValueSet to identify codes representing Adjustments required for a patient"
+Title: "RA Flag Code"
+Description: "A ValueSet containing flag codes for the Reasonable Adjustments NHS England Programme"
 
 * ^name = "ReasonableAdjustmentsFlagCode"
 * ^url = "https://fhir.nhs.uk/England/ValueSet/RA-FlagCode"

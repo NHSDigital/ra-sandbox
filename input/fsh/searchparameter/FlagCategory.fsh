@@ -1,6 +1,6 @@
 Instance: FlagCategory
 InstanceOf: SearchParameter
-Title: "SearchParameter for Category in Flag"
+Title: "Search for Category in Flag"
 Usage: #definition
 Description: "Search by category in the Flag resource"
 

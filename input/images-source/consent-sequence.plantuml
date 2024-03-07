@@ -7,7 +7,7 @@ actor        "Patient"          as pat
 actor        "Patient Advocate" as pad
 participant  "FHIR API"         as api
 entity       "Consent"          as con
-entity       "Master Flag"      as mas
+entity       "Patient Flag"     as pfg
 entity       "Adjustment Flag"  as adj
 entity       "Condition"        as cod
 
@@ -29,8 +29,8 @@ else Consent has not been given/been revoked
   pra ->  api : Record consent was not given
   api ->  con : Delete adjustment consent
   api <-- con : return
-  api ->  mas : Delete adjustment master flag
-  api <-- mas : return
+  api ->  pfg : Delete adjustment patient flag
+  api <-- pfg : return
   api ->  adj : Delete adjustment flag(s)
   api <-- adj : return
   api ->  cod : Delete condition flag(s)

@@ -1,6 +1,6 @@
 Instance: RemoveRARecordExample
 InstanceOf: Bundle
-Title: "Example of deleting an RA record with a Transaction"
+Title: "RA Example of deleting an RA record with a Transaction"
 Usage: #example
 * type = #transaction
 * entry[0].request.method = #DELETE

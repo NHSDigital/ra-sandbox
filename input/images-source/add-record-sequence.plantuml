@@ -6,7 +6,7 @@ actor        "Practitioner"     as pra
 actor        "Patient"          as pat
 participant  "FHIR API"         as api
 entity       "Consent"          as con
-entity       "Master Flag"      as mas
+entity       "Patient Flag"      as mas
 entity       "Adjustment Flag"  as adj
 entity       "Condition"        as cod
 

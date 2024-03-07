@@ -1,7 +1,7 @@
 ValueSet: PatientFlagCategory
 Id: PatientFlagCategory
-Title: "NHS England Patient Flag Category"
-Description: "A ValueSet to identify the type/category of Flag."
+Title: "NHSE Patient Flag Category"
+Description: "A ValueSet to identify the type/category of a flag."
 
 * ^name = "PatientFlagCategory"
 * ^url = "https://fhir.nhs.uk/England/ValueSet/PatientFlagCategory"

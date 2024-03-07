@@ -1,7 +1,7 @@
 ValueSet: CPIS-FlagCode
 Id: CPIS-FlagCode
-Title: "Child Protection Information Sharing Flag Code"
-Description: "A ValueSet containing flag codes for the CP-IS NHS England Programme"
+Title: "CPIS Flag Code"
+Description: "A ValueSet containing flag codes for the Child Protection Information Sharing NHS England Programme"
 
 * ^name = "CPISFlagCode"
 * ^url = "https://fhir.nhs.uk/England/ValueSet/CPIS-FlagCode"

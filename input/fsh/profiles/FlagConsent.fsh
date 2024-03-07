@@ -1,11 +1,11 @@
-Profile: RA-Consent
+Profile: FlagConsent
 Parent: Consent
-Id: RA-Consent
-Title: "Reasonable Adjustments Consent Profile"
-Description: "To record consent to capture Reasonable Adjustments and Reasons for Reasonable Adjustments data"
+Id: FlagConsent
+Title: "NHSE Flag Consent Profile"
+Description: "To record consent to capture information for NHS England flags"
 
-* ^name = "ReasonableAdjustmentsConsent"
-* ^url = "https://fhir.nhs.uk/England/StructureDefinition/RA-Consent"
+* ^name = "FlagConsent"
+* ^url = "https://fhir.nhs.uk/England/StructureDefinition/FlagConsent"
 * ^version = "0.1.0"
 * ^status = #draft
 * ^date = "2024-02-14"
@@ -26,15 +26,14 @@ Description: "To record consent to capture Reasonable Adjustments and Reasons fo
 * contained ^slicing.rules = #open
 * contained ^slicing.discriminator.path = "contained"
 * contained contains provenance 1..1
-* contained[provenance] only RA-Provenance
+* contained[provenance] only FlagProvenance
 
 * category from $ValueSetPatientFlagCategory (extensible)
 * policy 1..1
 * policy.uri 1..
 * policyRule 1..
-* policyRule from RA-ProxyRole (extensible)
+* policyRule from FlagProxyRole (extensible)
 * performer ..1
 * performer only Reference(Organization or Patient or Practitioner)
 * provision.purpose 1..1
-* provision.purpose from RA-ConsentPurpose (extensible)
-
+* provision.purpose from FlagConsentPurpose (extensible)

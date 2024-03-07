@@ -1,6 +1,6 @@
 CodeSystem: RA-ConditionCategory
 Id: RA-ConditionCategory
-Title: "Reasonable Adjustments Record Condition Category"
+Title: "RA Condition Category"
 Description: "A CodeSystem to identify the category of a condition within Reasonable Adjustments."
 
 * ^name = "ReasonableAdjustmentsConditionCategory"

@@ -1,7 +1,7 @@
 ValueSet: ProgrammeFlagCode
 Id: ProgrammeFlagCode
-Title: "NHS England Programme Flag Code"
-Description: "A ValueSet containing flag codes for the NHS England Programmes"
+Title: "NHSE Programme Flag Code"
+Description: "A ValueSet containing flag codes for the NHS England Programmes."
 
 * ^name = "ProgrammeFlagCode"
 * ^url = "https://fhir.nhs.uk/England/ValueSet/ProgrammeFlagCode"

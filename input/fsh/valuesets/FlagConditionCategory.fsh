@@ -1,6 +1,6 @@
 ValueSet: FlagConditionCategory
 Id: FlagConditionCategory
-Title: "NHS England Flag Condition Category"
+Title: "NHSE Flag Condition Category"
 Description: "A ValueSet to identify the category of a condition."
 
 * ^name = "ReasonableAdjustmentsConditionCategory"

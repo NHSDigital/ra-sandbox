@@ -1,12 +1,16 @@
-Instance: RAMasterFlagExample1
+Instance: RAPatientFlagExample1
 InstanceOf: Flag
-Title: "Example of a master Flag resource for Reasonable Adjustments"
+Title: "RA Example of a patient Flag resource for Reasonable Adjustments"
 Usage: #example
+* meta.profile = "https://fhir.nhs.uk/England/StructureDefinition/PatientFlag"
+
 * extension[0].url = "https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes"
-* extension[=].valueAnnotation.text = "Example of flag notes extension text in master flag"
+* extension[=].valueAnnotation.text = "Example of flag notes extension text in patient flag"
+
 * status = #active
 * code = PatientFlagCategory#NRAF "National Reasonable Adjustments Flag"
 * subject = Reference(Patient/PatientExample1)
+
 * contained.resourceType = "Provenance"
 * contained.id = "4c75ce1f-1ad7-4391-b5f6-104754c7e904"
 * contained.target.reference = "#"

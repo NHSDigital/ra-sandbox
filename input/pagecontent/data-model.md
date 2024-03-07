@@ -13,12 +13,12 @@ erDiagram
 
   Patient ||..|| Consent : provides
   Patient ||--o{ Condition : has
-  Patient ||--o| "Master Flag" : "has"
+  Patient ||--o| "Patient Flag" : "has"
   Patient ||--o{ "Adjustment Flag" : has
 
   Consent ||--|| Provenance : contains
   Condition ||--|| Provenance : contains
-  "Master Flag" ||--|| Provenance : contains
+  "Patient Flag" ||--|| Provenance : contains
   "Adjustment Flag" ||--|| Provenance : contains
 </div>
 
