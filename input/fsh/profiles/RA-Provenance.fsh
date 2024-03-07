@@ -12,7 +12,7 @@ Description: "To record details of the practitioner recording or removing an ind
 
 * insert NHSEngland-PublisherContactCopyright
 
-* target only Reference(Condition or RA-Consent or RA-AdjustmentFlag or MasterFlag)
+* target only Reference(Condition or RA-Consent or ProgrammeFlag or MasterFlag)
 * agent.role from $ValueSetRAProvenanceRole (extensible)
 * agent.who only Reference(Practitioner)
 * agent.onBehalfOf only Reference(Organization)

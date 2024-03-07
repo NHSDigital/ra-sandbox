@@ -109,13 +109,13 @@ A transaction Bundle is also given that allows these resources (plus the patient
 
 * [Consent](Consent-ConsentExample1.html)
 * [Master flag](Flag-MasterFlagExample1.html)
-* [Adjustment flag 1](Flag-AdjustmentFlagExample1.html)
+* [Adjustment flag 1](Flag-RAFlagExample1.html)
 * [Condition 1](Condition-ConditionExample1.html)
 * [Transaction Bundle 1](Bundle-AddConditionTransactionExample1.html)
 
 The following set of examples are for the same patient, and constitute an addition flag and condition.  The transaction Bundle here illustates an idempotent update by simply adding the new resources to the first transaction Bundle.
 
-* [Adjustment flag 2](Flag-AdjustmentFlagExample2.html)
+* [Adjustment flag 2](Flag-RAFlagExample2.html)
 * [Condition 2](Condition-ConditionExample2.html)
 * [Transaction Bundle 2](Bundle-AddConditionTransactionExample2.html)
 

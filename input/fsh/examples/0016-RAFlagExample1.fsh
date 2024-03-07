@@ -1,11 +1,11 @@
-Instance: AdjustmentFlagExample1
+Instance: RAFlagExample1
 InstanceOf: Flag
 Usage: #example
 * extension[0].url = "https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes"
 * extension[=].valueAnnotation.text = "Example of flag notes extension text in adjustment flag"
 * status = #active
 * category[0] = PatientFlagCategory#NRAF "National Reasonable Adjustments Flag"
-* category[+] = RA-AdjustmentCategory#001 "Communication support"
+* category[+] = RA-FlagCategory#001 "Communication support"
 * code = $sct#1082681000000103 "Requires support for receptive communication needs"
 * subject = Reference(Patient/PatientExample1)
 * contained.resourceType = "Provenance"

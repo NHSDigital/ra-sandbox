@@ -19,7 +19,7 @@ Usage: #example
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Flag/fba99f70-fe1d-42e2-b77a-916e44b53c19"
 * entry[+].fullUrl = "urn:uuid:04adcb5b-3de7-4f67-97f0-b2fdf941ba85"
-* entry[=].resource = AdjustmentFlagExample1
+* entry[=].resource = RAFlagExample1
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Flag/04adcb5b-3de7-4f67-97f0-b2fdf941ba85"
 * entry[+].fullUrl = "urn:uuid:b19124e9-f742-49b4-9247-5c2d58ac1ef4"
@@ -27,6 +27,6 @@ Usage: #example
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Condition/b19124e9-f742-49b4-9247-5c2d58ac1ef4"
 * entry[+].fullUrl = "urn:uuid:212c1018-f52a-4db7-9bc2-59a88622eb4f"
-* entry[=].resource = AdjustmentFlagExample2
+* entry[=].resource = RAFlagExample2
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Flag/212c1018-f52a-4db7-9bc2-59a88622eb4f"

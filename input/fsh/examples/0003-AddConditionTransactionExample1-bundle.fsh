@@ -19,6 +19,6 @@ Usage: #example
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Flag/fba99f70-fe1d-42e2-b77a-916e44b53c19"
 * entry[+].fullUrl = "urn:uuid:04adcb5b-3de7-4f67-97f0-b2fdf941ba85"
-* entry[=].resource = AdjustmentFlagExample1
+* entry[=].resource = RAFlagExample1
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Flag/04adcb5b-3de7-4f67-97f0-b2fdf941ba85"

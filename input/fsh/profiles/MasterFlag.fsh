@@ -1,7 +1,7 @@
 Profile: MasterFlag
 Parent: Flag
 Id: MasterFlag
-Title: "Patient Master Flag Profile"
+Title: "NHS England Patient Master Flag Profile"
 Description: "To record whether a Patient Flags exists"
 
 * ^name = "MasterFlag"
@@ -19,7 +19,7 @@ Description: "To record whether a Patient Flags exists"
 * extension[flagNotes].value[x] only Annotation
 * extension[flagNotes].valueAnnotation 1..
 
-* extension[flagDetail].valueReference only Reference(RA-AdjustmentFlag or RA-Consent or RA-Provenance)
+* extension[flagDetail].valueReference only Reference(ProgrammeFlag or RA-Consent or RA-Provenance)
 
 * contained ^slicing.discriminator.type = #profile
 * contained ^slicing.rules = #open

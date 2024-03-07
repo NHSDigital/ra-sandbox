@@ -1,11 +1,11 @@
-Profile: RA-AdjustmentFlag
+Profile: ProgrammeFlag
 Parent: Flag
-Id: RA-AdjustmentFlag
-Title: "Reasonable Adjustments Flag Profile"
-Description: "To (optionally) record an individual Adjustment for a Reasonable Adjustment Flag"
+Id: ProgrammeFlag
+Title: "NHS England Programme Flag Profile"
+Description: "Record an individual flag for an NHS England programme."
 
-* ^name = "ReasonableAdjustmentsFlag"
-* ^url = "https://fhir.nhs.uk/England/StructureDefinition/RA-AdjustmentFlag"
+* ^name = "ProgrammeFlag"
+* ^url = "https://fhir.nhs.uk/England/StructureDefinition/ProgrammeFlag"
 * ^version = "0.1.0"
 * ^status = #draft
 * ^date = "2024-02-14"
@@ -26,7 +26,7 @@ Description: "To (optionally) record an individual Adjustment for a Reasonable A
 * category[masterFlag] from $ValueSetPatientFlagCategory (required)
 
 * category contains adjustmentFlag 1.. MS
-* category[adjustmentFlag] from $ValueSetRAAdjustmentCategory (required)
+* category[adjustmentFlag] from $ValueSetProgrammeFlagCategory (required)
 
 * code MS
 * code from $ValueSetRAFlagCode (extensible)
