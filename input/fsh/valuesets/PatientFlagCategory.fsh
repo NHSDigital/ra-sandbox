@@ -1,6 +1,6 @@
 ValueSet: PatientFlagCategory
 Id: PatientFlagCategory
-Title: "PatientFlagCategory"
+Title: "NHS England Patient Flag Category"
 Description: "A ValueSet to identify the type/category of Flag."
 
 * ^name = "PatientFlagCategory"

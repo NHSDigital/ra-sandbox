@@ -18,15 +18,15 @@ Description: "Record an individual flag for an NHS England programme."
 * extension[flagNotes].value[x] only Annotation
 * extension[flagNotes].valueAnnotation 1..
 
-* category ^slicing.discriminator.type = #profile
+* category ^slicing.discriminator.type = #type
 * category ^slicing.rules = #open
 * category ^slicing.discriminator.path = "system"
 
-* category contains masterFlag 1.. MS
-* category[masterFlag] from $ValueSetPatientFlagCategory (required)
+* category contains patientFlag 1.. MS
+* category[patientFlag] from $ValueSetPatientFlagCategory (required)
 
-* category contains adjustmentFlag 1.. MS
-* category[adjustmentFlag] from $ValueSetProgrammeFlagCategory (required)
+* category contains programmeFlag 1.. MS
+* category[programmeFlag] from $ValueSetProgrammeFlagCategory (required)
 
 * code MS
-* code from $ValueSetRAFlagCode (extensible)
+* code from $ValueSetProgrammeFlagCode (extensible)

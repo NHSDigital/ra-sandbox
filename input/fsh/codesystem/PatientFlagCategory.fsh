@@ -1,6 +1,6 @@
 CodeSystem: PatientFlagCategory
 Id: PatientFlagCategory
-Title: "Patient Flag Category"
+Title: "NHS England Patient Flag Category"
 Description: "A CodeSystem to identify the type/category of Flag."
 
 * ^name = "PatientFlagCategory"

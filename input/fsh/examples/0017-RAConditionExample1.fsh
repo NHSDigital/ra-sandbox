@@ -1,9 +1,10 @@
-Instance: ConditionExample2
+Instance: RAConditionExample1
 InstanceOf: Condition
+Title: "Example 1 of a Condition resource for Reasonable Adjustments"
 Usage: #example
 * clinicalStatus = $condition-clinical#active
 * category = RA-ConditionCategory#issue "Issue"
-* code = RA-ConditionCode#9 "Social or behavioural (for example associated with autism spectrum disorder (ASD) which includes Asperger’s, or attention deficit hyperactivity disorder (ADHD))"
+* code = RA-ConditionCode#5 "Learning or understanding or concentrating"
 * subject = Reference(Patient/PatientExample1)
 * contained.resourceType = "Provenance"
 * contained.id = "4c75ce1f-1ad7-4391-b5f6-104754c7e904"

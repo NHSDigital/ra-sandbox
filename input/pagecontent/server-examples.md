@@ -48,7 +48,7 @@ TODO
 
 ##### Example 2
 
-The first example [Bundle transaction](Bundle-AddConditionTransactionExample1.html) adds an RA record consisting of 
+The first example [Bundle transaction](Bundle-AddRARecordTransactionExample1.html) adds an RA record consisting of 
 
 * a Patient resource
 * a Consent resource 
@@ -60,7 +60,7 @@ These resources are contained in a transaction Bundle, which provides atomicity 
 
 Each Flag resource (<span style="background-color: #FFFF00">TODO embed in all or make separate</>)has a Provenance resource embedded in it.  (<span style="background-color: #FFFF00">TODO maybe a futher discussion section somewhere on options for provenance, i.e. linking to versions, _history and transaction considerations, options to use etag or X-provenance</span>).  
 
-Another example [Bundle transaction](Bundle-AddConditionTransactionExample2.html) modifies the first transaction by adding additional resources for another Condition and adjustment (Flag).  
+Another example [Bundle transaction](Bundle-AddRARecordTransactionExample2.html) modifies the first transaction by adding additional resources for another Condition and adjustment (Flag).  
 
 The transactions are using PUT's to provide (upsert)[https://hl7.org/fhir/http.html#upsert] functionality.  The HAPI Starter Server (provided via docker) supports this part of the specification.
 
@@ -84,13 +84,13 @@ which are all returned using default Patient SearchParameters (defined in the ba
 
 First Bundle example:  
 
-* [Bundle transaction](Bundle-AddConditionTransactionExample1.html)  
-* [Query output](Bundle-QUERY-OUTPUT--0005-add-condition-transaction-example.html)  
+* [Bundle transaction](Bundle-AddRARecordTransactionExample1.html)  
+* [Query output](Bundle-QUERY-OUTPUT--0005-add-ra-record-transaction-example.html)  
 
 Second Bundle example:  
 
-* [Bundle transaction](Bundle-AddConditionTransactionExample2.html)  
-* [Query output](Bundle-QUERY-OUTPUT--0006-add-condition-transaction-example.html)  
+* [Bundle transaction](Bundle-AddRARecordTransactionExample2.html)  
+* [Query output](Bundle-QUERY-OUTPUT--0006-add-ra-record-transaction-example.html)  
 
 #### Remove RA Record
 

@@ -1,5 +1,6 @@
 Instance: RAMasterFlagExample1
 InstanceOf: Flag
+Title: "Example of a master Flag resource for Reasonable Adjustments"
 Usage: #example
 * extension[0].url = "https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes"
 * extension[=].valueAnnotation.text = "Example of flag notes extension text in master flag"

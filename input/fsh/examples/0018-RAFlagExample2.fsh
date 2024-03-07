@@ -1,5 +1,6 @@
 Instance: RAFlagExample2
 InstanceOf: Flag
+Title: "Example 2 of a Flag resource for Reasonable Adjustments"
 Usage: #example
 * extension[0].url = "https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes"
 * extension[=].valueAnnotation.text = "Example of adjustment notes extension text in adjustment flag"

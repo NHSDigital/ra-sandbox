@@ -1,10 +1,10 @@
-ValueSet: RA-ConditionCategoryy
-Id: RA-ConditionCategory
-Title: "Reasonable Adjustments Record Condition Category"
+ValueSet: FlagConditionCategory
+Id: FlagConditionCategory
+Title: "NHS England Flag Condition Category"
 Description: "A ValueSet to identify the category of a condition."
 
 * ^name = "ReasonableAdjustmentsConditionCategory"
-* ^url = "https://fhir.nhs.uk/England/ValueSet/RA-ConditionCategory"
+* ^url = "https://fhir.nhs.uk/England/ValueSet/FlagConditionCategory"
 * ^version = "0.1.0"
 * ^status = #draft
 * ^date = "2024-02-14"
@@ -28,3 +28,11 @@ Description: "A ValueSet to identify the category of a condition."
 * ^expansion.contains[+].system = "https://fhir.nhs.uk/England/CodeSystem/RA-ConditionCategory"
 * ^expansion.contains[=].code = #problem-list-item
 * ^expansion.contains[=].display = "Problem List Item"
+
+* ^expansion.contains[+].system = "https://fhir.nhs.uk/England/CodeSystem/CPIS-ConditionCategory"
+* ^expansion.contains[=].code = #cpis-example-condition-category
+* ^expansion.contains[=].display = "CPIS example condition category"
+
+* ^expansion.contains[+].system = "https://fhir.nhs.uk/England/CodeSystem/FGM-ConditionCategory"
+* ^expansion.contains[=].code = #fgm-example-condition-category
+* ^expansion.contains[=].display = "FGM example condition category"

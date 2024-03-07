@@ -1,6 +1,6 @@
 ValueSet: RA-ProvenanceRole
 Id: RA-ProvenanceRole
-Title: "ReasonableAdjustmentsProvenanceRole"
+Title: "Reasonable Adjustments Provenance Role"
 Description: "A ValueSet to identify the role in which someone recording provenance is acting"
 
 * ^name = "ReasonableAdjustmentsProvenanceRole"

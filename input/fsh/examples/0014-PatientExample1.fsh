@@ -1,5 +1,6 @@
 Instance: PatientExample1
 InstanceOf: Patient
+Title: "A simple NHS patient example"
 Usage: #example
 * identifier.system = "https://fhir.nhs.uk/Id/nhs-number"
 * identifier.value = "9912003888"

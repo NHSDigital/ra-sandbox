@@ -72,6 +72,6 @@ If consent is removed, then all previous adjustment records must be deleted, inc
 
 ### Examples
 
-* [Consent is given example](Consent-ConsentExample1.html)
+* [Consent is given example](Consent-RAConsentExample1.html)
 * Consent is not given is implied by the absence of a Consent resource
 * Consent is revoked is implied by the absence of a Consent resource

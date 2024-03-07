@@ -33,10 +33,10 @@ This query will return the Patient resource using the patients NHS number (<span
 which are all returned using default Patient SearchParameters (defined in the base specification).   
 
 First Bundle example:  
-* [Bundle transaction](Bundle-AddConditionTransactionExample1.html)
-* [Query output](Bundle-QUERY-OUTPUT--0005-add-condition-transaction-example.html)  
+* [Bundle transaction](Bundle-AddRARecordTransactionExample1.html)
+* [Query output](Bundle-QUERY-OUTPUT--0005-add-ra-record-transaction-example.html)  
 
 Second Bundle example:  
-* [Bundle transaction](Bundle-AddConditionTransactionExample2.html)  
-* [Query output](Bundle-QUERY-OUTPUT--0006-add-condition-transaction-example.html)  
+* [Bundle transaction](Bundle-AddRARecordTransactionExample2.html)  
+* [Query output](Bundle-QUERY-OUTPUT--0006-add-ra-record-transaction-example.html)  
 

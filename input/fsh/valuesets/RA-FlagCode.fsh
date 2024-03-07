@@ -1,6 +1,6 @@
 ValueSet: RA-FlagCode
 Id: RA-FlagCode
-Title: "ReasonableAdjustmentsFlagCode"
+Title: "Reasonable Adjustments Flag Code"
 Description: "A ValueSet to identify codes representing Adjustments required for a patient"
 
 * ^name = "ReasonableAdjustmentsFlagCode"

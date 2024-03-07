@@ -1,8 +1,8 @@
 Instance: FlagDetail
 InstanceOf: SearchParameter
-Title: "SearchParameter for Condition, Flag or Consent resources in the flag-detail extension"
+Title: "SearchParameter for flag-detail extension"
 Usage: #definition
-Description: "Search using extension for flag detail extension in Flag resource"
+Description: "Search for Condition, Flag or Consent resources using extension for flag detail extension in Flag resource"
 
 * name = "SearchParameterFlagDetailExtension"
 * url = "https://fhir.nhs.uk/England/SearchParameter/FlagDetail"

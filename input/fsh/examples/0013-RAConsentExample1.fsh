@@ -1,5 +1,6 @@
-Instance: ConsentExample1
+Instance: RAConsentExample1
 InstanceOf: Consent
+Title: "Example of Consent resource for Reasonable Adjustments"
 Usage: #example
 * extension[0].url = "https://fhir.nhs.uk/England/StructureDefinition/Extension-ConsentCreateSummary"
 * extension[=].valueAnnotation.text = "Example of consent create summary extension text"

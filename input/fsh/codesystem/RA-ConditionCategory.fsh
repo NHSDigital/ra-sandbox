@@ -1,7 +1,7 @@
 CodeSystem: RA-ConditionCategory
 Id: RA-ConditionCategory
 Title: "Reasonable Adjustments Record Condition Category"
-Description: "A CodeSystem to identify the category of a condition.."
+Description: "A CodeSystem to identify the category of a condition within Reasonable Adjustments."
 
 * ^name = "ReasonableAdjustmentsConditionCategory"
 * ^url = "https://fhir.nhs.uk/England/CodeSystem/RA-ConditionCategory"

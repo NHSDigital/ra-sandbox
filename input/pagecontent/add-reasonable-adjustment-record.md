@@ -107,17 +107,17 @@ The following set of examples constitute the individual associated resources wit
 
 A transaction Bundle is also given that allows these resources (plus the patient) to be entered in an atomic traction.  It uses PUTs, where in the case of an intial update, it may be done as a [conditional update](https://www.hl7.org/fhir/http.html#cond-update)
 
-* [Consent](Consent-ConsentExample1.html)
+* [Consent](Consent-RAConsentExample1.html)
 * [Master flag](Flag-RAMasterFlagExample1.html)
 * [Adjustment flag 1](Flag-RAFlagExample1.html)
-* [Condition 1](Condition-ConditionExample1.html)
-* [Transaction Bundle 1](Bundle-AddConditionTransactionExample1.html)
+* [Condition 1](Condition-RAConditionExample1.html)
+* [Transaction Bundle 1](Bundle-AddRARecordTransactionExample1.html)
 
 The following set of examples are for the same patient, and constitute an addition flag and condition.  The transaction Bundle here illustates an idempotent update by simply adding the new resources to the first transaction Bundle.
 
 * [Adjustment flag 2](Flag-RAFlagExample2.html)
-* [Condition 2](Condition-ConditionExample2.html)
-* [Transaction Bundle 2](Bundle-AddConditionTransactionExample2.html)
+* [Condition 2](Condition-RAConditionExample2.html)
+* [Transaction Bundle 2](Bundle-AddRARecordTransactionExample2.html)
 
 ### Relevant Documentation
 

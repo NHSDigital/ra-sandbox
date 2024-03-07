@@ -1,6 +1,6 @@
 ValueSet: ProgrammeFlagCategory
 Id: ProgrammeFlagCategory
-Title: "Programme Flag Category"
+Title: "NHS England Programme Flag Category"
 Description: "A ValueSet to identify the flag category of an NHS England programme"
 
 * ^name = "ProgrammeFlagCategory"
