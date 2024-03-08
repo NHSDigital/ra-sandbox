@@ -10,7 +10,7 @@ Usage: #example
 * status = #active
 * category[0] = PatientFlagCategory#CP-IS "Child Protection - Information Sharing Flag"
 * category[+] = CPIS-FlagCategory#001 "Example CPIS category"
-* code = $sct#1082681000000103 "Requires support for receptive communication needs"
+* code = $sct#224353004 "Child protection finding (finding)"
 * subject = Reference(Patient/PatientExample1)
 
 * contained.resourceType = "Provenance"

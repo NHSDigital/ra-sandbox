@@ -10,7 +10,7 @@ Usage: #example
 * status = #active
 * category[0] = PatientFlagCategory#FGM "Female Genital Mutilation Flag"
 * category[+] = FGM-FlagCategory#001 "Example FGM category"
-* code = $sct#1082681000000103 "Requires support for receptive communication needs"
+* code = $sct#902961000000107 "Family history of female genital mutilation (situation)"
 * subject = Reference(Patient/PatientExample1)
 
 * contained.resourceType = "Provenance"
