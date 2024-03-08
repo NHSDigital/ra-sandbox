@@ -11,7 +11,7 @@ Usage: #example
 
 * status = #active
 * scope = $consentscope#patient-privacy
-* category = PatientFlagCategory#NRAF "National Reasonable Adjustments Flag"
+* category = PatientFlagCategory#CP-IS "Child Protection - Information Sharing Flag"
 * provision.purpose = CPIS-ConsentPurpose#CPISCONSENT "CPIS - Consent to record CPIS flags"
 * patient = Reference(Patient/PatientExample1)
 * policy.authority = "https://www.gov.uk/"
