@@ -1,6 +1,6 @@
 Instance: AddRARecordTransactionExample1
 InstanceOf: Bundle
-Title: "RA Example of adding an RA record with a Transaction"
+Title: "RA Example of adding a record with a Transaction"
 Usage: #example
 * type = #transaction
 * entry[0].fullUrl = "urn:uuid:6253c43b-5cc8-4645-93b1-38e41be82a77"

@@ -1,17 +1,18 @@
-Instance: RAConditionExample1
-InstanceOf: Condition
-Title: "RA example 1 of a Condition resource."
+Instance: CPISPatientFlagExample1
+InstanceOf: Flag
+Title: "CPIS example of a patient Flag resource"
 Usage: #example
-* meta.profile = "https://fhir.nhs.uk/England/StructureDefinition/FlagCondition"
+* meta.profile = "https://fhir.nhs.uk/England/StructureDefinition/PatientFlag"
 
-* clinicalStatus = $condition-clinical#active
-* category[0] = PatientFlagCategory#NRAF "National Reasonable Adjustments Flag"
-* category[+] = RA-ConditionCategory#issue "Issue"
-* code = RA-ConditionCode#5 "Learning or understanding or concentrating"
+* extension[0].url = "https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes"
+* extension[=].valueAnnotation.text = "Example of flag notes extension text in patient flag"
+
+* status = #active
+* code = PatientFlagCategory#CP-IS "Child Protection - Information Sharing Flag"
 * subject = Reference(Patient/PatientExample1)
 
 * contained.resourceType = "Provenance"
-* contained.id = "6a6b18a7-c077-49da-929f-a8dd38468f79"
+* contained.id = "42b9f285-0f1b-435a-ba6e-c72762d6502e"
 * contained.target.reference = "#"
 * contained.recorded = "2024-01-01T11:00:00+00:00"
 * contained.activity = $v3-DataOperation#CREATE "create"

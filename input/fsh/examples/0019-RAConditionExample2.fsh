@@ -1,6 +1,6 @@
 Instance: RAConditionExample2
 InstanceOf: Condition
-Title: "RA Example 2 of a Condition resource for Reasonable Adjustments"
+Title: "RA example 2 of a Condition resource."
 Usage: #example
 * meta.profile = "https://fhir.nhs.uk/England/StructureDefinition/FlagCondition"
 
@@ -11,7 +11,7 @@ Usage: #example
 * subject = Reference(Patient/PatientExample1)
 
 * contained.resourceType = "Provenance"
-* contained.id = "4c75ce1f-1ad7-4391-b5f6-104754c7e904"
+* contained.id = "f55e1edc-8ac7-4e06-b322-25fd34e62249"
 * contained.target.reference = "#"
 * contained.recorded = "2024-01-01T11:00:00+00:00"
 * contained.activity = $v3-DataOperation#CREATE "create"

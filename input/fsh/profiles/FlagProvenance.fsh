@@ -2,7 +2,7 @@ Profile: FlagProvenance
 Parent: Provenance
 Id: FlagProvenance
 Title: "NHSE Flag Provenance Profile"
-Description: "To record details of the practitioner recording or removing an individual Flag."
+Description: "Record details of the practitioner recording or removing an individual Flag."
 
 * ^name = "FlagProvenance"
 * ^url = "https://fhir.nhs.uk/England/StructureDefinition/FlagProvenance"

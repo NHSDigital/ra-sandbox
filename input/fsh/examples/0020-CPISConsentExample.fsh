@@ -1,6 +1,6 @@
-Instance: RAConsentExample1
+Instance: CPISConsentExample1
 InstanceOf: Consent
-Title: "RA example of Consent resource."
+Title: "CPIS example of Consent resource"
 Usage: #example
 * meta.profile = "https://fhir.nhs.uk/England/StructureDefinition/FlagConsent"
 
@@ -12,14 +12,14 @@ Usage: #example
 * status = #active
 * scope = $consentscope#patient-privacy
 * category = PatientFlagCategory#NRAF "National Reasonable Adjustments Flag"
-* provision.purpose = RA-ConsentPurpose#RACONSENT "Reasonable Adjustments - Consent to record Reasonable Adjustments"
+* provision.purpose = CPIS-ConsentPurpose#CPISCONSENT "CPIS - Consent to record CPIS flags"
 * patient = Reference(Patient/PatientExample1)
 * policy.authority = "https://www.gov.uk/"
 * policy.uri = "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/535024/data-security-review.pdf"
 * policyRule = FlagProxyRole#001
 
 * contained.resourceType = "Provenance"
-* contained.id = "4c75ce1f-1ad7-4391-b5f6-104754c7e904"
+* contained.id = "51a731b3-1c46-47ba-abad-04209bd264e6"
 * contained.target.reference = "#"
 * contained.recorded = "2024-01-01T11:00:00+00:00"
 * contained.activity = $v3-DataOperation#CREATE "create"

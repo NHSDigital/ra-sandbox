@@ -2,7 +2,7 @@ Profile: PatientFlag
 Parent: Flag
 Id: PatientFlag
 Title: "NHSE Patient Flag Profile"
-Description: "To record whether a Patient Flags exists"
+Description: "Record whether a Patient Flags exists"
 
 * ^name = "PatientFlag"
 * ^url = "https://fhir.nhs.uk/England/StructureDefinition/PatientFlag"
@@ -28,7 +28,5 @@ Description: "To record whether a Patient Flags exists"
 * contained contains provenance 1..1
 * contained[provenance] only FlagProvenance
 
-* category 1.. MS
-* category from $ValueSetPatientFlagCategory (required)
 * code MS
-* code from $ValueSetRAFlagCode (extensible)
+* code from $ValueSetPatientFlagCategory (required)

@@ -1,20 +1,20 @@
-Instance: RAFlagExample2
+Instance: CPISFlagExample1
 InstanceOf: Flag
-Title: "RA example 2 of a Flag resource."
+Title: "CPIS example of a Flag resource"
 Usage: #example
 * meta.profile = "https://fhir.nhs.uk/England/StructureDefinition/ProgrammeFlag"
 
 * extension[0].url = "https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes"
-* extension[=].valueAnnotation.text = "Example of adjustment notes extension text in adjustment flag"
+* extension[=].valueAnnotation.text = "Example of flag notes extension text in adjustment flag"
 
 * status = #active
-* category[0] = PatientFlagCategory#NRAF "National Reasonable Adjustments Flag"
-* category[+] = RA-FlagCategory#011 "Bespoke Reasonable adjustments"
-* code = $sct#73618009 "Autistic spectrum disorder with isolated skills"
+* category[0] = PatientFlagCategory#CP-IS "Child Protection - Information Sharing Flag"
+* category[+] = CPIS-FlagCategory#001 "Example CPIS category"
+* code = $sct#1082681000000103 "Requires support for receptive communication needs"
 * subject = Reference(Patient/PatientExample1)
 
 * contained.resourceType = "Provenance"
-* contained.id = "71f8bcda-242d-4401-a59c-6924a6cb1c0e"
+* contained.id = "ea77b434-585a-48b9-a789-eac610f0363e"
 * contained.target.reference = "#"
 * contained.recorded = "2024-01-01T11:00:00+00:00"
 * contained.activity = $v3-DataOperation#CREATE "create"

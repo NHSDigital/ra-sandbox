@@ -2,7 +2,7 @@ Profile: FlagConsent
 Parent: Consent
 Id: FlagConsent
 Title: "NHSE Flag Consent Profile"
-Description: "To record consent to capture information for NHS England flags"
+Description: "Record consent to capture information for NHS England flags"
 
 * ^name = "FlagConsent"
 * ^url = "https://fhir.nhs.uk/England/StructureDefinition/FlagConsent"

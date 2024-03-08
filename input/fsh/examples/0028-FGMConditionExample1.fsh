@@ -1,17 +1,17 @@
-Instance: RAConditionExample1
+Instance: FGMConditionExample1
 InstanceOf: Condition
-Title: "RA example 1 of a Condition resource."
+Title: "FGM example of a Condition resource."
 Usage: #example
 * meta.profile = "https://fhir.nhs.uk/England/StructureDefinition/FlagCondition"
 
 * clinicalStatus = $condition-clinical#active
-* category[0] = PatientFlagCategory#NRAF "National Reasonable Adjustments Flag"
-* category[+] = RA-ConditionCategory#issue "Issue"
-* code = RA-ConditionCode#5 "Learning or understanding or concentrating"
+* category[0] = PatientFlagCategory#FGM "Female Genital Mutilation Flag"
+* category[+] = FGM-ConditionCategory#fgm-example-condition-category "FGM example condition category"
+* code = FGM-ConditionCode#1 "FGM example condition code"
 * subject = Reference(Patient/PatientExample1)
 
 * contained.resourceType = "Provenance"
-* contained.id = "6a6b18a7-c077-49da-929f-a8dd38468f79"
+* contained.id = "e78b78b2-31f9-453d-b278-6d5720001073"
 * contained.target.reference = "#"
 * contained.recorded = "2024-01-01T11:00:00+00:00"
 * contained.activity = $v3-DataOperation#CREATE "create"

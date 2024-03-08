@@ -1,6 +1,6 @@
 Instance: RAFlagExample1
 InstanceOf: Flag
-Title: "RA Example 1 of a Flag resource for Reasonable Adjustments"
+Title: "RA example 1 of a Flag resource."
 Usage: #example
 * meta.profile = "https://fhir.nhs.uk/England/StructureDefinition/ProgrammeFlag"
 
@@ -14,7 +14,7 @@ Usage: #example
 * subject = Reference(Patient/PatientExample1)
 
 * contained.resourceType = "Provenance"
-* contained.id = "4c75ce1f-1ad7-4391-b5f6-104754c7e904"
+* contained.id = "873a38eb-0f9c-4a66-a4e9-8e4be2350d6b"
 * contained.target.reference = "#"
 * contained.recorded = "2024-01-01T11:00:00+00:00"
 * contained.activity = $v3-DataOperation#CREATE "create"
