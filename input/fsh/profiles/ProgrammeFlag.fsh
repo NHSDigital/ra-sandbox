@@ -10,7 +10,7 @@ Description: "Record an individual flag for an NHS England programme."
 * ^status = #draft
 * ^date = "2024-02-14"
 
-* insert NHSEngland-PublisherContactCopyright
+* insert NHSEngland-Copyright
 
 * extension contains
     Extension-FlagNotes named flagNotes 0..1 

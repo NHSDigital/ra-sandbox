@@ -16,7 +16,7 @@ Description: "Record an individual condition for a flag in NHS England"
 * contained contains provenance 1..1
 * contained[provenance] only FlagProvenance
 
-* insert NHSEngland-PublisherContactCopyright
+* insert NHSEngland-Copyright
 
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.rules = #open

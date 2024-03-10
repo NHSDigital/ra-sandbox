@@ -6,7 +6,7 @@ actor        "Practitioner"     as pra
 actor        "Patient"          as pat
 participant  "FHIR API"         as api
 entity       "Consent"          as con
-entity       "Patient Flag"      as mas
+entity       "Patient Flag"     as flg
 entity       "Adjustment Flag"  as adj
 entity       "Condition"        as cod
 
@@ -14,45 +14,37 @@ pra ->  pat : Examine patient
 pra ->  pat : Suggest adjustments
 pra <-- pat : Provide consent\nto share information
 
-pra ->  api : Record adjustment record
+pra ->  api : Record adjustment record (transaction Bundle)
 
 api ->  con : Create/update resource
 con ->  con : Validate
-alt Validation failed
 api <-- con : return
-api <- api : rollback
-api ->  pra : OperationOutcome indicating failure
+alt Validation failed
+  api -> api : rollback
 end
-api <-- con : return
 
-api ->  mas : Create/update resource
-mas ->  mas : Validate
+api ->  flg : Create/update resource
+flg ->  flg : Validate
+api <-- flg : return
 alt Validation failed
-api <-- mas : return
-api <- api : rollback
-api ->  pra : OperationOutcome indicating failure
+  api -> api : rollback
 end
 
 api ->  adj : Create/update resource
 adj ->  adj : Validate
-alt Validation failed
 api <-- adj : return
-api <- api : rollback
-api ->  pra : OperationOutcome indicating failure
+alt Validation failed
+  api -> api : rollback
 end
 
 alt Condition also to be recorded
 api ->  cod : Create/update resource
 cod ->  cod : Validate
+api <-- cod : return
 alt Validation failed
-api <-- cod : return
-api <- api : rollback
-api ->  pra : OperationOutcome indicating failure
+  api -> api : rollback
 end
-api <-- cod : return
 pra <-- api : OperationOutcome
-end
-
 
 @enduml
 

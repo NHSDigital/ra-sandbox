@@ -10,8 +10,6 @@ Description: "Search by category in the Flag resource"
 * status = #active
 * date = "2024-02-14"
 
-* insert NHSEngland-PublisherContactCopyright-Instance
-
 * code = #category
 * base = #Flag
 * type = #token

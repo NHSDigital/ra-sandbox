@@ -10,7 +10,7 @@ Description: "A ValueSet to identify the purpose of a consent given for an NHS E
 * ^date = "2024-02-14"
 * ^experimental = false
 
-* insert NHSEngland-PublisherContactCopyright
+* insert NHSEngland-Copyright
 
 * ^expansion.timestamp = "2024-02-14T12:00:00+00:00"
 * ^expansion.contains[0].system = "https://fhir.nhs.uk/England/CodeSystem/RA-ConsentPurpose"

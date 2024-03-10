@@ -10,7 +10,7 @@ Description: "A ValueSet containing flag codes for the NHS England Programmes."
 * ^date = "2024-02-14"
 * ^experimental = false
 
-* insert NHSEngland-PublisherContactCopyright
+* insert NHSEngland-Copyright
 
 * codes from system $ValueSetRAFlagCode
 * codes from system $ValueSetCPISFlagCode

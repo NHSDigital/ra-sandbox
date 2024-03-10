@@ -10,7 +10,7 @@ Description: "Record whether a Patient Flags exists"
 * ^status = #draft
 * ^date = "2024-02-14"
 
-* insert NHSEngland-PublisherContactCopyright
+* insert NHSEngland-Copyright
 
 * extension contains
     Extension-FlagNotes named flagNotes 0..1 and

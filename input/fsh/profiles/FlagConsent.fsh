@@ -10,7 +10,7 @@ Description: "Record consent to capture information for NHS England flags"
 * ^status = #draft
 * ^date = "2024-02-14"
 
-* insert NHSEngland-PublisherContactCopyright
+* insert NHSEngland-Copyright
 
 * extension contains
     Extension-ConsentCreateSummary named createSummary 0..1 and

@@ -24,17 +24,16 @@ alt Consent has been given
   api ->  con : Create/update resource
   con ->  con : Validate
   api <-- con : return
+  alt Validation failed
+    api -> api : rollback
+  end
   pra <-- api : OperationOutcome
 else Consent has not been given/been revoked
   pra ->  api : Record consent was not given
   api ->  con : Delete adjustment consent
-  api <-- con : return
   api ->  pfg : Delete adjustment patient flag
-  api <-- pfg : return
   api ->  adj : Delete adjustment flag(s)
-  api <-- adj : return
   api ->  cod : Delete condition flag(s)
-  api <-- cod : return
   pra <-- api : OperationOutcome
 end
 

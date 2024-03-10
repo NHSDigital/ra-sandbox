@@ -10,7 +10,7 @@ Description: "A CodeSystem to identify the category of a condition within Reason
 * ^date = "2024-02-14"
 * ^experimental = false
 
-* insert NHSEngland-PublisherContactCopyright
+* insert NHSEngland-Copyright
 
 * ^caseSensitive = true
 * ^content = #complete

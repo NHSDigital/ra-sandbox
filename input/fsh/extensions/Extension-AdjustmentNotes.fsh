@@ -10,7 +10,7 @@ Context: Flag
 * ^status = #draft
 * ^date = "2024-02-14"
 
-* insert NHSEngland-PublisherContactCopyright
+* insert NHSEngland-Copyright
 
 * value[x] 1..
 * value[x] only Annotation

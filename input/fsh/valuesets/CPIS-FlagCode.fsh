@@ -10,7 +10,7 @@ Description: "A ValueSet containing flag codes for the Child Protection Informat
 * ^date = "2024-02-14"
 * ^experimental = false
 
-* insert NHSEngland-PublisherContactCopyright
+* insert NHSEngland-Copyright
 
 * ^expansion.timestamp = "2024-02-14T12:00:00+00:00"
 * ^expansion.contains[0].system = "http://snomed.info/sct"

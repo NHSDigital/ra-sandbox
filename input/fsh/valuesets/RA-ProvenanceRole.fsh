@@ -10,7 +10,7 @@ Description: "A ValueSet to identify the role in which someone recording provena
 * ^date = "2024-02-14"
 * ^experimental = false
 
-* insert NHSEngland-PublisherContactCopyright
+* insert NHSEngland-Copyright
 
 * $CareConnect-SDSJobRoleName-1#R0010 "Medical Director"
 * $CareConnect-SDSJobRoleName-1#R0020 "Clinical Director - Medical"

@@ -10,7 +10,7 @@ Description: "A CodeSystem to identify the type/role of the proxy involved"
 * ^date = "2024-02-14"
 * ^experimental = false
 
-* insert NHSEngland-PublisherContactCopyright
+* insert NHSEngland-Copyright
 
 * ^caseSensitive = true
 * ^content = #complete

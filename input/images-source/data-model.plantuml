@@ -9,28 +9,28 @@ entity "Patient" as pat {
 entity "Consent" as con {
   *patient : Patient
   *category : CodeableConcept
-  *contained : Provenance
+  *contained : Provenance (Contained)
 }
 
 entity "Condition" as cod {
   *patient : Patient
   *code : CodeableConcept
   *category : CodeableConcept
-  *contained : Provenance
+  *contained : Provenance (Contained)
 }
 
 entity "Patient Flag" as pfg {
   *patient : Patient
   *code : CodeableConcept
   *category : CodeableConcept
-  *contained : Provenance
+  *contained : Provenance (Contained)
 }
 
 entity "Adjustment Flag" as adj {
   *patient : Patient
   *code : CodeableConcept
   *category : CodeableConcept
-  *contained : Provenance
+  *contained : Provenance (Contained)
 }
 
 entity "Provenance" as pro {

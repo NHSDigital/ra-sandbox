@@ -10,7 +10,7 @@ Description: "Record details of the practitioner recording or removing an indivi
 * ^status = #draft
 * ^date = "2024-02-14"
 
-* insert NHSEngland-PublisherContactCopyright
+* insert NHSEngland-Copyright
 
 * target only Reference(FlagCondition or FlagConsent or ProgrammeFlag or PatientFlag)
 * agent.role from $ValueSetFlagProvenanceRole (extensible)

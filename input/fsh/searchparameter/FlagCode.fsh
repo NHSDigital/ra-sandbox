@@ -10,8 +10,6 @@ Description: "Search by code in the Flag resource"
 * status = #active
 * date = "2024-02-14"
 
-* insert NHSEngland-PublisherContactCopyright-Instance
-
 * code = #code
 * base = #Flag
 * type = #token

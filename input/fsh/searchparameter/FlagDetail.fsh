@@ -10,8 +10,6 @@ Description: "Search for Condition, Flag or Consent resources referenced in flag
 * status = #active
 * date = "2024-02-14"
 
-* insert NHSEngland-PublisherContactCopyright-Instance
-
 * code = #detail
 * base = #Flag
 * type = #reference
