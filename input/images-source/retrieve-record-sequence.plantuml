@@ -1,0 +1,15 @@
+@startuml
+
+skinparam actorStyle hollow
+
+actor        "Practitioner"     as pra
+actor        "Patient"          as pat
+participant  "FHIR API"         as api
+
+pra ->  pat : Request confirmation\n       of consent to\n  access information
+pra <-- pat : Provide consent\nto share information
+
+pra ->  api : Application GET /<query>
+pra <-- api : SearchSet Bundle
+
+@enduml

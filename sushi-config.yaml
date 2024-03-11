@@ -81,8 +81,8 @@ menu:
   Use Cases:
     Consent to Share Information: consent-to-share-information.html
     Add Reasonable Adjustment Record: add-reasonable-adjustment-record.html
-    Retrieve Reasonable Adjustment Record: retrieve-ra-record.html
-    Remove Reasonable Adjustment Record: remove-ra-record.html
+    Retrieve Reasonable Adjustment Record: retrieve-reasonable-adjustment-record.html
+    Remove Reasonable Adjustment Record: remove-reasonable-adjustment-record.html
   Additional Examples: 
     CPIS/FGM demo: additional-examples.html
     Server Examples: server-examples.html

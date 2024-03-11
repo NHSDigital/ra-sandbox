@@ -66,7 +66,7 @@ The transactions are using PUT's to provide (upsert)[https://hl7.org/fhir/http.h
 
 #### Retrieve RA Record
 
-This section provides examples for those given in the use case [Retrieve RA Record](retrieve-ra-record.html).
+This section provides examples for those given in the use case [Retrieve RA Record](retrieve-reasonable-adjustment-record.html).
 
 ##### Example 1
 
