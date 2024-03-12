@@ -62,7 +62,7 @@ If consent is not given, then this will be recorded.  If there was previous cons
 
 If consent is given either by the patient or the patient advocate, then this should be recorded.  A record of who obtained the consent must also be embedded in the Consent resource.  This will done using a provenance resource.  If consent has not been previously given, then this means the Consent resource must be created.  If consent is removed, then the Consent resource should be deleted.  The absence of a Consent resource implies patient dissent.
 
-If consent is removed, then all previous adjustment records must be deleted, including the master flag and all adjustment flags and conditions.
+If consent is removed, then all previous adjustment records must be deleted, including the patient flag and all adjustment flags and conditions.
 
 <div style="text-align: left;">
 
@@ -72,6 +72,6 @@ If consent is removed, then all previous adjustment records must be deleted, inc
 
 ### Examples
 
-* [Consent is given example](Consent-ConsentExample1.html)
+* [Consent is given example](Consent-RAConsentExample1.html)
 * Consent is not given is implied by the absence of a Consent resource
 * Consent is revoked is implied by the absence of a Consent resource

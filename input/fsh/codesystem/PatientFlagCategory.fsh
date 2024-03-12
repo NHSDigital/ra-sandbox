@@ -1,6 +1,6 @@
 CodeSystem: PatientFlagCategory
 Id: PatientFlagCategory
-Title: "Patient Flag Category"
+Title: "NHSE Patient Flag Category"
 Description: "A CodeSystem to identify the type/category of Flag."
 
 * ^name = "PatientFlagCategory"
@@ -10,7 +10,7 @@ Description: "A CodeSystem to identify the type/category of Flag."
 * ^date = "2024-02-14"
 * ^experimental = false
 
-* insert NHSEngland-PublisherContactCopyright
+* insert NHSEngland-Copyright
 
 * ^caseSensitive = true
 * ^content = #complete

@@ -1,6 +1,6 @@
 CodeSystem: RA-ConditionCode
 Id: RA-ConditionCode
-Title: "Reasonable Adjustments Record Condition Code"
+Title: "RA Record Condition Code"
 Description: "A CodeSystem to identify the SNOMED-CT concept representing an Impairment recorded as part of a Reasonable Adjustment"
 
 * ^name = "ReasonableAdjustmentsConditionCode"
@@ -10,7 +10,7 @@ Description: "A CodeSystem to identify the SNOMED-CT concept representing an Imp
 * ^date = "2024-02-14"
 * ^experimental = false
 
-* insert NHSEngland-PublisherContactCopyright
+* insert NHSEngland-Copyright
 
 * ^caseSensitive = true
 * ^content = #complete

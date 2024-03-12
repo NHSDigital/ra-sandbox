@@ -1,17 +1,14 @@
 ### Overview
 
-Patient consent must be obtained before recording any adjustment.  See [Consent to Share Information](consent-to-share-information.html) for details.
+Patient consent must be obtained before recording any adjustment or impairment.  See [Consent to Share Information](consent-to-share-information.html) for details of requirements around consent.
 
-Key purposes of the Reasonable Adjustment Flag include: 
-
-* identifying a patient may require services to be adjusted  
-* identifying when patients with specific impairments present for care (learning impairments, behavioural impairments or any other impairment in line with the disability protected characteristic of the [Equality Act (2010)](https://www.gov.uk/guidance/equality-act-2010-guidance)). 
-* ensuring the key information is shared consistently across health and care – wherever the patient is treated. 
-* ensuring that the information is clearly visible in clinical systems 
+For high level requirements, see [Key purposes of the Reasonable Adjustment Flag](index.html#key-purposes) 
 
 ### Usecase
 
-After obtaining consent from a patient, an adjustment flag may be created.  A condition may also optionally be recorded.  If an adjustment flag exists, there must be an additional flag created, designated as the master flag, to indicate that there are reasonable adjustments recorded for the patient.
+After obtaining consent from a patient, a Reasonable Adjustment Record may be created.  This consists of a Flag resource containing an adjustment and a Condition resource may also optionally be created to record the details of an impairment.  
+
+If a Reasonable Adjustment Record exists, a Flag resource designated as the patient flag must be created to indicate that there are reasonable adjustments recorded for the patient.  There is a single instance of this type of resource per patient.
 
 <div style="text-align: left;">
 
@@ -25,22 +22,22 @@ After obtaining consent from a patient, an adjustment flag may be created.  A co
 Given a practitioner has received consent from a patient
 And the consent is for reasonable adjustments
 When a practioner adds an adjustment flag
-Then an additional flag designated as a master flag will be created
+Then an additional flag designated as a patient flag will be created
 
 Given a practitioner has received consent from a patient
 And the consent is for reasonable adjustments
-When a practioner adds an master flag
-Then the details of who created the master flag will be recorded
+When a practioner adds an patient flag
+Then the details of who created the patient flag will be recorded
 And the flag will be linked to the patient
 
 Given a practitioner has received consent from a patient
 And the consent is for reasonable adjustments
-When a practioner adds an master flag
+When a practioner adds an patient flag
 Then the category of the flag will indicate that it is reasonable adjustments
 
 Given a practitioner has received consent from a patient
 And the consent is for reasonable adjustments
-When a practioner adds an master flag
+When a practioner adds an patient flag
 Then the code of the flag will indicate that it is reasonable adjustments
 
 Given a practitioner has received consent from a patient
@@ -103,21 +100,21 @@ The practioner decides to record a condition with the patients consent.  This co
 
 * [Patient example](Patient-PatientExample1.html)
 
-The following set of examples constitute the individual associated resources with the intial addition of a flag for Reasonable Adjustment.  This includes the Consent resource where the patient has agreed to share information.  Also a master Flag resource, the adjustment Flag resource and the associated Condition resource.  All resources have contained provenances.
+The following set of examples constitute the individual associated resources with the intial addition of a flag for Reasonable Adjustment.  This includes the Consent resource where the patient has agreed to share information.  Also a patient Flag resource, the adjustment Flag resource and the associated Condition resource.  All resources have contained provenances.
 
 A transaction Bundle is also given that allows these resources (plus the patient) to be entered in an atomic traction.  It uses PUTs, where in the case of an intial update, it may be done as a [conditional update](https://www.hl7.org/fhir/http.html#cond-update)
 
-* [Consent](Consent-ConsentExample1.html)
-* [Master flag](Flag-MasterFlagExample1.html)
-* [Adjustment flag 1](Flag-AdjustmentFlagExample1.html)
-* [Condition 1](Condition-ConditionExample1.html)
-* [Transaction Bundle 1](Bundle-AddConditionTransactionExample1.html)
+* [Consent](Consent-RAConsentExample1.html)
+* [Patient flag](Flag-RAPatientFlagExample1.html)
+* [Reasonable Adjustment flag 1](Flag-RAFlagExample1.html)
+* [Condition 1](Condition-RAConditionExample1.html)
+* [Transaction Bundle 1](Bundle-AddRARecordTransactionExample1.html)
 
 The following set of examples are for the same patient, and constitute an addition flag and condition.  The transaction Bundle here illustates an idempotent update by simply adding the new resources to the first transaction Bundle.
 
-* [Adjustment flag 2](Flag-AdjustmentFlagExample2.html)
-* [Condition 2](Condition-ConditionExample2.html)
-* [Transaction Bundle 2](Bundle-AddConditionTransactionExample2.html)
+* [Reasonable Adjustment flag 2](Flag-RAFlagExample2.html)
+* [Condition 2](Condition-RAConditionExample2.html)
+* [Transaction Bundle 2](Bundle-AddRARecordTransactionExample2.html)
 
 ### Relevant Documentation
 

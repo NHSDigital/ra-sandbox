@@ -1,7 +1,7 @@
 ValueSet: RA-FlagCode
 Id: RA-FlagCode
-Title: "ReasonableAdjustmentsFlagCode"
-Description: "A ValueSet to identify codes representing Adjustments required for a patient"
+Title: "RA Flag Code"
+Description: "A ValueSet containing flag codes for the Reasonable Adjustments NHS England Programme"
 
 * ^name = "ReasonableAdjustmentsFlagCode"
 * ^url = "https://fhir.nhs.uk/England/ValueSet/RA-FlagCode"
@@ -10,7 +10,7 @@ Description: "A ValueSet to identify codes representing Adjustments required for
 * ^date = "2024-02-14"
 * ^experimental = false
 
-* insert NHSEngland-PublisherContactCopyright
+* insert NHSEngland-Copyright
 
 * ^expansion.timestamp = "2024-02-14T12:00:00+00:00"
 * ^expansion.contains[0].system = "http://snomed.info/sct"

@@ -1,29 +1,49 @@
 ### Summary
 
-The RA record is made up of Consent, Condition, Flag and Provenances resources.  The Consent, Condition and Flag resources are linked via a Patient resource.  The Provenace resource is only scoped to a sinle Flag and has no lifetime outside of the Flag (specific version) resource.
+The RA record is made up of Consent, Condition, Flag and Provenances resources.  The Consent, Condition and Flag resources are linked via a Patient resource.  Provenance of all resources that make up an RA record must be stored.  This is modelled here as a contained resource, and as such has no lifetime outside of the constituent RA record resources.
 
 ### Data Model
 
-<div>
-    <img style="max-width: 70%" alt="RA Record Data Model" src="data-model-contained-provenance.drawio.png"/>
-</div>
-
 <div class="mermaid">
 erDiagram
+  Patient {
+    NHS-number identifier
+  }
+  Consent {
+    patient Patient
+    category CodeableConcept
+    contained Provenance
+  }
+  Condition {
+    patient Patient
+    code CodeableConcept
+    category CodeableConcept
+    contained Provenance
+  }
+  PatientFlag {
+    patient Patient
+    code CodeableConcept
+    category CodeableConcept
+    contained Provenance
+  }
+  ProgrammeFlag {
+    patient Patient
+    code CodeableConcept
+    category CodeableConcept
+    contained Provenance
+  }
+  Provenance {
+    recorded DateTime
+    agent Agent
+  }
 
   Patient ||..|| Consent : provides
   Patient ||--o{ Condition : has
-  Patient ||--o| "Master Flag" : "has"
-  Patient ||--o{ "Adjustment Flag" : has
+  Patient ||--o| PatientFlag : has
+  Patient ||--o{ ProgrammeFlag : has
 
   Consent ||--|| Provenance : contains
   Condition ||--|| Provenance : contains
-  "Master Flag" ||--|| Provenance : contains
-  "Adjustment Flag" ||--|| Provenance : contains
-</div>
-
-<div style="text-align: left;">
-
-{%include data-model.svg%}
-
+  PatientFlag ||--|| Provenance : contains
+  ProgrammeFlag ||--|| Provenance : contains
 </div>
