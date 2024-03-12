@@ -4,7 +4,7 @@ Id: FlagCondition
 Title: "NHSE Condition Profile for flags"
 Description: "Record an individual condition for a flag in NHS England"
 
-* ^name = "ReasonableAdjustmentsCondition"
+* ^name = "FlagCondition"
 * ^url = "https://fhir.nhs.uk/England/StructureDefinition/FlagCondition"
 * ^version = "0.1.0"
 * ^status = #draft

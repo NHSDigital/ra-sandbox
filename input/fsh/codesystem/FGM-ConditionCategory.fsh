@@ -3,7 +3,7 @@ Id: FGM-ConditionCategory
 Title: "FGM Condition Category"
 Description: "A CodeSystem to identify the category of a condition within FGM."
 
-* ^name = "ReasonableAdjustmentsConditionCategory"
+* ^name = "FGMConditionCategory"
 * ^url = "https://fhir.nhs.uk/England/CodeSystem/FGM-ConditionCategory"
 * ^version = "0.1.0"
 * ^status = #draft
