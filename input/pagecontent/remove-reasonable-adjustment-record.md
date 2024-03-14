@@ -17,7 +17,7 @@ A patient presents to be examined by a practitioner. The practitioner performs a
 </p>
 
 <div>
-    <img style="max-width: 70%" alt="Activity created in draw.io!" src="remove-ra-record-workflow.drawio.png"/>
+    <img style="max-width: 70%" alt="Activity created in draw.io!" src="remove-record-workflow.svg"/>
 </div>
 
 #### Patient's RA Record Removed
