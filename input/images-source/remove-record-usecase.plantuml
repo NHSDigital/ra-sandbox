@@ -1,0 +1,17 @@
+@startuml
+skinparam actorStyle awesome
+
+actor Practitioner as pra
+package Consenter {
+  actor "Patient Advocate" as pad
+  actor Patient as pat
+}
+
+usecase "Practitioner Examines Patient and decides to remove record" as PEP
+usecase "Remove Reasonable Adjustment record" as RET
+
+pat -- PEP
+pra -- PEP
+PEP -- RET
+
+@enduml
