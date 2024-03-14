@@ -2,6 +2,15 @@
 
 <p>Practioner wishes to remove an entire RA Record</p>    
 
+#### UseCase
+
+<div style="text-align: left;">
+
+  {%include remove-record-usecase.svg%}
+
+</div>
+
+
 #### Workflow
 <p>
 A patient presents to be examined by a practitioner. The practitioner performs an examination and retrieves the patients RA record. The practitioner then decides to remove an RA record for a patient.
