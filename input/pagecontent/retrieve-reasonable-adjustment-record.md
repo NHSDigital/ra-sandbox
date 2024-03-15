@@ -30,7 +30,7 @@ Using [FHIR search](https://www.hl7.org/fhir/search.html) capabilities, it is po
 
 <div style="text-align: left;">
 
-  {%include retrieve-record-usecase.svg%}
+  {%include retrieve-record-sequence.svg%}
 
 </div>
 
