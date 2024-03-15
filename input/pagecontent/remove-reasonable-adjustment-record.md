@@ -42,7 +42,6 @@ The following resources will be removed from the record if consent is not grante
 
 * [Flag Consent](StructureDefinition-FlagConsent.html) resource
 * [Patient Flag](StructureDefinition-PatientFlag.html) resources  
-* [Programme Flag](StructureDefinition-ProgrammeFlag.html) resources
 * [Flag Condition](StructureDefinition-FlagCondition.html) resources 
 
 #### Example
@@ -57,7 +56,6 @@ This query will delete the patient's RA record, i.e. the resources contained in 
 
 * [Flag Consent](StructureDefinition-FlagConsent.html) resource
 * [Patient Flag](StructureDefinition-PatientFlag.html) resources  
-* [Programme Flag](StructureDefinition-ProgrammeFlag.html) resources
 * [Flag Condition](StructureDefinition-FlagCondition.html) resources 
 
 This will be the following Request body [Bundle transaction](Bundle-RemoveRARecordExample.html)
