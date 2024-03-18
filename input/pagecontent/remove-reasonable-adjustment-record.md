@@ -34,7 +34,7 @@ A patient presents to be examined by a practitioner. A patient may revoke consen
 
 <div style="text-align: left;">
 
-  {%include remove-record-usecase.svg%}
+  {%include remove-record-sequence.svg%}
 
 </div>
 
