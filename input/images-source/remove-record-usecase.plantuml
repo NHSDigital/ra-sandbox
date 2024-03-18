@@ -8,13 +8,13 @@ package Consenter {
   actor Patient as pat
 }
 
-usecase  "Consent not granted" as CNG
+usecase  "Consent to share information" as CON
 usecase "Remove Reasonable Adjustment record" as RET
 
-pat -- CNG
-pad -- CNG
+pat -- CON
+pad -- CON
 pra -- RET
-CNG -- RET
+CON -- RET
 
 
 @enduml
