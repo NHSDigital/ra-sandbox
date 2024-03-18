@@ -15,6 +15,19 @@ As consent is not granted from a patient , a Reasonable Adjustment record will b
 
 </div>
 
+#### Scenarios
+
+```gherkin
+
+Given a patient or their advocate revokes consent
+And the consent is for reasonable adjustments
+When a practioner records the consent
+Then consent will be marked as inactive
+And all flags will be deleted
+And all conditions will be deleted
+
+```
+
 
 #### Workflow
 <p>
