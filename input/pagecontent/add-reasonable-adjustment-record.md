@@ -1,17 +1,13 @@
 ### Overview
 
-Patient consent must be obtained before recording any adjustment.  See [Consent to Share Information](consent-to-share-information.html) for details.
+Patient consent must be obtained before recording any adjustment or impairment.  See [Consent to Share Information](consent-to-share-information.html) for details of requirements around consent.
 
-Key purposes of the Reasonable Adjustment Flag include: 
-
-* identifying a patient may require services to be adjusted  
-* identifying when patients with specific impairments present for care (learning impairments, behavioural impairments or any other impairment in line with the disability protected characteristic of the [Equality Act (2010)](https://www.gov.uk/guidance/equality-act-2010-guidance)). 
-* ensuring the key information is shared consistently across health and care – wherever the patient is treated. 
-* ensuring that the information is clearly visible in clinical systems 
+For high level requirements, see [Key purposes of the Reasonable Adjustment Flag](index.html#key-purposes) 
 
 ### Usecase
+After obtaining consent from a patient, a Reasonable Adjustment Record may be created.  This consists of a Flag resource containing an adjustment and a Condition resource may also optionally be created to record the details of an impairment.  
 
-After obtaining consent from a patient, an adjustment flag may be created.  A condition may also optionally be recorded.  If an adjustment flag exists, there must be an additional flag created, designated as the patient flag, to indicate that there are reasonable adjustments recorded for the patient.
+If a Reasonable Adjustment Record exists, a Flag resource designated as the patient flag must be created to indicate that there are reasonable adjustments recorded for the patient.  There is a single instance of this type of resource per patient.
 
 <div style="text-align: left;">
 

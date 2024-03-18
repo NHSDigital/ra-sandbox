@@ -1,5 +1,5 @@
 Instance: RAConditionExample2
-InstanceOf: Condition
+InstanceOf: FlagCondition
 Title: "RA example 2 of a Condition resource."
 Usage: #example
 * meta.profile = "https://fhir.nhs.uk/England/StructureDefinition/FlagCondition"

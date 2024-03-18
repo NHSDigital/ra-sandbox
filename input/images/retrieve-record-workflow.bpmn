@@ -11,30 +11,30 @@
     <bpmn:laneSet id="LaneSet_1s0cwuu">
       <bpmn:lane id="Lane_1qewygr" name="API">
         <bpmn:flowNodeRef>Activity_0dhbqc4</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Event_0l5456e</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Activity_1qe7rt1</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Event_0nheh7a</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_0f2zwq2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_1tii599</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_0s229l6" name="Patient">
-        <bpmn:flowNodeRef>Gateway_1171opp</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1s5y9xm</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1171opp</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_0jp784q" name="Practitioner">
         <bpmn:flowNodeRef>Event_03tz7z4</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1lxn6f7</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_00yhqnr</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_11a6p73</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0qlq94j</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
     <bpmn:startEvent id="Event_03tz7z4">
       <bpmn:outgoing>Flow_0ws129z</bpmn:outgoing>
     </bpmn:startEvent>
     <bpmn:sequenceFlow id="Flow_0ws129z" sourceRef="Event_03tz7z4" targetRef="Activity_00yhqnr" />
-    <bpmn:sequenceFlow id="Flow_0yxt3zu" sourceRef="Activity_0dhbqc4" targetRef="Event_0l5456e" />
-    <bpmn:task id="Activity_1lxn6f7" name="Record adjustment and/or condition">
+    <bpmn:task id="Activity_1lxn6f7" name="Query for Reasonable Adjustment records">
       <bpmn:incoming>Flow_1e2o9um</bpmn:incoming>
       <bpmn:outgoing>Flow_1jisczp</bpmn:outgoing>
     </bpmn:task>
-    <bpmn:task id="Activity_00yhqnr" name="Examine patient and suggest adjustments">
+    <bpmn:task id="Activity_00yhqnr" name="Determine need for access to Reasonable Adjustment record">
       <bpmn:incoming>Flow_0ws129z</bpmn:incoming>
       <bpmn:outgoing>Flow_1y1ffd0</bpmn:outgoing>
     </bpmn:task>
@@ -42,48 +42,54 @@
     <bpmn:sequenceFlow id="Flow_1vk7ynh" sourceRef="Activity_1s5y9xm" targetRef="Gateway_1171opp" />
     <bpmn:sequenceFlow id="Flow_1e2o9um" name="Yes" sourceRef="Gateway_1171opp" targetRef="Activity_1lxn6f7" />
     <bpmn:sequenceFlow id="Flow_1jisczp" sourceRef="Activity_1lxn6f7" targetRef="Activity_0dhbqc4" />
-    <bpmn:subProcess id="Activity_1s5y9xm" name="Provide consent">
+    <bpmn:subProcess id="Activity_1s5y9xm" name="Confirm/provide consent">
       <bpmn:incoming>Flow_1y1ffd0</bpmn:incoming>
       <bpmn:outgoing>Flow_1vk7ynh</bpmn:outgoing>
     </bpmn:subProcess>
     <bpmn:exclusiveGateway id="Gateway_1171opp">
       <bpmn:incoming>Flow_1vk7ynh</bpmn:incoming>
       <bpmn:outgoing>Flow_1e2o9um</bpmn:outgoing>
-      <bpmn:outgoing>Flow_1a3rt06</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1cx5q9g</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:serviceTask id="Activity_0dhbqc4" name="Update Resources">
+    <bpmn:serviceTask id="Activity_0dhbqc4" name="Return records">
       <bpmn:incoming>Flow_1jisczp</bpmn:incoming>
-      <bpmn:outgoing>Flow_0yxt3zu</bpmn:outgoing>
+      <bpmn:outgoing>Flow_13blkkd</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:endEvent id="Event_0l5456e">
-      <bpmn:incoming>Flow_0yxt3zu</bpmn:incoming>
+    <bpmn:task id="Activity_11a6p73" name="Review records">
+      <bpmn:incoming>Flow_13blkkd</bpmn:incoming>
+      <bpmn:outgoing>Flow_1dyrqyw</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_13blkkd" sourceRef="Activity_0dhbqc4" targetRef="Activity_11a6p73" />
+    <bpmn:endEvent id="Event_0qlq94j">
+      <bpmn:incoming>Flow_1dyrqyw</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:subProcess id="Activity_1qe7rt1" name="Revoke/remove Consent &#38; RA records">
-      <bpmn:incoming>Flow_1a3rt06</bpmn:incoming>
-      <bpmn:outgoing>Flow_1tggx8z</bpmn:outgoing>
+    <bpmn:sequenceFlow id="Flow_1dyrqyw" sourceRef="Activity_11a6p73" targetRef="Event_0qlq94j" />
+    <bpmn:sequenceFlow id="Flow_1cx5q9g" name="No" sourceRef="Gateway_1171opp" targetRef="Activity_0f2zwq2" />
+    <bpmn:sequenceFlow id="Flow_0fh1jdb" sourceRef="Activity_0f2zwq2" targetRef="Event_1tii599" />
+    <bpmn:subProcess id="Activity_0f2zwq2" name="Revoke/remove Consent &#38; RA records">
+      <bpmn:incoming>Flow_1cx5q9g</bpmn:incoming>
+      <bpmn:outgoing>Flow_0fh1jdb</bpmn:outgoing>
     </bpmn:subProcess>
-    <bpmn:sequenceFlow id="Flow_1a3rt06" name="No" sourceRef="Gateway_1171opp" targetRef="Activity_1qe7rt1" />
-    <bpmn:sequenceFlow id="Flow_1tggx8z" sourceRef="Activity_1qe7rt1" targetRef="Event_0nheh7a" />
-    <bpmn:endEvent id="Event_0nheh7a">
-      <bpmn:incoming>Flow_1tggx8z</bpmn:incoming>
+    <bpmn:endEvent id="Event_1tii599">
+      <bpmn:incoming>Flow_0fh1jdb</bpmn:incoming>
     </bpmn:endEvent>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0q56fut">
       <bpmndi:BPMNShape id="Participant_18xshys_di" bpmnElement="Participant_18xshys" isHorizontal="true">
-        <dc:Bounds x="160" y="62" width="1030" height="748" />
+        <dc:Bounds x="160" y="62" width="1130" height="748" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_0jp784q_di" bpmnElement="Lane_0jp784q" isHorizontal="true">
-        <dc:Bounds x="190" y="62" width="1000" height="250" />
+        <dc:Bounds x="190" y="62" width="1100" height="250" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_0s229l6_di" bpmnElement="Lane_0s229l6" isHorizontal="true">
-        <dc:Bounds x="190" y="312" width="1000" height="258" />
+        <dc:Bounds x="190" y="312" width="1100" height="258" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_1qewygr_di" bpmnElement="Lane_1qewygr" isHorizontal="true">
-        <dc:Bounds x="190" y="570" width="1000" height="240" />
+        <dc:Bounds x="190" y="570" width="1100" height="240" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_03tz7z4_di" bpmnElement="Event_03tz7z4">
@@ -97,31 +103,33 @@
         <dc:Bounds x="420" y="150" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0nheh7a_di" bpmnElement="Event_0nheh7a">
+      <bpmndi:BPMNShape id="Activity_0bn3kvy_di" bpmnElement="Activity_0dhbqc4">
+        <dc:Bounds x="830" y="650" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_11a6p73_di" bpmnElement="Activity_11a6p73">
+        <dc:Bounds x="1000" y="150" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0qlq94j_di" bpmnElement="Event_0qlq94j">
+        <dc:Bounds x="1172" y="172" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1tii599_di" bpmnElement="Event_1tii599">
         <dc:Bounds x="452" y="672" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_00yzkhu_di" bpmnElement="Activity_1s5y9xm">
         <dc:Bounds x="420" y="390" width="100" height="80" />
+        <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_1171opp_di" bpmnElement="Gateway_1171opp" isMarkerVisible="true">
         <dc:Bounds x="665" y="405" width="50" height="50" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1m0u30p_di" bpmnElement="Activity_0dhbqc4">
-        <dc:Bounds x="830" y="650" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0l5456e_di" bpmnElement="Event_0l5456e">
-        <dc:Bounds x="1052" y="672" width="36" height="36" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1wkul1x_di" bpmnElement="Activity_1qe7rt1">
+      <bpmndi:BPMNShape id="Activity_0ksa53r_di" bpmnElement="Activity_0f2zwq2">
         <dc:Bounds x="640" y="650" width="100" height="80" />
+        <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_0ws129z_di" bpmnElement="Flow_0ws129z">
         <di:waypoint x="298" y="190" />
         <di:waypoint x="420" y="190" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0yxt3zu_di" bpmnElement="Flow_0yxt3zu">
-        <di:waypoint x="930" y="690" />
-        <di:waypoint x="1052" y="690" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1y1ffd0_di" bpmnElement="Flow_1y1ffd0">
         <di:waypoint x="470" y="230" />
@@ -143,14 +151,23 @@
         <di:waypoint x="880" y="190" />
         <di:waypoint x="880" y="650" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1a3rt06_di" bpmnElement="Flow_1a3rt06">
+      <bpmndi:BPMNEdge id="Flow_13blkkd_di" bpmnElement="Flow_13blkkd">
+        <di:waypoint x="930" y="690" />
+        <di:waypoint x="1050" y="690" />
+        <di:waypoint x="1050" y="230" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1dyrqyw_di" bpmnElement="Flow_1dyrqyw">
+        <di:waypoint x="1100" y="190" />
+        <di:waypoint x="1172" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1cx5q9g_di" bpmnElement="Flow_1cx5q9g">
         <di:waypoint x="690" y="455" />
         <di:waypoint x="690" y="650" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="698" y="493" width="15" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1tggx8z_di" bpmnElement="Flow_1tggx8z">
+      <bpmndi:BPMNEdge id="Flow_0fh1jdb_di" bpmnElement="Flow_0fh1jdb">
         <di:waypoint x="640" y="690" />
         <di:waypoint x="488" y="690" />
       </bpmndi:BPMNEdge>
@@ -167,7 +184,7 @@
   <bpmndi:BPMNDiagram id="BPMNDiagram_0h1l0dp">
     <bpmndi:BPMNPlane id="BPMNPlane_0ufkrov" bpmnElement="Activity_1s5y9xm" />
   </bpmndi:BPMNDiagram>
-  <bpmndi:BPMNDiagram id="BPMNDiagram_1fec2b4">
-    <bpmndi:BPMNPlane id="BPMNPlane_1x1kk3w" bpmnElement="Activity_1qe7rt1" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_0smjx02">
+    <bpmndi:BPMNPlane id="BPMNPlane_1pock82" bpmnElement="Activity_0f2zwq2" />
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>

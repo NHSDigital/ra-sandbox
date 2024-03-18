@@ -1,5 +1,5 @@
 Instance: FGMPatientFlagExample1
-InstanceOf: Flag
+InstanceOf: PatientFlag
 Title: "FGM example of a patient Flag resource"
 Usage: #example
 * meta.profile = "https://fhir.nhs.uk/England/StructureDefinition/PatientFlag"

@@ -7,6 +7,16 @@ Usage: #example
 * extension[0].url = "https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes"
 * extension[=].valueAnnotation.text = "Example of flag notes extension text in patient flag"
 
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/flag-detail"
+* extension[=].valueReference = Reference(RAConditionExample1)
+* extension[=].valueReference.type = "Condition"
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/flag-detail"
+* extension[=].valueReference = Reference(RAConsentExample1)
+* extension[=].valueReference.type = "Consent"
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/flag-detail"
+* extension[=].valueReference = Reference(RAFlagExample1)
+* extension[=].valueReference.type = "Flag"
+
 * status = #active
 * code = PatientFlagCategory#NRAF "National Reasonable Adjustments Flag"
 * subject = Reference(Patient/PatientExample1)

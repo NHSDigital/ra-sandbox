@@ -3,7 +3,7 @@ Id: FlagConditionCode
 Title: "NHSE Flag Condition Code"
 Description: "A ValueSet to identify a condition."
 
-* ^name = "ReasonableAdjustmentsConditionCode"
+* ^name = "FlagConditionCode"
 * ^url = "https://fhir.nhs.uk/England/ValueSet/FlagConditionCode"
 * ^version = "0.1.0"
 * ^status = #draft

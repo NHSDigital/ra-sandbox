@@ -1,9 +1,9 @@
 ValueSet: FlagProvenanceRole
 Id: FlagProvenanceRole
-Title: "RA Provenance Role"
+Title: "NHSE Flag Provenance Role"
 Description: "A ValueSet to identify the role in which someone recording provenance is acting"
 
-* ^name = "ReasonableAdjustmentsProvenanceRole"
+* ^name = "FlagProvenanceRole"
 * ^url = "https://fhir.nhs.uk/England/ValueSet/FlagProvenanceRole"
 * ^version = "0.1.0"
 * ^status = #draft

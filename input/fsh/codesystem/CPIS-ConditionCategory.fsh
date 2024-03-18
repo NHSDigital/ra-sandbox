@@ -3,7 +3,7 @@ Id: CPIS-ConditionCategory
 Title: "CPIS Condition Category"
 Description: "A CodeSystem to identify the category of a condition within CPIS."
 
-* ^name = "ReasonableAdjustmentsConditionCategory"
+* ^name = "CPISConditionCategory"
 * ^url = "https://fhir.nhs.uk/England/CodeSystem/CPIS-ConditionCategory"
 * ^version = "0.1.0"
 * ^status = #draft

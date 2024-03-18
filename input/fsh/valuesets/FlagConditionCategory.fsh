@@ -3,7 +3,7 @@ Id: FlagConditionCategory
 Title: "NHSE Flag Condition Category"
 Description: "A ValueSet to identify the category of a condition."
 
-* ^name = "ReasonableAdjustmentsConditionCategory"
+* ^name = "FlagConditionCategory"
 * ^url = "https://fhir.nhs.uk/England/ValueSet/FlagConditionCategory"
 * ^version = "0.1.0"
 * ^status = #draft
