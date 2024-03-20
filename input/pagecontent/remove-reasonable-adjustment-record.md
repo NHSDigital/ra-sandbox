@@ -7,7 +7,7 @@ For high level requirements, see [Key purposes of the Reasonable Adjustment Flag
 
 #### UseCase
 
-If a patient denys consent, then this must be recorded and all adjustment records removed.
+If a patient denys consent, then this must be recorded and all adjustment records should be removed.
 
 <div style="text-align: left;">
 
