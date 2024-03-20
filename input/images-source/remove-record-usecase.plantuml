@@ -13,8 +13,9 @@ usecase "Remove Reasonable Adjustment record" as RET
 
 pat -- CON
 pad -- CON
+pra -- CON
 pra -- RET
-CON -- RET
+CON <.. RET : include
 
 
 @enduml
