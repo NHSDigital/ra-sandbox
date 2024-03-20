@@ -1,13 +1,13 @@
 ### Overview
 
-Patient consent must be obtained before removing any adjustment or impairment.  See [Consent to Share Information](consent-to-share-information.html) for details of requirements around consent.
+A patient may deny or revoke their consent to share adjustment or impairment information at any point. See [Consent to Share Information](consent-to-share-information.html) for details of requirements around consent.
 
 For high level requirements, see [Key purposes of the Reasonable Adjustment Flag](index.html#key-purposes)   
  
 
 #### UseCase
 
-As consent is not granted from a patient , a Reasonable Adjustment record will be removed by the practitioner.
+If a patient denys consent, then this must be recorded and all adjustment records removed.
 
 <div style="text-align: left;">
 
@@ -32,7 +32,7 @@ And all conditions will be deleted
 #### Workflow
 <p>
   
-A patient presents to be examined by a practitioner. A patient may revoke consent to share information about Reasonable Adjustment records and if they do, all records should be removed.
+A patient may revoke consent to share information about Reasonable Adjustment records and if they do, all records should be removed.
 
 </p>
 
@@ -41,9 +41,6 @@ A patient presents to be examined by a practitioner. A patient may revoke consen
 </div>
 
 ### System Interactions
-
-
-#### General query interaction
 
 <div style="text-align: left;">
 
