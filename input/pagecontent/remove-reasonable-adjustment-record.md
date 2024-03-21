@@ -53,7 +53,7 @@ In the following sequence diagram, a patient revokes consent.  The Consent resou
 The following resources will be deleted from the record if consent is not granted i.e.
 
 * [Patient Flag](Flag-RAPatientFlagExample1.html) resources  
-* [Flag Condition](Condition-RAConditionExample1l) resources 
+* [Condition Flag](Condition-RAConditionExample1.html) resources 
 
 #### Example
 
@@ -66,4 +66,4 @@ POST /
 The following resources can be deleted using a [Transaction Bundle](Bundle-RemoveRARecordExample.html)
 
 * [Patient Flag](Flag-RAPatientFlagExample1.html) resources 
-* [Flag Condition](Condition-RAConditionExample1l) resources 
+* [Condition Flag](Condition-RAConditionExample1.html) resources 
