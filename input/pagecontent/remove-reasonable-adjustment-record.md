@@ -7,7 +7,7 @@ For high level requirements, see [Key purposes of the Reasonable Adjustment Flag
 
 #### UseCase
 
-If a patient denys consent, then this must be recorded and all adjustment records should be removed.
+If a patient denys consent, then this must be recorded and all adjustment records must be removed.
 
 <div style="text-align: left;">
 
@@ -32,7 +32,7 @@ And all conditions will be deleted
 #### Workflow
 <p>
   
-A patient may revoke consent to share information about Reasonable Adjustment records and if they do, all records should be removed.
+A patient may revoke consent to share information about Reasonable Adjustment records and if they do, all records must be removed.
 
 </p>
 
@@ -41,6 +41,8 @@ A patient may revoke consent to share information about Reasonable Adjustment re
 </div>
 
 ### System Interactions
+
+In the following sequence diagram, a patient revokes consent.  The Consent resource is updated to reflect the patient dissent, and all adjustment records are deleted.
 
 <div style="text-align: left;">
 
