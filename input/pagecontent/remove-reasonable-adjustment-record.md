@@ -50,11 +50,10 @@ In the following sequence diagram, a patient revokes consent.  The Consent resou
 
 </div>
 
-The following resources will be removed from the record if consent is not granted i.e.
+The following resources will be deleted from the record if consent is not granted i.e.
 
-* [Flag Consent](StructureDefinition-FlagConsent.html) resource
-* [Patient Flag](StructureDefinition-PatientFlag.html) resources  
-* [Flag Condition](StructureDefinition-FlagCondition.html) resources 
+* [Patient Flag](Flag-RAPatientFlagExample1.html) resources  
+* [Flag Condition](Condition-RAConditionExample1l) resources 
 
 #### Example
 
@@ -64,10 +63,7 @@ for the delete transaction example provided below, the following query will perf
 POST /
 ```
 
-This query will delete the patient's RA record, i.e. the resources contained in the transaction.
+The following resources can be deleted using a [Transaction Bundle](Bundle-RemoveRARecordExample.html)
 
-* [Flag Consent](StructureDefinition-FlagConsent.html) resource
-* [Patient Flag](StructureDefinition-PatientFlag.html) resources  
-* [Flag Condition](StructureDefinition-FlagCondition.html) resources 
-
-This will be the following Request body [Bundle transaction](Bundle-RemoveRARecordExample.html)
+* [Patient Flag](Flag-RAPatientFlagExample1.html) resources 
+* [Flag Condition](Condition-RAConditionExample1l) resources 
