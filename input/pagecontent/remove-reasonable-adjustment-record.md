@@ -18,16 +18,13 @@ If a patient denys consent, then this must be recorded and all adjustment record
 #### Scenarios
 
 ```gherkin
-
 Given a patient or their advocate revokes consent
 And the consent is for reasonable adjustments
 When a practioner records the consent
 Then consent will be marked as inactive
 And all flags will be deleted
 And all conditions will be deleted
-
 ```
-
 
 #### Workflow
 <p>
@@ -50,20 +47,21 @@ In the following sequence diagram, a patient revokes consent.  The Consent resou
 
 </div>
 
-The following resources will be deleted from the record if consent is not granted i.e.
+The following resource types will be deleted from the record if consent is not granted i.e.
 
-* [Patient Flag](Flag-RAPatientFlagExample1.html) resources  
-* [Condition Flag](Condition-RAConditionExample1.html) resources 
+* [Patient Flag](StructureDefinition-PatientFlag.html)  
+* [Programme Flag](StructureDefinition-ProgrammeFlag.html)  
+* [Condition Flag](StructureDefinition-FlagCondition.html) 
 
 #### Example
 
-for the delete transaction example provided below, the following query will performed (dynamically during the IG build)
+Multiple resources can be deleteed using a transaction bundle.  With this [example delete transaction Bundle](Bundle-RemoveRARecordExample.html), the following resources can be deleted.
 
-```
-POST /
-```
+* [Patient Flag](Flag-RAPatientFlagExample1.html) example.  
+* [Programme Flag](Flag-RAFlagExample1.html) example.  
+* [Condition Flag](Condition-RAConditionExample1.html) example.  
 
-The following resources can be deleted using a [Transaction Bundle](Bundle-RemoveRARecordExample.html)
+### Relevant Documentation
 
-* [Patient Flag](Flag-RAPatientFlagExample1.html) resources 
-* [Condition Flag](Condition-RAConditionExample1.html) resources 
+[Bundles](https://hl7.org/fhir/r4/bundle.html)  
+[Transactions](https://hl7.org/fhir/r4/http.html#transaction)  
