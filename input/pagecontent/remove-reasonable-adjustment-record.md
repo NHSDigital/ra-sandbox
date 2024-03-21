@@ -55,7 +55,7 @@ The following resource types will be deleted from the record if consent is not g
 
 #### Example
 
-Multiple resources can be deleteed using a transaction bundle.  With this [example delete transaction Bundle](Bundle-RemoveRARecordExample.html), the following resources can be deleted.
+Multiple resources can be deleted using a transaction bundle.  This [example delete transaction Bundle](Bundle-RemoveRARecordExample.html) demonstates deleting the following resources
 
 * [Patient Flag](Flag-RAPatientFlagExample1.html) example.  
 * [Programme Flag](Flag-RAFlagExample1.html) example.  
