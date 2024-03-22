@@ -34,7 +34,7 @@ A patient may revoke consent to share information about Reasonable Adjustment re
 </p>
 
 <div>
-    <img style="max-width: 70%" alt="Activity created in draw.io!" src="remove-record-workflow.svg"/>
+    <img style="max-width: 70%" alt="Remove record workflow BPMN diagram." src="remove-record-workflow.svg"/>
 </div>
 
 ### System Interactions
