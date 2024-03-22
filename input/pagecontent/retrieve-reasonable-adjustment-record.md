@@ -16,10 +16,10 @@ After obtaining consent from a patient, a Reasonable Adjustment Record may be re
 
 ### Workflow
 
-A practitioner confirms that a patient consents to share information about Reasonable Adjustment records.  A patient may revoke consent to share information about Reasonable Adjustment records and if they do, all records should be removed.
+A practitioner confirms that a patient consents to share information about Reasonable Adjustment records.  A patient may revoke consent to share information about Reasonable Adjustment records and if they do, all records must be removed.
 
 <div>
-    <img style="max-width: 70%" alt="Activity created in draw.io!" src="retrieve-record-workflow.svg"/>
+    <img style="max-width: 70%" alt="Retrieve record workflow BPMN diagram." src="retrieve-record-workflow.svg"/>
 </div>
 
 ### System Interactions
@@ -113,3 +113,6 @@ This includes the associated patient resource.
 &_include=Flag:patient
 ```
 
+### Relevant Documentation
+
+[FHIR Search](http://www.hl7.org/fhir/R4/search.html)
