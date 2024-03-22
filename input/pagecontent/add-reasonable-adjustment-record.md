@@ -5,7 +5,6 @@ Patient consent must be obtained before recording any adjustment or impairment. 
 For high level requirements, see [Key purposes of the Reasonable Adjustment Flag](index.html#key-purposes) 
 
 ### Usecase
-
 After obtaining consent from a patient, a Reasonable Adjustment Record may be created.  This consists of a Flag resource containing an adjustment and a Condition resource may also optionally be created to record the details of an impairment.  
 
 If a Reasonable Adjustment Record exists, a Flag resource designated as the patient flag must be created to indicate that there are reasonable adjustments recorded for the patient.  There is a single instance of this type of resource per patient.
