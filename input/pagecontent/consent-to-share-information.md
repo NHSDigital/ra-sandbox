@@ -55,7 +55,7 @@ And all conditions will be deleted
 If consent is not given, then this will be recorded.  If there was previous consent to record adjustments, but the consent is then revoked, then all adjustment records must also be removed.
 
 <div>
-    <img style="max-width: 100%" alt="Activity created in draw.io!" src="consent-to-treatment.svg"/>
+    <img style="max-width: 100%" alt="Consent workflow BPMN diagram." src="consent-to-treatment.svg"/>
 </div>
 
 ### System Interactions
