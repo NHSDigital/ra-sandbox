@@ -52,7 +52,7 @@ And all conditions will be deleted
 
 ### Workflow
 
-If consent is not given, then this will be recorded.  If there was previous consent to record adjustments, but the consent is then revoked, then all adjustment records must also be removed.
+When consent or dissent is provided by the patient or their advocate, then this will be recorded in a [Consent](https://www.hl7.org/fhir/r4/consent.html) resource.  If there was previous consent to record adjustments, but the consent is then revoked, then all adjustment records must also be removed.
 
 <div>
     <img style="max-width: 100%" alt="Consent workflow BPMN diagram." src="consent-to-treatment.svg"/>
@@ -60,9 +60,9 @@ If consent is not given, then this will be recorded.  If there was previous cons
 
 ### System Interactions
 
-If consent is given either by the patient or the patient advocate, then this should be recorded.  A record of who obtained the consent must also be embedded in the Consent resource.  This will done using a provenance resource.  If consent has not been previously given, then this means the Consent resource must be created.  If consent is removed, then the Consent resource should be deleted.  The absence of a Consent resource implies patient dissent.
+If consent is given either by the patient or the patient advocate, then this should be recorded.  A record of who obtained the consent must also be embedded in the Consent resource.  This will done using a contained provenance resource.  
 
-If consent is removed, then all previous adjustment records must be deleted, including the patient flag and all adjustment flags and conditions.
+If consent has not been previously given, then this means the Consent resource must be created.  If consent is revoked, then the Consent resource should be updated to reflect this and marked as inactive.  Any previous adjustment records that were recorded must be removed, including the patient flag and all adjustment flags and conditions.
 
 <div style="text-align: left;">
 
@@ -73,5 +73,8 @@ If consent is removed, then all previous adjustment records must be deleted, inc
 ### Examples
 
 * [Consent is given example](Consent-RAConsentExample1.html)
-* Consent is not given is implied by the absence of a Consent resource
-* Consent is revoked is implied by the absence of a Consent resource
+
+**TODO** - *these were not previous modelled in the terminology*
+
+* [Consent is not given](Consent-RAConsentExampleDissent.html)
+* [Consent is revoked](Consent-RAConsentExampleRevoked.html)

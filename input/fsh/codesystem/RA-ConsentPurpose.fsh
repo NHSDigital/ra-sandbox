@@ -15,3 +15,5 @@ Description: "A CodeSystem to identify the purpose of the consent given within R
 * ^caseSensitive = true
 * ^content = #complete
 * #RACONSENT "Reasonable Adjustments - Consent to record Reasonable Adjustments"
+* #RADISSENT "Reasonable Adjustments - Dissent to record Reasonable Adjustments"
+* #RAREVOKED "Reasonable Adjustments - Consent revoked to record Reasonable Adjustments"
