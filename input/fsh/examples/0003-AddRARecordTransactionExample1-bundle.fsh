@@ -15,11 +15,11 @@ Usage: #example
 * entry[=].resource = RAConditionExample1
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Condition?patient=urn:uuid:6253c43b-5cc8-4645-93b1-38e41be82a77"
-* entry[+].fullUrl = "urn:uuid:fba99f70-fe1d-42e2-b77a-916e44b53c19"
+* entry[+].fullUrl = "Flag/RAPatientFlagExample1"
 * entry[=].resource = RAPatientFlagExample1
 * entry[=].request.method = #PUT
-* entry[=].request.url = "Flag/fba99f70-fe1d-42e2-b77a-916e44b53c19"
-* entry[+].fullUrl = "urn:uuid:04adcb5b-3de7-4f67-97f0-b2fdf941ba85"
+* entry[=].request.url = "Flag/RAPatientFlagExample1"
+* entry[+].fullUrl = "Flag/RAFlagExample1"
 * entry[=].resource = RAFlagExample1
 * entry[=].request.method = #PUT
-* entry[=].request.url = "Flag/04adcb5b-3de7-4f67-97f0-b2fdf941ba85"
+* entry[=].request.url = "Flag/RAFlagExample1"
