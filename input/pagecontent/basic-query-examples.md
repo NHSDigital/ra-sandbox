@@ -4,7 +4,7 @@ The [HAPI FHIR Starter Server](https://github.com/hapifhir/hapi-fhir-jpaserver-s
 
 #### Docker invocation of the HAPI Starter Project
 
-This command starts the server on port 8080 and use UUID (as opposed to sequential numbers) for resource ID's.
+This command starts the server on port 8080 and use UUID (as opposed to sequential numbers) for resource ID's.  For more options see this [config](https://github.com/hapifhir/hapi-fhir-jpaserver-starter/blob/master/src/main/resources/application.yaml).
 
 ```
 docker run -p 8080:8080 -e hapi.fhir.daoconfig_client_id_strategy=UUID -e hapi.fhir.client_id_strategy=ANY hapiproject/hapi:latest
@@ -27,3 +27,5 @@ http://localhost:8080/fhir/swagger-ui/index.html
 #### Postman
 
 Some transaction and basic query examples are available in a [Postman collection](assets/postman/postman_collection.json).
+
+**NOTE:** Posting the SearchParameters first to the [HAPI FHIR Starter Server](https://github.com/hapifhir/hapi-fhir-jpaserver-starter) will allow them to index/load quicker so they work in the query examples.
