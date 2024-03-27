@@ -37,15 +37,6 @@ jobs:
       - name: Install Graphvix
         run: sudo apt install graphviz
 
-      - name: Run FHIR server (TODO - load package from vars and validate - maybe just let the publisher handle that...)
-        run: docker run -d -p 8080:8080 -e hapi.fhir.daoconfig_client_id_strategy=UUID -e hapi.fhir.client_id_strategy=ANY hapiproject/hapi:latest
-
-      - name: Sleep to give server time to start
-        run: sleep 90
-
-      - name: Convert FSH, load examples and run queries to be added to IG
-        run: ./scripts/run-examples.sh
-
       - name: Build IG
         run: ./_genonce.sh ${{ vars.VALIDATOR_OFFLINE }}
 
