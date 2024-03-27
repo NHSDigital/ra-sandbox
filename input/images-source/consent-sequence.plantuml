@@ -35,8 +35,7 @@ else Consent has not been given/been revoked
   api <-- con : return
   alt Validation failed
     api -> api : rollback
-  else
-    api ->  con : Delete adjustment consent
+  else Consent updated
     api ->  pfg : Delete adjustment patient flag
     api ->  adj : Delete adjustment flag(s)
     api ->  cod : Delete condition flag(s)

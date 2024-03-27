@@ -63,5 +63,5 @@ Multiple resources can be deleted using a transaction bundle.  This [example del
 
 ### Relevant Documentation
 
-[Bundles](https://hl7.org/fhir/r4/bundle.html)  
-[Transactions](https://hl7.org/fhir/r4/http.html#transaction)  
+* [Bundle](https://hl7.org/fhir/r4/bundle.html)  
+* [Transaction](https://hl7.org/fhir/r4/http.html#transaction)  

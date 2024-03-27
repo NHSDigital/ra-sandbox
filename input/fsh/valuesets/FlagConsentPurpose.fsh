@@ -17,10 +17,10 @@ Description: "A ValueSet to identify the purpose of a consent given for an NHS E
 * ^expansion.contains[=].code = #RACONSENT
 * ^expansion.contains[=].display = "Reasonable Adjustments - Consent to record Reasonable Adjustments"
 
-* ^expansion.contains[0].system = "https://fhir.nhs.uk/England/CodeSystem/CPIS-ConsentPurpose"
+* ^expansion.contains[+].system = "https://fhir.nhs.uk/England/CodeSystem/CPIS-ConsentPurpose"
 * ^expansion.contains[=].code = #CPISCONSENT
 * ^expansion.contains[=].display = "CPIS - Consent to record CPIS flags"
 
-* ^expansion.contains[0].system = "https://fhir.nhs.uk/England/CodeSystem/FGM-ConsentPurpose"
+* ^expansion.contains[+].system = "https://fhir.nhs.uk/England/CodeSystem/FGM-ConsentPurpose"
 * ^expansion.contains[=].code = #FGMCONSENT
 * ^expansion.contains[=].display = "FGM - Consent to record FGM flags"
