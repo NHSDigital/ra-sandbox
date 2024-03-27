@@ -1,6 +1,6 @@
-Instance: RAConsentExample1
+Instance: RAConsentExampleDissent
 InstanceOf: Consent
-Title: "RA example of Consent resource where patient provides consent."
+Title: "RA example of Consent resource where patient dissents to share information."
 Usage: #example
 * meta.profile = "https://fhir.nhs.uk/England/StructureDefinition/FlagConsent"
 
@@ -12,7 +12,7 @@ Usage: #example
 * status = #active
 * scope = $consentscope#patient-privacy
 * category = PatientFlagCategory#NRAF "National Reasonable Adjustments Flag"
-* provision.purpose = RA-ConsentPurpose#RACONSENT "Reasonable Adjustments - Consent to record Reasonable Adjustments"
+* provision.purpose = RA-ConsentPurpose#RADISSENT "Reasonable Adjustments - Dissent to record Reasonable Adjustments"
 * patient = Reference(Patient/PatientExample1)
 * policy.authority = "https://www.gov.uk/"
 * policy.uri = "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/535024/data-security-review.pdf"
