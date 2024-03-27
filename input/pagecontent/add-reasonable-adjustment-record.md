@@ -117,6 +117,6 @@ The following set of examples are for the same patient, and constitute an additi
 
 ### Relevant Documentation
 
-[Bundles](https://hl7.org/fhir/r4/bundle.html)  
-[Transactions](https://hl7.org/fhir/r4/http.html#transaction)  
-[Upsert](https://hl7.org/fhir/r4/http.html#upsert)  
+* [Bundle](https://hl7.org/fhir/r4/bundle.html)  
+* [Transaction](https://hl7.org/fhir/r4/http.html#transaction)  
+* [Upsert](https://hl7.org/fhir/r4/http.html#upsert)  

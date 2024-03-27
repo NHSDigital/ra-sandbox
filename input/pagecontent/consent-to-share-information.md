@@ -78,3 +78,7 @@ If consent has not been previously given, then this means the Consent resource m
 
 * [Consent is not given](Consent-RAConsentExampleDissent.html)
 * [Consent is revoked](Consent-RAConsentExampleRevoked.html)
+
+### Relevant Documentation
+
+* FHIR [ReSTful API](https://www.hl7.org/fhir/R4/http.html)
