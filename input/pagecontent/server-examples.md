@@ -26,4 +26,4 @@ http://localhost:8080/fhir/swagger-ui/index.html
 
 #### Postman
 
-All examples and some queries are available in a [Postman collection](assets/postman/postman_collection.json).
+Some transaction and basic query examples are available in a [Postman collection](assets/postman/postman_collection.json).
