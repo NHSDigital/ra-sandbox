@@ -1,0 +1,17 @@
+@startuml
+
+skinparam actorStyle awesome
+
+actor Practitioner as pra
+package Consenter {
+  actor "Patient Advocate" as pad
+  actor Patient as pat
+}
+
+usecase "Consent to share information" as CON
+
+pat -- CON
+pad -- CON
+pra -- CON
+
+@enduml

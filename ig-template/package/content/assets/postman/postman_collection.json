@@ -1,0 +1,725 @@
+{
+	"info": {
+		"_postman_id": "5911c4df-e4e8-4ef1-ae75-bf22a688d9cc",
+		"name": "Reasonable Adjustments Examples",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32605342"
+	},
+	"item": [
+		{
+			"name": "SearchParameters",
+			"item": [
+				{
+					"name": "Flag.category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resourceType\" : \"SearchParameter\",\n  \"id\" : \"FlagCategory\",\n  \"url\" : \"http://localhost:8080/fhir/SearchParameter/FlagCategory\",\n  \"version\" : \"1\",\n  \"name\" : \"Search for Flag.category\",\n  \"title\" : \"Search for Flag.category\",\n  \"derivedFrom\" : \"http://hl7.org/fhir/SearchParameter/Resource-id\",\n  \"status\" : \"active\",\n  \"description\" : \"Search by category in the Flag resource\",\n  \"code\" : \"category\",\n  \"base\" : [\"Flag\"],\n  \"type\" : \"token\",\n  \"expression\" : \"Flag.category\",\n  \"xpathUsage\": \"normal\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/fhir/SearchParameter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fhir",
+								"SearchParameter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Flag.code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resourceType\" : \"SearchParameter\",\n  \"id\" : \"FlagCode\",\n  \"url\" : \"http://localhost:8080/fhir/SearchParameter/FlagCode\",\n  \"version\" : \"1\",\n  \"name\" : \"Search for Flag.code\",\n  \"title\" : \"Search for Flag.code\",\n  \"derivedFrom\" : \"http://hl7.org/fhir/SearchParameter/Resource-id\",\n  \"status\" : \"active\",\n  \"description\" : \"Search by code in the Flag resource\",\n  \"code\" : \"code\",\n  \"base\" : [\"Flag\"],\n  \"type\" : \"token\",\n  \"expression\" : \"Flag.code\",\n  \"xpathUsage\": \"normal\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/fhir/SearchParameter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fhir",
+								"SearchParameter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Extension Flag.detail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resourceType\": \"SearchParameter\",\n    \"id\": \"FlagDetail\",\n    \"url\": \"http://localhost:8080/fhir/SearchParameter/FlagDetail\",\n    \"name\": \"SearchParameter for flag detail extension used in Flag\",\n    \"title\": \"SearchParameter for Flag.extension where url=http://hl7.org/fhir/StructureDefinition/flag-detail\",\n    \"status\": \"active\",\n    \"description\": \"Search using extension for flag detail extension in Flag resource\",\n    \"code\": \"detail\",\n    \"base\": [\"Flag\"],\n    \"type\": \"reference\",\n    \"expression\": \"Flag.extension('http://hl7.org/fhir/StructureDefinition/flag-detail')\",\n    \"target\": [\"Condition\", \"Flag\", \"Consent\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/fhir/SearchParameter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fhir",
+								"SearchParameter"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction Bundles",
+			"item": [
+				{
+					"name": "AddRARecordTransactionExample1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resourceType\": \"Bundle\",\n  \"id\": \"AddRARecordTransactionExample1\",\n  \"entry\": [\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Patient/PatientExample1\"\n      },\n      \"fullUrl\": \"Patient/PatientExample1\",\n      \"resource\": {\n        \"resourceType\": \"Patient\",\n        \"id\": \"PatientExample1\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient\"\n          ]\n        },\n        \"identifier\": [\n          {\n            \"system\": \"https://fhir.nhs.uk/Id/nhs-number\",\n            \"value\": \"9912003888\"\n          }\n        ],\n        \"name\": [\n          {\n            \"given\": [\n              \"Alan\"\n            ],\n            \"use\": \"official\",\n            \"family\": \"Mann\"\n          }\n        ],\n        \"active\": true,\n        \"gender\": \"male\",\n        \"birthDate\": \"1970-01-01\"\n      }\n    },\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Consent/RAConsentExample1\"\n      },\n      \"fullUrl\": \"Consent/RAConsentExample1\",\n      \"resource\": {\n        \"resourceType\": \"Consent\",\n        \"id\": \"RAConsentExample1\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.nhs.uk/England/StructureDefinition/FlagConsent\"\n          ]\n        },\n        \"extension\": [\n          {\n            \"valueAnnotation\": {\n              \"text\": \"Example of consent create summary extension text\"\n            },\n            \"url\": \"https://fhir.nhs.uk/England/StructureDefinition/Extension-ConsentCreateSummary\"\n          },\n          {\n            \"valueAnnotation\": {\n              \"text\": \"Example of consent remove summary extension text\"\n            },\n            \"url\": \"https://fhir.nhs.uk/England/StructureDefinition/Extension-ConsentRemoveSummary\"\n          }\n        ],\n        \"category\": [\n          {\n            \"coding\": [\n              {\n                \"code\": \"NRAF\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/PatientFlagCategory\",\n                \"display\": \"National Reasonable Adjustments Flag\"\n              }\n            ]\n          }\n        ],\n        \"provision\": {\n          \"purpose\": [\n            {\n              \"code\": \"RACONSENT\",\n              \"system\": \"https://fhir.nhs.uk/England/CodeSystem/RA-ConsentPurpose\",\n              \"display\": \"Reasonable Adjustments - Consent to record Reasonable Adjustments\"\n            }\n          ]\n        },\n        \"policy\": [\n          {\n            \"authority\": \"https://www.gov.uk/\",\n            \"uri\": \"https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/535024/data-security-review.pdf\"\n          }\n        ],\n        \"contained\": [\n          {\n            \"resourceType\": \"Provenance\",\n            \"id\": \"4c75ce1f-1ad7-4391-b5f6-104754c7e904\",\n            \"target\": [\n              {\n                \"reference\": \"#\"\n              }\n            ],\n            \"recorded\": \"2024-01-01T11:00:00+00:00\",\n            \"activity\": {\n              \"coding\": [\n                {\n                  \"code\": \"CREATE\",\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/v3-DataOperation\",\n                  \"display\": \"create\"\n                }\n              ]\n            },\n            \"agent\": [\n              {\n                \"role\": [\n                  {\n                    \"coding\": [\n                      {\n                        \"code\": \"R0260\",\n                        \"system\": \"https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1\",\n                        \"display\": \"General Medical Practitioner\"\n                      }\n                    ]\n                  }\n                ],\n                \"who\": {\n                  \"reference\": \"https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9\"\n                },\n                \"onBehalfOf\": {\n                  \"reference\": \"https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7\"\n                }\n              }\n            ]\n          }\n        ],\n        \"status\": \"active\",\n        \"scope\": {\n          \"coding\": [\n            {\n              \"code\": \"patient-privacy\",\n              \"system\": \"http://terminology.hl7.org/CodeSystem/consentscope\"\n            }\n          ]\n        },\n        \"patient\": {\n          \"reference\": \"Patient/PatientExample1\"\n        },\n        \"policyRule\": {\n          \"coding\": [\n            {\n              \"code\": \"001\",\n              \"system\": \"https://fhir.nhs.uk/England/CodeSystem/FlagProxyRole\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Condition/RAConditionExample1\"\n      },\n      \"fullUrl\": \"Condition/RAConditionExample1\",\n      \"resource\": {\n        \"resourceType\": \"Condition\",\n        \"id\": \"RAConditionExample1\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.nhs.uk/England/StructureDefinition/FlagCondition\"\n          ]\n        },\n        \"category\": [\n          {\n            \"coding\": [\n              {\n                \"code\": \"NRAF\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/PatientFlagCategory\",\n                \"display\": \"National Reasonable Adjustments Flag\"\n              }\n            ]\n          },\n          {\n            \"coding\": [\n              {\n                \"code\": \"issue\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/RA-ConditionCategory\",\n                \"display\": \"Issue\"\n              }\n            ]\n          }\n        ],\n        \"contained\": [\n          {\n            \"resourceType\": \"Provenance\",\n            \"id\": \"6a6b18a7-c077-49da-929f-a8dd38468f79\",\n            \"target\": [\n              {\n                \"reference\": \"#\"\n              }\n            ],\n            \"recorded\": \"2024-01-01T11:00:00+00:00\",\n            \"activity\": {\n              \"coding\": [\n                {\n                  \"code\": \"CREATE\",\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/v3-DataOperation\",\n                  \"display\": \"create\"\n                }\n              ]\n            },\n            \"agent\": [\n              {\n                \"role\": [\n                  {\n                    \"coding\": [\n                      {\n                        \"code\": \"R0260\",\n                        \"system\": \"https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1\",\n                        \"display\": \"General Medical Practitioner\"\n                      }\n                    ]\n                  }\n                ],\n                \"who\": {\n                  \"reference\": \"https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9\"\n                },\n                \"onBehalfOf\": {\n                  \"reference\": \"https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7\"\n                }\n              }\n            ]\n          }\n        ],\n        \"clinicalStatus\": {\n          \"coding\": [\n            {\n              \"code\": \"active\",\n              \"system\": \"http://terminology.hl7.org/CodeSystem/condition-clinical\"\n            }\n          ]\n        },\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"5\",\n              \"system\": \"https://fhir.nhs.uk/England/CodeSystem/RA-ConditionCode\",\n              \"display\": \"Learning or understanding or concentrating\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/PatientExample1\"\n        }\n      }\n    },\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Flag/RAPatientFlagExample1\"\n      },\n      \"fullUrl\": \"Flag/RAPatientFlagExample1\",\n      \"resource\": {\n        \"resourceType\": \"Flag\",\n        \"id\": \"RAPatientFlagExample1\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.nhs.uk/England/StructureDefinition/PatientFlag\"\n          ]\n        },\n        \"extension\": [\n          {\n            \"valueAnnotation\": {\n              \"text\": \"Example of flag notes extension text in patient flag\"\n            },\n            \"url\": \"https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes\"\n          },\n          {\n            \"valueReference\": {\n              \"reference\": \"Condition/RAConditionExample1\",\n              \"type\": \"Condition\"\n            },\n            \"url\": \"http://hl7.org/fhir/StructureDefinition/flag-detail\"\n          },\n          {\n            \"valueReference\": {\n              \"reference\": \"Consent/RAConsentExample1\",\n              \"type\": \"Consent\"\n            },\n            \"url\": \"http://hl7.org/fhir/StructureDefinition/flag-detail\"\n          },\n          {\n            \"valueReference\": {\n              \"reference\": \"Flag/RAFlagExample1\",\n              \"type\": \"Flag\"\n            },\n            \"url\": \"http://hl7.org/fhir/StructureDefinition/flag-detail\"\n          }\n        ],\n        \"contained\": [\n          {\n            \"resourceType\": \"Provenance\",\n            \"id\": \"c4e2e862-3bf4-4176-a186-9f1732938260\",\n            \"target\": [\n              {\n                \"reference\": \"#\"\n              }\n            ],\n            \"recorded\": \"2024-01-01T11:00:00+00:00\",\n            \"activity\": {\n              \"coding\": [\n                {\n                  \"code\": \"CREATE\",\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/v3-DataOperation\",\n                  \"display\": \"create\"\n                }\n              ]\n            },\n            \"agent\": [\n              {\n                \"role\": [\n                  {\n                    \"coding\": [\n                      {\n                        \"code\": \"R0260\",\n                        \"system\": \"https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1\",\n                        \"display\": \"General Medical Practitioner\"\n                      }\n                    ]\n                  }\n                ],\n                \"who\": {\n                  \"reference\": \"https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9\"\n                },\n                \"onBehalfOf\": {\n                  \"reference\": \"https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7\"\n                }\n              }\n            ]\n          }\n        ],\n        \"status\": \"active\",\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"NRAF\",\n              \"system\": \"https://fhir.nhs.uk/England/CodeSystem/PatientFlagCategory\",\n              \"display\": \"National Reasonable Adjustments Flag\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/PatientExample1\"\n        }\n      }\n    },\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Flag/RAFlagExample1\"\n      },\n      \"fullUrl\": \"Flag/RAFlagExample1\",\n      \"resource\": {\n        \"resourceType\": \"Flag\",\n        \"id\": \"RAFlagExample1\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.nhs.uk/England/StructureDefinition/ProgrammeFlag\"\n          ]\n        },\n        \"extension\": [\n          {\n            \"valueAnnotation\": {\n              \"text\": \"Example of flag notes extension text in adjustment flag\"\n            },\n            \"url\": \"https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes\"\n          }\n        ],\n        \"category\": [\n          {\n            \"coding\": [\n              {\n                \"code\": \"NRAF\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/PatientFlagCategory\",\n                \"display\": \"National Reasonable Adjustments Flag\"\n              }\n            ]\n          },\n          {\n            \"coding\": [\n              {\n                \"code\": \"001\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/RA-FlagCategory\",\n                \"display\": \"Communication support\"\n              }\n            ]\n          }\n        ],\n        \"contained\": [\n          {\n            \"resourceType\": \"Provenance\",\n            \"id\": \"873a38eb-0f9c-4a66-a4e9-8e4be2350d6b\",\n            \"target\": [\n              {\n                \"reference\": \"#\"\n              }\n            ],\n            \"recorded\": \"2024-01-01T11:00:00+00:00\",\n            \"activity\": {\n              \"coding\": [\n                {\n                  \"code\": \"CREATE\",\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/v3-DataOperation\",\n                  \"display\": \"create\"\n                }\n              ]\n            },\n            \"agent\": [\n              {\n                \"role\": [\n                  {\n                    \"coding\": [\n                      {\n                        \"code\": \"R0260\",\n                        \"system\": \"https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1\",\n                        \"display\": \"General Medical Practitioner\"\n                      }\n                    ]\n                  }\n                ],\n                \"who\": {\n                  \"reference\": \"https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9\"\n                },\n                \"onBehalfOf\": {\n                  \"reference\": \"https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7\"\n                }\n              }\n            ]\n          }\n        ],\n        \"status\": \"active\",\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"1082681000000103\",\n              \"system\": \"https://snomed.info/sct\",\n              \"display\": \"Requires support for receptive communication needs\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/PatientExample1\"\n        }\n      }\n    }\n  ],\n  \"type\": \"transaction\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/fhir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fhir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddRARecordTransactionExample2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resourceType\": \"Bundle\",\n  \"id\": \"AddRARecordTransactionExample2\",\n  \"entry\": [\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Patient/PatientExample1\"\n      },\n      \"fullUrl\": \"Patient/PatientExample1\",\n      \"resource\": {\n        \"resourceType\": \"Patient\",\n        \"id\": \"PatientExample1\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient\"\n          ]\n        },\n        \"identifier\": [\n          {\n            \"system\": \"https://fhir.nhs.uk/Id/nhs-number\",\n            \"value\": \"9912003888\"\n          }\n        ],\n        \"name\": [\n          {\n            \"given\": [\n              \"Alan\"\n            ],\n            \"use\": \"official\",\n            \"family\": \"Mann\"\n          }\n        ],\n        \"active\": true,\n        \"gender\": \"male\",\n        \"birthDate\": \"1970-01-01\"\n      }\n    },\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Consent/RAConsentExample1\"\n      },\n      \"fullUrl\": \"Consent/RAConsentExample1\",\n      \"resource\": {\n        \"resourceType\": \"Consent\",\n        \"id\": \"RAConsentExample1\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.nhs.uk/England/StructureDefinition/FlagConsent\"\n          ]\n        },\n        \"extension\": [\n          {\n            \"valueAnnotation\": {\n              \"text\": \"Example of consent create summary extension text\"\n            },\n            \"url\": \"https://fhir.nhs.uk/England/StructureDefinition/Extension-ConsentCreateSummary\"\n          },\n          {\n            \"valueAnnotation\": {\n              \"text\": \"Example of consent remove summary extension text\"\n            },\n            \"url\": \"https://fhir.nhs.uk/England/StructureDefinition/Extension-ConsentRemoveSummary\"\n          }\n        ],\n        \"category\": [\n          {\n            \"coding\": [\n              {\n                \"code\": \"NRAF\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/PatientFlagCategory\",\n                \"display\": \"National Reasonable Adjustments Flag\"\n              }\n            ]\n          }\n        ],\n        \"provision\": {\n          \"purpose\": [\n            {\n              \"code\": \"RACONSENT\",\n              \"system\": \"https://fhir.nhs.uk/England/CodeSystem/RA-ConsentPurpose\",\n              \"display\": \"Reasonable Adjustments - Consent to record Reasonable Adjustments\"\n            }\n          ]\n        },\n        \"policy\": [\n          {\n            \"authority\": \"https://www.gov.uk/\",\n            \"uri\": \"https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/535024/data-security-review.pdf\"\n          }\n        ],\n        \"contained\": [\n          {\n            \"resourceType\": \"Provenance\",\n            \"id\": \"4c75ce1f-1ad7-4391-b5f6-104754c7e904\",\n            \"target\": [\n              {\n                \"reference\": \"#\"\n              }\n            ],\n            \"recorded\": \"2024-01-01T11:00:00+00:00\",\n            \"activity\": {\n              \"coding\": [\n                {\n                  \"code\": \"CREATE\",\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/v3-DataOperation\",\n                  \"display\": \"create\"\n                }\n              ]\n            },\n            \"agent\": [\n              {\n                \"role\": [\n                  {\n                    \"coding\": [\n                      {\n                        \"code\": \"R0260\",\n                        \"system\": \"https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1\",\n                        \"display\": \"General Medical Practitioner\"\n                      }\n                    ]\n                  }\n                ],\n                \"who\": {\n                  \"reference\": \"https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9\"\n                },\n                \"onBehalfOf\": {\n                  \"reference\": \"https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7\"\n                }\n              }\n            ]\n          }\n        ],\n        \"status\": \"active\",\n        \"scope\": {\n          \"coding\": [\n            {\n              \"code\": \"patient-privacy\",\n              \"system\": \"http://terminology.hl7.org/CodeSystem/consentscope\"\n            }\n          ]\n        },\n        \"patient\": {\n          \"reference\": \"Patient/PatientExample1\"\n        },\n        \"policyRule\": {\n          \"coding\": [\n            {\n              \"code\": \"001\",\n              \"system\": \"https://fhir.nhs.uk/England/CodeSystem/FlagProxyRole\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Condition/RAConditionExample1\"\n      },\n      \"fullUrl\": \"Condition/RAConditionExample1\",\n      \"resource\": {\n        \"resourceType\": \"Condition\",\n        \"id\": \"RAConditionExample1\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.nhs.uk/England/StructureDefinition/FlagCondition\"\n          ]\n        },\n        \"category\": [\n          {\n            \"coding\": [\n              {\n                \"code\": \"NRAF\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/PatientFlagCategory\",\n                \"display\": \"National Reasonable Adjustments Flag\"\n              }\n            ]\n          },\n          {\n            \"coding\": [\n              {\n                \"code\": \"issue\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/RA-ConditionCategory\",\n                \"display\": \"Issue\"\n              }\n            ]\n          }\n        ],\n        \"contained\": [\n          {\n            \"resourceType\": \"Provenance\",\n            \"id\": \"6a6b18a7-c077-49da-929f-a8dd38468f79\",\n            \"target\": [\n              {\n                \"reference\": \"#\"\n              }\n            ],\n            \"recorded\": \"2024-01-01T11:00:00+00:00\",\n            \"activity\": {\n              \"coding\": [\n                {\n                  \"code\": \"CREATE\",\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/v3-DataOperation\",\n                  \"display\": \"create\"\n                }\n              ]\n            },\n            \"agent\": [\n              {\n                \"role\": [\n                  {\n                    \"coding\": [\n                      {\n                        \"code\": \"R0260\",\n                        \"system\": \"https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1\",\n                        \"display\": \"General Medical Practitioner\"\n                      }\n                    ]\n                  }\n                ],\n                \"who\": {\n                  \"reference\": \"https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9\"\n                },\n                \"onBehalfOf\": {\n                  \"reference\": \"https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7\"\n                }\n              }\n            ]\n          }\n        ],\n        \"clinicalStatus\": {\n          \"coding\": [\n            {\n              \"code\": \"active\",\n              \"system\": \"http://terminology.hl7.org/CodeSystem/condition-clinical\"\n            }\n          ]\n        },\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"5\",\n              \"system\": \"https://fhir.nhs.uk/England/CodeSystem/RA-ConditionCode\",\n              \"display\": \"Learning or understanding or concentrating\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/PatientExample1\"\n        }\n      }\n    },\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Flag/RAPatientFlagExample1\"\n      },\n      \"fullUrl\": \"Flag/RAPatientFlagExample1\",\n      \"resource\": {\n        \"resourceType\": \"Flag\",\n        \"id\": \"RAPatientFlagExample1\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.nhs.uk/England/StructureDefinition/PatientFlag\"\n          ]\n        },\n        \"extension\": [\n          {\n            \"valueAnnotation\": {\n              \"text\": \"Example of flag notes extension text in patient flag\"\n            },\n            \"url\": \"https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes\"\n          },\n          {\n            \"valueReference\": {\n              \"reference\": \"Condition/RAConditionExample1\",\n              \"type\": \"Condition\"\n            },\n            \"url\": \"http://hl7.org/fhir/StructureDefinition/flag-detail\"\n          },\n          {\n            \"valueReference\": {\n              \"reference\": \"Consent/RAConsentExample1\",\n              \"type\": \"Consent\"\n            },\n            \"url\": \"http://hl7.org/fhir/StructureDefinition/flag-detail\"\n          },\n          {\n            \"valueReference\": {\n              \"reference\": \"Flag/RAFlagExample1\",\n              \"type\": \"Flag\"\n            },\n            \"url\": \"http://hl7.org/fhir/StructureDefinition/flag-detail\"\n          }\n        ],\n        \"contained\": [\n          {\n            \"resourceType\": \"Provenance\",\n            \"id\": \"c4e2e862-3bf4-4176-a186-9f1732938260\",\n            \"target\": [\n              {\n                \"reference\": \"#\"\n              }\n            ],\n            \"recorded\": \"2024-01-01T11:00:00+00:00\",\n            \"activity\": {\n              \"coding\": [\n                {\n                  \"code\": \"CREATE\",\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/v3-DataOperation\",\n                  \"display\": \"create\"\n                }\n              ]\n            },\n            \"agent\": [\n              {\n                \"role\": [\n                  {\n                    \"coding\": [\n                      {\n                        \"code\": \"R0260\",\n                        \"system\": \"https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1\",\n                        \"display\": \"General Medical Practitioner\"\n                      }\n                    ]\n                  }\n                ],\n                \"who\": {\n                  \"reference\": \"https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9\"\n                },\n                \"onBehalfOf\": {\n                  \"reference\": \"https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7\"\n                }\n              }\n            ]\n          }\n        ],\n        \"status\": \"active\",\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"NRAF\",\n              \"system\": \"https://fhir.nhs.uk/England/CodeSystem/PatientFlagCategory\",\n              \"display\": \"National Reasonable Adjustments Flag\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/PatientExample1\"\n        }\n      }\n    },\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Flag/RAFlagExample1\"\n      },\n      \"fullUrl\": \"Flag/RAFlagExample1\",\n      \"resource\": {\n        \"resourceType\": \"Flag\",\n        \"id\": \"RAFlagExample1\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.nhs.uk/England/StructureDefinition/ProgrammeFlag\"\n          ]\n        },\n        \"extension\": [\n          {\n            \"valueAnnotation\": {\n              \"text\": \"Example of flag notes extension text in adjustment flag\"\n            },\n            \"url\": \"https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes\"\n          }\n        ],\n        \"category\": [\n          {\n            \"coding\": [\n              {\n                \"code\": \"NRAF\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/PatientFlagCategory\",\n                \"display\": \"National Reasonable Adjustments Flag\"\n              }\n            ]\n          },\n          {\n            \"coding\": [\n              {\n                \"code\": \"001\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/RA-FlagCategory\",\n                \"display\": \"Communication support\"\n              }\n            ]\n          }\n        ],\n        \"contained\": [\n          {\n            \"resourceType\": \"Provenance\",\n            \"id\": \"873a38eb-0f9c-4a66-a4e9-8e4be2350d6b\",\n            \"target\": [\n              {\n                \"reference\": \"#\"\n              }\n            ],\n            \"recorded\": \"2024-01-01T11:00:00+00:00\",\n            \"activity\": {\n              \"coding\": [\n                {\n                  \"code\": \"CREATE\",\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/v3-DataOperation\",\n                  \"display\": \"create\"\n                }\n              ]\n            },\n            \"agent\": [\n              {\n                \"role\": [\n                  {\n                    \"coding\": [\n                      {\n                        \"code\": \"R0260\",\n                        \"system\": \"https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1\",\n                        \"display\": \"General Medical Practitioner\"\n                      }\n                    ]\n                  }\n                ],\n                \"who\": {\n                  \"reference\": \"https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9\"\n                },\n                \"onBehalfOf\": {\n                  \"reference\": \"https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7\"\n                }\n              }\n            ]\n          }\n        ],\n        \"status\": \"active\",\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"1082681000000103\",\n              \"system\": \"https://snomed.info/sct\",\n              \"display\": \"Requires support for receptive communication needs\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/PatientExample1\"\n        }\n      }\n    },\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Condition/RAConditionExample2\"\n      },\n      \"fullUrl\": \"Condition/RAConditionExample2\",\n      \"resource\": {\n        \"resourceType\": \"Condition\",\n        \"id\": \"RAConditionExample2\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.nhs.uk/England/StructureDefinition/FlagCondition\"\n          ]\n        },\n        \"category\": [\n          {\n            \"coding\": [\n              {\n                \"code\": \"NRAF\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/PatientFlagCategory\",\n                \"display\": \"National Reasonable Adjustments Flag\"\n              }\n            ]\n          },\n          {\n            \"coding\": [\n              {\n                \"code\": \"issue\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/RA-ConditionCategory\",\n                \"display\": \"Issue\"\n              }\n            ]\n          }\n        ],\n        \"contained\": [\n          {\n            \"resourceType\": \"Provenance\",\n            \"id\": \"f55e1edc-8ac7-4e06-b322-25fd34e62249\",\n            \"target\": [\n              {\n                \"reference\": \"#\"\n              }\n            ],\n            \"recorded\": \"2024-01-01T11:00:00+00:00\",\n            \"activity\": {\n              \"coding\": [\n                {\n                  \"code\": \"CREATE\",\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/v3-DataOperation\",\n                  \"display\": \"create\"\n                }\n              ]\n            },\n            \"agent\": [\n              {\n                \"role\": [\n                  {\n                    \"coding\": [\n                      {\n                        \"code\": \"R0260\",\n                        \"system\": \"https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1\",\n                        \"display\": \"General Medical Practitioner\"\n                      }\n                    ]\n                  }\n                ],\n                \"who\": {\n                  \"reference\": \"https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9\"\n                },\n                \"onBehalfOf\": {\n                  \"reference\": \"https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7\"\n                }\n              }\n            ]\n          }\n        ],\n        \"clinicalStatus\": {\n          \"coding\": [\n            {\n              \"code\": \"active\",\n              \"system\": \"http://terminology.hl7.org/CodeSystem/condition-clinical\"\n            }\n          ]\n        },\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"9\",\n              \"system\": \"https://fhir.nhs.uk/England/CodeSystem/RA-ConditionCode\",\n              \"display\": \"Social or behavioural (for example associated with autism spectrum disorder (ASD) which includes Asperger’s, or attention deficit hyperactivity disorder (ADHD))\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/PatientExample1\"\n        }\n      }\n    },\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Flag/RAFlagExample2\"\n      },\n      \"fullUrl\": \"Flag/RAFlagExample2\",\n      \"resource\": {\n        \"resourceType\": \"Flag\",\n        \"id\": \"RAFlagExample2\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.nhs.uk/England/StructureDefinition/ProgrammeFlag\"\n          ]\n        },\n        \"extension\": [\n          {\n            \"valueAnnotation\": {\n              \"text\": \"Example of adjustment notes extension text in adjustment flag\"\n            },\n            \"url\": \"https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes\"\n          }\n        ],\n        \"category\": [\n          {\n            \"coding\": [\n              {\n                \"code\": \"NRAF\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/PatientFlagCategory\",\n                \"display\": \"National Reasonable Adjustments Flag\"\n              }\n            ]\n          },\n          {\n            \"coding\": [\n              {\n                \"code\": \"011\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/RA-FlagCategory\",\n                \"display\": \"Bespoke Reasonable adjustments\"\n              }\n            ]\n          }\n        ],\n        \"contained\": [\n          {\n            \"resourceType\": \"Provenance\",\n            \"id\": \"71f8bcda-242d-4401-a59c-6924a6cb1c0e\",\n            \"target\": [\n              {\n                \"reference\": \"#\"\n              }\n            ],\n            \"recorded\": \"2024-01-01T11:00:00+00:00\",\n            \"activity\": {\n              \"coding\": [\n                {\n                  \"code\": \"CREATE\",\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/v3-DataOperation\",\n                  \"display\": \"create\"\n                }\n              ]\n            },\n            \"agent\": [\n              {\n                \"role\": [\n                  {\n                    \"coding\": [\n                      {\n                        \"code\": \"R0260\",\n                        \"system\": \"https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1\",\n                        \"display\": \"General Medical Practitioner\"\n                      }\n                    ]\n                  }\n                ],\n                \"who\": {\n                  \"reference\": \"https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9\"\n                },\n                \"onBehalfOf\": {\n                  \"reference\": \"https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7\"\n                }\n              }\n            ]\n          }\n        ],\n        \"status\": \"active\",\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"73618009\",\n              \"system\": \"https://snomed.info/sct\",\n              \"display\": \"Autistic spectrum disorder with isolated skills\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/PatientExample1\"\n        }\n      }\n    }\n  ],\n  \"type\": \"transaction\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/fhir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fhir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveRARecordExample",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resourceType\": \"Bundle\",\n  \"id\": \"RemoveRARecordExample\",\n  \"entry\": [\n    {\n      \"request\": {\n        \"method\": \"DELETE\",\n        \"url\": \"Flag/RAPatientFlagExample1\"\n      }\n    },\n    {\n      \"request\": {\n        \"method\": \"DELETE\",\n        \"url\": \"Consent/RAConsentExample1\"\n      }\n    },\n    {\n      \"request\": {\n        \"method\": \"DELETE\",\n        \"url\": \"Condition/RAConditionExample1\"\n      }\n    }\n  ],\n  \"type\": \"transaction\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/fhir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fhir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddCPISRecordTransactionExample1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resourceType\": \"Bundle\",\n  \"id\": \"AddCPISRecordTransactionExample1\",\n  \"entry\": [\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Patient/PatientExample1\"\n      },\n      \"fullUrl\": \"Patient/PatientExample1\",\n      \"resource\": {\n        \"resourceType\": \"Patient\",\n        \"id\": \"PatientExample1\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient\"\n          ]\n        },\n        \"identifier\": [\n          {\n            \"system\": \"https://fhir.nhs.uk/Id/nhs-number\",\n            \"value\": \"9912003888\"\n          }\n        ],\n        \"name\": [\n          {\n            \"given\": [\n              \"Alan\"\n            ],\n            \"use\": \"official\",\n            \"family\": \"Mann\"\n          }\n        ],\n        \"active\": true,\n        \"gender\": \"male\",\n        \"birthDate\": \"1970-01-01\"\n      }\n    },\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Consent/CPISConsentExample1\"\n      },\n      \"fullUrl\": \"Consent/CPISConsentExample1\",\n      \"resource\": {\n        \"resourceType\": \"Consent\",\n        \"id\": \"CPISConsentExample1\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.nhs.uk/England/StructureDefinition/FlagConsent\"\n          ]\n        },\n        \"extension\": [\n          {\n            \"valueAnnotation\": {\n              \"text\": \"Example of consent create summary extension text\"\n            },\n            \"url\": \"https://fhir.nhs.uk/England/StructureDefinition/Extension-ConsentCreateSummary\"\n          },\n          {\n            \"valueAnnotation\": {\n              \"text\": \"Example of consent remove summary extension text\"\n            },\n            \"url\": \"https://fhir.nhs.uk/England/StructureDefinition/Extension-ConsentRemoveSummary\"\n          }\n        ],\n        \"category\": [\n          {\n            \"coding\": [\n              {\n                \"code\": \"CP-IS\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/PatientFlagCategory\",\n                \"display\": \"Child Protection - Information Sharing Flag\"\n              }\n            ]\n          }\n        ],\n        \"provision\": {\n          \"purpose\": [\n            {\n              \"code\": \"CPISCONSENT\",\n              \"system\": \"https://fhir.nhs.uk/England/CodeSystem/CPIS-ConsentPurpose\",\n              \"display\": \"CPIS - Consent to record CPIS flags\"\n            }\n          ]\n        },\n        \"policy\": [\n          {\n            \"authority\": \"https://www.gov.uk/\",\n            \"uri\": \"https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/535024/data-security-review.pdf\"\n          }\n        ],\n        \"contained\": [\n          {\n            \"resourceType\": \"Provenance\",\n            \"id\": \"51a731b3-1c46-47ba-abad-04209bd264e6\",\n            \"target\": [\n              {\n                \"reference\": \"#\"\n              }\n            ],\n            \"recorded\": \"2024-01-01T11:00:00+00:00\",\n            \"activity\": {\n              \"coding\": [\n                {\n                  \"code\": \"CREATE\",\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/v3-DataOperation\",\n                  \"display\": \"create\"\n                }\n              ]\n            },\n            \"agent\": [\n              {\n                \"role\": [\n                  {\n                    \"coding\": [\n                      {\n                        \"code\": \"R0260\",\n                        \"system\": \"https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1\",\n                        \"display\": \"General Medical Practitioner\"\n                      }\n                    ]\n                  }\n                ],\n                \"who\": {\n                  \"reference\": \"https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9\"\n                },\n                \"onBehalfOf\": {\n                  \"reference\": \"https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7\"\n                }\n              }\n            ]\n          }\n        ],\n        \"status\": \"active\",\n        \"scope\": {\n          \"coding\": [\n            {\n              \"code\": \"patient-privacy\",\n              \"system\": \"http://terminology.hl7.org/CodeSystem/consentscope\"\n            }\n          ]\n        },\n        \"patient\": {\n          \"reference\": \"Patient/PatientExample1\"\n        },\n        \"policyRule\": {\n          \"coding\": [\n            {\n              \"code\": \"001\",\n              \"system\": \"https://fhir.nhs.uk/England/CodeSystem/FlagProxyRole\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Condition/CPISConditionExample1\"\n      },\n      \"fullUrl\": \"Condition/CPISConditionExample1\",\n      \"resource\": {\n        \"resourceType\": \"Condition\",\n        \"id\": \"CPISConditionExample1\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.nhs.uk/England/StructureDefinition/FlagCondition\"\n          ]\n        },\n        \"category\": [\n          {\n            \"coding\": [\n              {\n                \"code\": \"CP-IS\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/PatientFlagCategory\",\n                \"display\": \"Child Protection - Information Sharing Flag\"\n              }\n            ]\n          },\n          {\n            \"coding\": [\n              {\n                \"code\": \"cpis-example-condition-category\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/CPIS-ConditionCategory\",\n                \"display\": \"CPIS example condition category\"\n              }\n            ]\n          }\n        ],\n        \"contained\": [\n          {\n            \"resourceType\": \"Provenance\",\n            \"id\": \"482155c0-9ed3-4b22-b7b8-009f265606cc\",\n            \"target\": [\n              {\n                \"reference\": \"#\"\n              }\n            ],\n            \"recorded\": \"2024-01-01T11:00:00+00:00\",\n            \"activity\": {\n              \"coding\": [\n                {\n                  \"code\": \"CREATE\",\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/v3-DataOperation\",\n                  \"display\": \"create\"\n                }\n              ]\n            },\n            \"agent\": [\n              {\n                \"role\": [\n                  {\n                    \"coding\": [\n                      {\n                        \"code\": \"R0260\",\n                        \"system\": \"https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1\",\n                        \"display\": \"General Medical Practitioner\"\n                      }\n                    ]\n                  }\n                ],\n                \"who\": {\n                  \"reference\": \"https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9\"\n                },\n                \"onBehalfOf\": {\n                  \"reference\": \"https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7\"\n                }\n              }\n            ]\n          }\n        ],\n        \"clinicalStatus\": {\n          \"coding\": [\n            {\n              \"code\": \"active\",\n              \"system\": \"http://terminology.hl7.org/CodeSystem/condition-clinical\"\n            }\n          ]\n        },\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"1\",\n              \"system\": \"https://fhir.nhs.uk/England/CodeSystem/CPIS-ConditionCode\",\n              \"display\": \"CPIS example condition code\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/PatientExample1\"\n        }\n      }\n    },\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Flag/CPISPatientFlagExample1\"\n      },\n      \"fullUrl\": \"Flag/CPISPatientFlagExample1\",\n      \"resource\": {\n        \"resourceType\": \"Flag\",\n        \"id\": \"CPISPatientFlagExample1\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.nhs.uk/England/StructureDefinition/PatientFlag\"\n          ]\n        },\n        \"extension\": [\n          {\n            \"valueAnnotation\": {\n              \"text\": \"Example of flag notes extension text in patient flag\"\n            },\n            \"url\": \"https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes\"\n          }\n        ],\n        \"contained\": [\n          {\n            \"resourceType\": \"Provenance\",\n            \"id\": \"42b9f285-0f1b-435a-ba6e-c72762d6502e\",\n            \"target\": [\n              {\n                \"reference\": \"#\"\n              }\n            ],\n            \"recorded\": \"2024-01-01T11:00:00+00:00\",\n            \"activity\": {\n              \"coding\": [\n                {\n                  \"code\": \"CREATE\",\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/v3-DataOperation\",\n                  \"display\": \"create\"\n                }\n              ]\n            },\n            \"agent\": [\n              {\n                \"role\": [\n                  {\n                    \"coding\": [\n                      {\n                        \"code\": \"R0260\",\n                        \"system\": \"https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1\",\n                        \"display\": \"General Medical Practitioner\"\n                      }\n                    ]\n                  }\n                ],\n                \"who\": {\n                  \"reference\": \"https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9\"\n                },\n                \"onBehalfOf\": {\n                  \"reference\": \"https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7\"\n                }\n              }\n            ]\n          }\n        ],\n        \"status\": \"active\",\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"CP-IS\",\n              \"system\": \"https://fhir.nhs.uk/England/CodeSystem/PatientFlagCategory\",\n              \"display\": \"Child Protection - Information Sharing Flag\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/PatientExample1\"\n        }\n      }\n    },\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Flag/CPISFlagExample1\"\n      },\n      \"fullUrl\": \"Flag/CPISFlagExample1\",\n      \"resource\": {\n        \"resourceType\": \"Flag\",\n        \"id\": \"CPISFlagExample1\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.nhs.uk/England/StructureDefinition/ProgrammeFlag\"\n          ]\n        },\n        \"extension\": [\n          {\n            \"valueAnnotation\": {\n              \"text\": \"Example of flag notes extension text in adjustment flag\"\n            },\n            \"url\": \"https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes\"\n          }\n        ],\n        \"category\": [\n          {\n            \"coding\": [\n              {\n                \"code\": \"CP-IS\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/PatientFlagCategory\",\n                \"display\": \"Child Protection - Information Sharing Flag\"\n              }\n            ]\n          },\n          {\n            \"coding\": [\n              {\n                \"code\": \"001\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/CPIS-FlagCategory\",\n                \"display\": \"Example CPIS category\"\n              }\n            ]\n          }\n        ],\n        \"contained\": [\n          {\n            \"resourceType\": \"Provenance\",\n            \"id\": \"ea77b434-585a-48b9-a789-eac610f0363e\",\n            \"target\": [\n              {\n                \"reference\": \"#\"\n              }\n            ],\n            \"recorded\": \"2024-01-01T11:00:00+00:00\",\n            \"activity\": {\n              \"coding\": [\n                {\n                  \"code\": \"CREATE\",\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/v3-DataOperation\",\n                  \"display\": \"create\"\n                }\n              ]\n            },\n            \"agent\": [\n              {\n                \"role\": [\n                  {\n                    \"coding\": [\n                      {\n                        \"code\": \"R0260\",\n                        \"system\": \"https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1\",\n                        \"display\": \"General Medical Practitioner\"\n                      }\n                    ]\n                  }\n                ],\n                \"who\": {\n                  \"reference\": \"https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9\"\n                },\n                \"onBehalfOf\": {\n                  \"reference\": \"https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7\"\n                }\n              }\n            ]\n          }\n        ],\n        \"status\": \"active\",\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"224353004\",\n              \"system\": \"https://snomed.info/sct\",\n              \"display\": \"Child protection finding (finding)\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/PatientExample1\"\n        }\n      }\n    }\n  ],\n  \"type\": \"transaction\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/fhir/Flag?patient=patient-example-1&category=PatientFlag",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fhir",
+								"Flag"
+							],
+							"query": [
+								{
+									"key": "patient",
+									"value": "patient-example-1"
+								},
+								{
+									"key": "category",
+									"value": "PatientFlag"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddFGMRecordTransactionExample1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"resourceType\": \"Bundle\",\n  \"id\": \"AddFGMRecordTransactionExample1\",\n  \"entry\": [\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Patient/PatientExample1\"\n      },\n      \"fullUrl\": \"Patient/PatientExample1\",\n      \"resource\": {\n        \"resourceType\": \"Patient\",\n        \"id\": \"PatientExample1\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient\"\n          ]\n        },\n        \"identifier\": [\n          {\n            \"system\": \"https://fhir.nhs.uk/Id/nhs-number\",\n            \"value\": \"9912003888\"\n          }\n        ],\n        \"name\": [\n          {\n            \"given\": [\n              \"Alan\"\n            ],\n            \"use\": \"official\",\n            \"family\": \"Mann\"\n          }\n        ],\n        \"active\": true,\n        \"gender\": \"male\",\n        \"birthDate\": \"1970-01-01\"\n      }\n    },\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Consent/FGMConsentExample1\"\n      },\n      \"fullUrl\": \"Consent/FGMConsentExample1\",\n      \"resource\": {\n        \"resourceType\": \"Consent\",\n        \"id\": \"FGMConsentExample1\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.nhs.uk/England/StructureDefinition/FlagConsent\"\n          ]\n        },\n        \"extension\": [\n          {\n            \"valueAnnotation\": {\n              \"text\": \"Example of consent create summary extension text\"\n            },\n            \"url\": \"https://fhir.nhs.uk/England/StructureDefinition/Extension-ConsentCreateSummary\"\n          },\n          {\n            \"valueAnnotation\": {\n              \"text\": \"Example of consent remove summary extension text\"\n            },\n            \"url\": \"https://fhir.nhs.uk/England/StructureDefinition/Extension-ConsentRemoveSummary\"\n          }\n        ],\n        \"category\": [\n          {\n            \"coding\": [\n              {\n                \"code\": \"FGM\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/PatientFlagCategory\",\n                \"display\": \"Female Genital Mutilation Flag\"\n              }\n            ]\n          }\n        ],\n        \"provision\": {\n          \"purpose\": [\n            {\n              \"code\": \"FGMCONSENT\",\n              \"system\": \"https://fhir.nhs.uk/England/CodeSystem/FGM-ConsentPurpose\",\n              \"display\": \"FGM - Consent to record FGM flags\"\n            }\n          ]\n        },\n        \"policy\": [\n          {\n            \"authority\": \"https://www.gov.uk/\",\n            \"uri\": \"https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/535024/data-security-review.pdf\"\n          }\n        ],\n        \"contained\": [\n          {\n            \"resourceType\": \"Provenance\",\n            \"id\": \"bc0dbfb1-7432-46fa-b1b8-0e3648827754\",\n            \"target\": [\n              {\n                \"reference\": \"#\"\n              }\n            ],\n            \"recorded\": \"2024-01-01T11:00:00+00:00\",\n            \"activity\": {\n              \"coding\": [\n                {\n                  \"code\": \"CREATE\",\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/v3-DataOperation\",\n                  \"display\": \"create\"\n                }\n              ]\n            },\n            \"agent\": [\n              {\n                \"role\": [\n                  {\n                    \"coding\": [\n                      {\n                        \"code\": \"R0260\",\n                        \"system\": \"https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1\",\n                        \"display\": \"General Medical Practitioner\"\n                      }\n                    ]\n                  }\n                ],\n                \"who\": {\n                  \"reference\": \"https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9\"\n                },\n                \"onBehalfOf\": {\n                  \"reference\": \"https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7\"\n                }\n              }\n            ]\n          }\n        ],\n        \"status\": \"active\",\n        \"scope\": {\n          \"coding\": [\n            {\n              \"code\": \"patient-privacy\",\n              \"system\": \"http://terminology.hl7.org/CodeSystem/consentscope\"\n            }\n          ]\n        },\n        \"patient\": {\n          \"reference\": \"Patient/PatientExample1\"\n        },\n        \"policyRule\": {\n          \"coding\": [\n            {\n              \"code\": \"001\",\n              \"system\": \"https://fhir.nhs.uk/England/CodeSystem/FlagProxyRole\"\n            }\n          ]\n        }\n      }\n    },\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Condition/FGMConditionExample1\"\n      },\n      \"fullUrl\": \"Condition/FGMConditionExample1\",\n      \"resource\": {\n        \"resourceType\": \"Condition\",\n        \"id\": \"FGMConditionExample1\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.nhs.uk/England/StructureDefinition/FlagCondition\"\n          ]\n        },\n        \"category\": [\n          {\n            \"coding\": [\n              {\n                \"code\": \"FGM\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/PatientFlagCategory\",\n                \"display\": \"Female Genital Mutilation Flag\"\n              }\n            ]\n          },\n          {\n            \"coding\": [\n              {\n                \"code\": \"fgm-example-condition-category\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/FGM-ConditionCategory\",\n                \"display\": \"FGM example condition category\"\n              }\n            ]\n          }\n        ],\n        \"contained\": [\n          {\n            \"resourceType\": \"Provenance\",\n            \"id\": \"e78b78b2-31f9-453d-b278-6d5720001073\",\n            \"target\": [\n              {\n                \"reference\": \"#\"\n              }\n            ],\n            \"recorded\": \"2024-01-01T11:00:00+00:00\",\n            \"activity\": {\n              \"coding\": [\n                {\n                  \"code\": \"CREATE\",\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/v3-DataOperation\",\n                  \"display\": \"create\"\n                }\n              ]\n            },\n            \"agent\": [\n              {\n                \"role\": [\n                  {\n                    \"coding\": [\n                      {\n                        \"code\": \"R0260\",\n                        \"system\": \"https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1\",\n                        \"display\": \"General Medical Practitioner\"\n                      }\n                    ]\n                  }\n                ],\n                \"who\": {\n                  \"reference\": \"https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9\"\n                },\n                \"onBehalfOf\": {\n                  \"reference\": \"https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7\"\n                }\n              }\n            ]\n          }\n        ],\n        \"clinicalStatus\": {\n          \"coding\": [\n            {\n              \"code\": \"active\",\n              \"system\": \"http://terminology.hl7.org/CodeSystem/condition-clinical\"\n            }\n          ]\n        },\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"1\",\n              \"system\": \"https://fhir.nhs.uk/England/CodeSystem/FGM-ConditionCode\",\n              \"display\": \"FGM example condition code\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/PatientExample1\"\n        }\n      }\n    },\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Flag/FGMPatientFlagExample1\"\n      },\n      \"fullUrl\": \"Flag/FGMPatientFlagExample1\",\n      \"resource\": {\n        \"resourceType\": \"Flag\",\n        \"id\": \"FGMPatientFlagExample1\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.nhs.uk/England/StructureDefinition/PatientFlag\"\n          ]\n        },\n        \"extension\": [\n          {\n            \"valueAnnotation\": {\n              \"text\": \"Example of flag notes extension text in patient flag\"\n            },\n            \"url\": \"https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes\"\n          }\n        ],\n        \"contained\": [\n          {\n            \"resourceType\": \"Provenance\",\n            \"id\": \"3fc83fd8-4a6d-48e4-91ab-12bb10a4a834\",\n            \"target\": [\n              {\n                \"reference\": \"#\"\n              }\n            ],\n            \"recorded\": \"2024-01-01T11:00:00+00:00\",\n            \"activity\": {\n              \"coding\": [\n                {\n                  \"code\": \"CREATE\",\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/v3-DataOperation\",\n                  \"display\": \"create\"\n                }\n              ]\n            },\n            \"agent\": [\n              {\n                \"role\": [\n                  {\n                    \"coding\": [\n                      {\n                        \"code\": \"R0260\",\n                        \"system\": \"https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1\",\n                        \"display\": \"General Medical Practitioner\"\n                      }\n                    ]\n                  }\n                ],\n                \"who\": {\n                  \"reference\": \"https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9\"\n                },\n                \"onBehalfOf\": {\n                  \"reference\": \"https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7\"\n                }\n              }\n            ]\n          }\n        ],\n        \"status\": \"active\",\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"FGM\",\n              \"system\": \"https://fhir.nhs.uk/England/CodeSystem/PatientFlagCategory\",\n              \"display\": \"Female Genital Mutilation Flag\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/PatientExample1\"\n        }\n      }\n    },\n    {\n      \"request\": {\n        \"method\": \"PUT\",\n        \"url\": \"Flag/FGMFlagExample1\"\n      },\n      \"fullUrl\": \"Flag/FGMFlagExample1\",\n      \"resource\": {\n        \"resourceType\": \"Flag\",\n        \"id\": \"FGMFlagExample1\",\n        \"meta\": {\n          \"profile\": [\n            \"https://fhir.nhs.uk/England/StructureDefinition/ProgrammeFlag\"\n          ]\n        },\n        \"extension\": [\n          {\n            \"valueAnnotation\": {\n              \"text\": \"Example of flag notes extension text in adjustment flag\"\n            },\n            \"url\": \"https://fhir.nhs.uk/England/StructureDefinition/Extension-FlagNotes\"\n          }\n        ],\n        \"category\": [\n          {\n            \"coding\": [\n              {\n                \"code\": \"FGM\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/PatientFlagCategory\",\n                \"display\": \"Female Genital Mutilation Flag\"\n              }\n            ]\n          },\n          {\n            \"coding\": [\n              {\n                \"code\": \"001\",\n                \"system\": \"https://fhir.nhs.uk/England/CodeSystem/FGM-FlagCategory\",\n                \"display\": \"Example FGM category\"\n              }\n            ]\n          }\n        ],\n        \"contained\": [\n          {\n            \"resourceType\": \"Provenance\",\n            \"id\": \"9b5f2d1b-8175-407f-a49d-b4f04c9d4300\",\n            \"target\": [\n              {\n                \"reference\": \"#\"\n              }\n            ],\n            \"recorded\": \"2024-01-01T11:00:00+00:00\",\n            \"activity\": {\n              \"coding\": [\n                {\n                  \"code\": \"CREATE\",\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/v3-DataOperation\",\n                  \"display\": \"create\"\n                }\n              ]\n            },\n            \"agent\": [\n              {\n                \"role\": [\n                  {\n                    \"coding\": [\n                      {\n                        \"code\": \"R0260\",\n                        \"system\": \"https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1\",\n                        \"display\": \"General Medical Practitioner\"\n                      }\n                    ]\n                  }\n                ],\n                \"who\": {\n                  \"reference\": \"https://sds.spineservices.nhs.uk/STU3/Practitioner/2ee4tr6a9\"\n                },\n                \"onBehalfOf\": {\n                  \"reference\": \"https://directory.spineservices.nhs.uk/STU3/Organization/a3e5i7\"\n                }\n              }\n            ]\n          }\n        ],\n        \"status\": \"active\",\n        \"code\": {\n          \"coding\": [\n            {\n              \"code\": \"902961000000107\",\n              \"system\": \"https://snomed.info/sct\",\n              \"display\": \"Family history of female genital mutilation (situation)\"\n            }\n          ]\n        },\n        \"subject\": {\n          \"reference\": \"Patient/PatientExample1\"\n        }\n      }\n    }\n  ],\n  \"type\": \"transaction\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/fhir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fhir"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patient Endpoint Queries",
+			"item": [
+				{
+					"name": "Return all NRAF associated resources for a patient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/fhir/Patient?identifier=9912003888&_revinclude=Consent:patient&_revinclude=Flag:patient&_revinclude=Condition:patient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fhir",
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": "9912003888"
+								},
+								{
+									"key": "_revinclude",
+									"value": "Consent:patient"
+								},
+								{
+									"key": "_revinclude",
+									"value": "Flag:patient"
+								},
+								{
+									"key": "_revinclude",
+									"value": "Condition:patient"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Flag Endpoint Queries",
+			"item": [
+				{
+					"name": "Get all top level Flags (FGM, CPIS flags don't exist but would be returned if they did) (not including provenance here)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/fhir/Flag?patient=patient-example-1&code=NRAF,FGM,CPIS",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fhir",
+								"Flag"
+							],
+							"query": [
+								{
+									"key": "patient",
+									"value": "patient-example-1"
+								},
+								{
+									"key": "code",
+									"value": "NRAF,FGM,CPIS"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/fhir/Flag?patient=patient-example-1&code=NRAF,FGM,CPIS",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"fhir",
+										"Flag"
+									],
+									"query": [
+										{
+											"key": "patient",
+											"value": "patient-example-1"
+										},
+										{
+											"key": "code",
+											"value": "NRAF,FGM,CPIS"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "HAPI FHIR 6.10.0 REST Server (FHIR Server; FHIR 4.0.1/R4)"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "zn9AY0CZdZGAvRFF"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Fri, 09 Feb 2024 02:11:22 GMT"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/fhir+json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 Feb 2024 02:11:29 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resourceType\": \"Bundle\",\n    \"id\": \"79d057f0-7e1b-49db-8726-d046d4523191\",\n    \"meta\": {\n        \"lastUpdated\": \"2024-02-09T02:11:22.336+00:00\"\n    },\n    \"type\": \"searchset\",\n    \"total\": 1,\n    \"link\": [\n        {\n            \"relation\": \"self\",\n            \"url\": \"http://localhost:8080/fhir/Flag?code=NRAF%2CFGM%2CCPIS&patient=patient-example-1\"\n        }\n    ],\n    \"entry\": [\n        {\n            \"fullUrl\": \"http://localhost:8080/fhir/Flag/fba99f70-fe1d-42e2-b77a-916e44b53c19\",\n            \"resource\": {\n                \"resourceType\": \"Flag\",\n                \"id\": \"fba99f70-fe1d-42e2-b77a-916e44b53c19\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-02-09T02:11:07.443+00:00\",\n                    \"source\": \"#2BVDta2nrOmwFe3M\"\n                },\n                \"status\": \"active\",\n                \"code\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"https://fhir.nhs.uk/STU3/CodeSystem/RARecord-FlagCategory-1\",\n                            \"code\": \"NRAF\",\n                            \"display\": \"National Reasonable Adjustments Flag\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/patient-example-1\"\n                }\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all RA records (flags) for a patient (not including provenance here)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/fhir/Flag?patient=patient-example-1&_include=Flag:detail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fhir",
+								"Flag"
+							],
+							"query": [
+								{
+									"key": "patient",
+									"value": "patient-example-1"
+								},
+								{
+									"key": "_include",
+									"value": "Flag:detail"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/fhir/Flag?patient=patient-example-1&_include=Flag:detail",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"fhir",
+										"Flag"
+									],
+									"query": [
+										{
+											"key": "patient",
+											"value": "patient-example-1"
+										},
+										{
+											"key": "_include",
+											"value": "Flag:detail"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "HAPI FHIR 6.10.0 REST Server (FHIR Server; FHIR 4.0.1/R4)"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "5tLsi8qnIw4wJJRp"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Fri, 09 Feb 2024 02:11:41 GMT"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/fhir+json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 Feb 2024 02:11:41 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resourceType\": \"Bundle\",\n    \"id\": \"a5a39cdf-f628-4bb7-bfe8-c5c5381d0a12\",\n    \"meta\": {\n        \"lastUpdated\": \"2024-02-09T02:11:41.787+00:00\"\n    },\n    \"type\": \"searchset\",\n    \"total\": 3,\n    \"link\": [\n        {\n            \"relation\": \"self\",\n            \"url\": \"http://localhost:8080/fhir/Flag?_include=Flag%3Adetail&patient=patient-example-1\"\n        }\n    ],\n    \"entry\": [\n        {\n            \"fullUrl\": \"http://localhost:8080/fhir/Flag/fba99f70-fe1d-42e2-b77a-916e44b53c19\",\n            \"resource\": {\n                \"resourceType\": \"Flag\",\n                \"id\": \"fba99f70-fe1d-42e2-b77a-916e44b53c19\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-02-09T02:11:07.443+00:00\",\n                    \"source\": \"#2BVDta2nrOmwFe3M\"\n                },\n                \"status\": \"active\",\n                \"code\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"https://fhir.nhs.uk/STU3/CodeSystem/RARecord-FlagCategory-1\",\n                            \"code\": \"NRAF\",\n                            \"display\": \"National Reasonable Adjustments Flag\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/patient-example-1\"\n                }\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://localhost:8080/fhir/Flag/04adcb5b-3de7-4f67-97f0-b2fdf941ba85\",\n            \"resource\": {\n                \"resourceType\": \"Flag\",\n                \"id\": \"04adcb5b-3de7-4f67-97f0-b2fdf941ba85\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-02-09T02:11:07.443+00:00\",\n                    \"source\": \"#2BVDta2nrOmwFe3M\"\n                },\n                \"extension\": [\n                    {\n                        \"url\": \"http://hl7.org/fhir/StructureDefinition/flag-detail\",\n                        \"valueReference\": {\n                            \"reference\": \"Condition/41a84a93-1c95-4162-b13c-1c617509e6e2\",\n                            \"type\": \"Condition\"\n                        }\n                    },\n                    {\n                        \"url\": \"http://hl7.org/fhir/StructureDefinition/flag-detail\",\n                        \"valueReference\": {\n                            \"reference\": \"Flag/fba99f70-fe1d-42e2-b77a-916e44b53c19\",\n                            \"type\": \"Flag\"\n                        }\n                    },\n                    {\n                        \"url\": \"http://hl7.org/fhir/StructureDefinition/flag-detail\",\n                        \"valueReference\": {\n                            \"reference\": \"Consent/consent-example-1\",\n                            \"type\": \"Consent\"\n                        }\n                    }\n                ],\n                \"status\": \"active\",\n                \"category\": [\n                    {\n                        \"coding\": [\n                            {\n                                \"system\": \"https://fhir.nhs.uk/STU3/CodeSystem/RARecord-AdjustmentCategory-1\",\n                                \"code\": \"001\",\n                                \"display\": \"Communication support\"\n                            }\n                        ]\n                    }\n                ],\n                \"code\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"https://snomed.info/sct\",\n                            \"code\": \"957371000000106\",\n                            \"display\": \"Requires written information in at least 28 point sans serif font\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/patient-example-1\"\n                }\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://localhost:8080/fhir/Flag/c357a25c-2282-4440-bc93-6fa7a4965d4a\",\n            \"resource\": {\n                \"resourceType\": \"Flag\",\n                \"id\": \"c357a25c-2282-4440-bc93-6fa7a4965d4a\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-02-09T02:11:07.443+00:00\",\n                    \"source\": \"#2BVDta2nrOmwFe3M\"\n                },\n                \"extension\": [\n                    {\n                        \"url\": \"http://hl7.org/fhir/StructureDefinition/flag-detail\",\n                        \"valueReference\": {\n                            \"reference\": \"Condition/da03d375-e3c0-4856-a8b9-994cf4de4f46\",\n                            \"type\": \"Condition\"\n                        }\n                    },\n                    {\n                        \"url\": \"http://hl7.org/fhir/StructureDefinition/flag-detail\",\n                        \"valueReference\": {\n                            \"reference\": \"Flag/fba99f70-fe1d-42e2-b77a-916e44b53c19\",\n                            \"type\": \"Flag\"\n                        }\n                    },\n                    {\n                        \"url\": \"http://hl7.org/fhir/StructureDefinition/flag-detail\",\n                        \"valueReference\": {\n                            \"reference\": \"Consent/consent-example-1\",\n                            \"type\": \"Consent\"\n                        }\n                    }\n                ],\n                \"status\": \"active\",\n                \"category\": [\n                    {\n                        \"coding\": [\n                            {\n                                \"system\": \"https://fhir.nhs.uk/STU3/CodeSystem/RARecord-AdjustmentCategory-1\",\n                                \"code\": \"010\",\n                                \"display\": \"Adjustments to support Additional needs\"\n                            }\n                        ]\n                    }\n                ],\n                \"code\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"https://snomed.info/sct\",\n                            \"code\": \"225861007\",\n                            \"display\": \"Unsafe to be left alone\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/patient-example-1\"\n                }\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://localhost:8080/fhir/Condition/41a84a93-1c95-4162-b13c-1c617509e6e2\",\n            \"resource\": {\n                \"resourceType\": \"Condition\",\n                \"id\": \"41a84a93-1c95-4162-b13c-1c617509e6e2\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-02-09T02:11:07.443+00:00\",\n                    \"source\": \"#2BVDta2nrOmwFe3M\"\n                },\n                \"clinicalStatus\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://terminology.hl7.org/CodeSystem/condition-clinical\",\n                            \"code\": \"active\"\n                        }\n                    ]\n                },\n                \"category\": [\n                    {\n                        \"coding\": [\n                            {\n                                \"system\": \"https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-ConditionCategory-1\",\n                                \"code\": \"issue\",\n                                \"display\": \"Issue\"\n                            }\n                        ]\n                    }\n                ],\n                \"code\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"https://fhir.nhs.uk/STU3/CodeSystem/RARecord-ConditionCode-1\",\n                            \"code\": \"5\",\n                            \"display\": \"Learning or understanding or concentrating\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/patient-example-1\"\n                }\n            },\n            \"search\": {\n                \"mode\": \"include\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://localhost:8080/fhir/Condition/da03d375-e3c0-4856-a8b9-994cf4de4f46\",\n            \"resource\": {\n                \"resourceType\": \"Condition\",\n                \"id\": \"da03d375-e3c0-4856-a8b9-994cf4de4f46\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-02-09T02:11:07.443+00:00\",\n                    \"source\": \"#2BVDta2nrOmwFe3M\"\n                },\n                \"clinicalStatus\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://terminology.hl7.org/CodeSystem/condition-clinical\",\n                            \"code\": \"active\"\n                        }\n                    ]\n                },\n                \"category\": [\n                    {\n                        \"coding\": [\n                            {\n                                \"system\": \"https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-ConditionCategory-1\",\n                                \"code\": \"issue\",\n                                \"display\": \"Issue\"\n                            }\n                        ]\n                    }\n                ],\n                \"code\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"https://snomed.info/sct\",\n                            \"code\": \"73618009\",\n                            \"display\": \"Autistic spectrum disorder with isolated skills\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/patient-example-1\"\n                }\n            },\n            \"search\": {\n                \"mode\": \"include\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://localhost:8080/fhir/Consent/consent-example-1\",\n            \"resource\": {\n                \"resourceType\": \"Consent\",\n                \"id\": \"consent-example-1\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-02-09T02:11:07.443+00:00\",\n                    \"source\": \"#2BVDta2nrOmwFe3M\"\n                },\n                \"status\": \"active\",\n                \"scope\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://terminology.hl7.org/CodeSystem/consentscope\",\n                            \"code\": \"patient-privacy\"\n                        }\n                    ]\n                },\n                \"category\": [\n                    {\n                        \"coding\": [\n                            {\n                                \"system\": \"https://fhir.nhs.uk/STU3/CodeSystem/RARecord-FlagCategory-1\",\n                                \"code\": \"NRAF\",\n                                \"display\": \"National Reasonable Adjustments Flag\"\n                            }\n                        ]\n                    }\n                ],\n                \"patient\": {\n                    \"reference\": \"Patient/patient-example-1\"\n                },\n                \"policy\": [\n                    {\n                        \"authority\": \"https://www.gov.uk/\",\n                        \"uri\": \"https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/535024/data-security-review.pdf\"\n                    }\n                ],\n                \"provision\": {\n                    \"purpose\": [\n                        {\n                            \"system\": \"https://snomed.info/sct\",\n                            \"code\": \"370856009\",\n                            \"display\": \"Limiting access to confidential patient information\"\n                        }\n                    ]\n                }\n            },\n            \"search\": {\n                \"mode\": \"include\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get RA record (flag) for a patient and restrict by adjustment code (not including provenance here)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/fhir/Flag?patient=patient-example-1&code=957371000000106&_include=Flag:detail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fhir",
+								"Flag"
+							],
+							"query": [
+								{
+									"key": "patient",
+									"value": "patient-example-1"
+								},
+								{
+									"key": "code",
+									"value": "957371000000106"
+								},
+								{
+									"key": "_include",
+									"value": "Flag:detail"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get RA record (flag) for a patient based on adjustment code, i.e. Flag.code (not including provenance here)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/fhir/Flag?patient=patient-example-1&code=957371000000106&_include=Flag:detail",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"fhir",
+										"Flag"
+									],
+									"query": [
+										{
+											"key": "patient",
+											"value": "patient-example-1"
+										},
+										{
+											"key": "code",
+											"value": "957371000000106"
+										},
+										{
+											"key": "_include",
+											"value": "Flag:detail"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "HAPI FHIR 6.10.0 REST Server (FHIR Server; FHIR 4.0.1/R4)"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "hn2yI8JHGdmP5ZWZ"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Fri, 09 Feb 2024 02:11:55 GMT"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/fhir+json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 Feb 2024 02:11:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"resourceType\": \"Bundle\",\n    \"id\": \"8612520f-fbc0-41ec-a2ac-d5938eadae68\",\n    \"meta\": {\n        \"lastUpdated\": \"2024-02-09T02:11:55.868+00:00\"\n    },\n    \"type\": \"searchset\",\n    \"total\": 1,\n    \"link\": [\n        {\n            \"relation\": \"self\",\n            \"url\": \"http://localhost:8080/fhir/Flag?_include=Flag%3Adetail&code=957371000000106&patient=patient-example-1\"\n        }\n    ],\n    \"entry\": [\n        {\n            \"fullUrl\": \"http://localhost:8080/fhir/Flag/04adcb5b-3de7-4f67-97f0-b2fdf941ba85\",\n            \"resource\": {\n                \"resourceType\": \"Flag\",\n                \"id\": \"04adcb5b-3de7-4f67-97f0-b2fdf941ba85\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-02-09T02:11:07.443+00:00\",\n                    \"source\": \"#2BVDta2nrOmwFe3M\"\n                },\n                \"extension\": [\n                    {\n                        \"url\": \"http://hl7.org/fhir/StructureDefinition/flag-detail\",\n                        \"valueReference\": {\n                            \"reference\": \"Condition/41a84a93-1c95-4162-b13c-1c617509e6e2\",\n                            \"type\": \"Condition\"\n                        }\n                    },\n                    {\n                        \"url\": \"http://hl7.org/fhir/StructureDefinition/flag-detail\",\n                        \"valueReference\": {\n                            \"reference\": \"Flag/fba99f70-fe1d-42e2-b77a-916e44b53c19\",\n                            \"type\": \"Flag\"\n                        }\n                    },\n                    {\n                        \"url\": \"http://hl7.org/fhir/StructureDefinition/flag-detail\",\n                        \"valueReference\": {\n                            \"reference\": \"Consent/consent-example-1\",\n                            \"type\": \"Consent\"\n                        }\n                    }\n                ],\n                \"status\": \"active\",\n                \"category\": [\n                    {\n                        \"coding\": [\n                            {\n                                \"system\": \"https://fhir.nhs.uk/STU3/CodeSystem/RARecord-AdjustmentCategory-1\",\n                                \"code\": \"001\",\n                                \"display\": \"Communication support\"\n                            }\n                        ]\n                    }\n                ],\n                \"code\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"https://snomed.info/sct\",\n                            \"code\": \"957371000000106\",\n                            \"display\": \"Requires written information in at least 28 point sans serif font\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/patient-example-1\"\n                }\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://localhost:8080/fhir/Condition/41a84a93-1c95-4162-b13c-1c617509e6e2\",\n            \"resource\": {\n                \"resourceType\": \"Condition\",\n                \"id\": \"41a84a93-1c95-4162-b13c-1c617509e6e2\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-02-09T02:11:07.443+00:00\",\n                    \"source\": \"#2BVDta2nrOmwFe3M\"\n                },\n                \"clinicalStatus\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://terminology.hl7.org/CodeSystem/condition-clinical\",\n                            \"code\": \"active\"\n                        }\n                    ]\n                },\n                \"category\": [\n                    {\n                        \"coding\": [\n                            {\n                                \"system\": \"https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-ConditionCategory-1\",\n                                \"code\": \"issue\",\n                                \"display\": \"Issue\"\n                            }\n                        ]\n                    }\n                ],\n                \"code\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"https://fhir.nhs.uk/STU3/CodeSystem/RARecord-ConditionCode-1\",\n                            \"code\": \"5\",\n                            \"display\": \"Learning or understanding or concentrating\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/patient-example-1\"\n                }\n            },\n            \"search\": {\n                \"mode\": \"include\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://localhost:8080/fhir/Flag/fba99f70-fe1d-42e2-b77a-916e44b53c19\",\n            \"resource\": {\n                \"resourceType\": \"Flag\",\n                \"id\": \"fba99f70-fe1d-42e2-b77a-916e44b53c19\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-02-09T02:11:07.443+00:00\",\n                    \"source\": \"#2BVDta2nrOmwFe3M\"\n                },\n                \"status\": \"active\",\n                \"code\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"https://fhir.nhs.uk/STU3/CodeSystem/RARecord-FlagCategory-1\",\n                            \"code\": \"NRAF\",\n                            \"display\": \"National Reasonable Adjustments Flag\"\n                        }\n                    ]\n                },\n                \"subject\": {\n                    \"reference\": \"Patient/patient-example-1\"\n                }\n            },\n            \"search\": {\n                \"mode\": \"include\"\n            }\n        },\n        {\n            \"fullUrl\": \"http://localhost:8080/fhir/Consent/consent-example-1\",\n            \"resource\": {\n                \"resourceType\": \"Consent\",\n                \"id\": \"consent-example-1\",\n                \"meta\": {\n                    \"versionId\": \"1\",\n                    \"lastUpdated\": \"2024-02-09T02:11:07.443+00:00\",\n                    \"source\": \"#2BVDta2nrOmwFe3M\"\n                },\n                \"status\": \"active\",\n                \"scope\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"http://terminology.hl7.org/CodeSystem/consentscope\",\n                            \"code\": \"patient-privacy\"\n                        }\n                    ]\n                },\n                \"category\": [\n                    {\n                        \"coding\": [\n                            {\n                                \"system\": \"https://fhir.nhs.uk/STU3/CodeSystem/RARecord-FlagCategory-1\",\n                                \"code\": \"NRAF\",\n                                \"display\": \"National Reasonable Adjustments Flag\"\n                            }\n                        ]\n                    }\n                ],\n                \"patient\": {\n                    \"reference\": \"Patient/patient-example-1\"\n                },\n                \"policy\": [\n                    {\n                        \"authority\": \"https://www.gov.uk/\",\n                        \"uri\": \"https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/535024/data-security-review.pdf\"\n                    }\n                ],\n                \"provision\": {\n                    \"purpose\": [\n                        {\n                            \"system\": \"https://snomed.info/sct\",\n                            \"code\": \"370856009\",\n                            \"display\": \"Limiting access to confidential patient information\"\n                        }\n                    ]\n                }\n            },\n            \"search\": {\n                \"mode\": \"include\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Other Queries",
+			"item": [
+				{
+					"name": "Read all Flags",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/fhir/Flag",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fhir",
+								"Flag"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Flag by Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/fhir/Flag?category=NRAF",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fhir",
+								"Flag"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "NRAF"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Flag by Category and Code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/fhir/Flag?category=NRAF&code=001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fhir",
+								"Flag"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "NRAF"
+								},
+								{
+									"key": "code",
+									"value": "001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Flag by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/fhir/Flag/04adcb5b-3de7-4f67-97f0-b2fdf941ba85",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fhir",
+								"Flag",
+								"04adcb5b-3de7-4f67-97f0-b2fdf941ba85"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

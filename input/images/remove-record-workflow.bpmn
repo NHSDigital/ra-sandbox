@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_149wjti" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="17.0.2">
+  <bpmn:collaboration id="Collaboration_0q56fut">
+    <bpmn:participant id="Participant_18xshys" name="Consent to Treatment" processRef="Process_0q168hd" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_0q168hd">
+    <bpmn:laneSet id="LaneSet_1s0cwuu">
+      <bpmn:lane id="Lane_1qewygr" name="API">
+        <bpmn:flowNodeRef>Event_0o7dt0z</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_1kgwaxm</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_0s229l6" name="Patient">
+        <bpmn:flowNodeRef>Activity_1s5y9xm</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_0jp784q" name="Practitioner">
+        <bpmn:flowNodeRef>Event_03tz7z4</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_00yhqnr</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="Event_03tz7z4">
+      <bpmn:outgoing>Flow_0ws129z</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_0ws129z" sourceRef="Event_03tz7z4" targetRef="Activity_00yhqnr" />
+    <bpmn:task id="Activity_00yhqnr" name="Request consent">
+      <bpmn:incoming>Flow_0ws129z</bpmn:incoming>
+      <bpmn:outgoing>Flow_1y1ffd0</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1y1ffd0" sourceRef="Activity_00yhqnr" targetRef="Activity_1s5y9xm" />
+    <bpmn:task id="Activity_1s5y9xm" name="Deny/revoke consent">
+      <bpmn:incoming>Flow_1y1ffd0</bpmn:incoming>
+      <bpmn:outgoing>Flow_1l3qp01</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_1l3qp01" sourceRef="Activity_1s5y9xm" targetRef="Activity_1kgwaxm" />
+    <bpmn:subProcess id="Activity_1kgwaxm" name="Update consent/remove all records">
+      <bpmn:incoming>Flow_1l3qp01</bpmn:incoming>
+      <bpmn:outgoing>Flow_0a0e2sc</bpmn:outgoing>
+    </bpmn:subProcess>
+    <bpmn:sequenceFlow id="Flow_0a0e2sc" sourceRef="Activity_1kgwaxm" targetRef="Event_0o7dt0z" />
+    <bpmn:endEvent id="Event_0o7dt0z">
+      <bpmn:incoming>Flow_0a0e2sc</bpmn:incoming>
+    </bpmn:endEvent>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0q56fut">
+      <bpmndi:BPMNShape id="Participant_18xshys_di" bpmnElement="Participant_18xshys" isHorizontal="true">
+        <dc:Bounds x="160" y="62" width="600" height="748" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0jp784q_di" bpmnElement="Lane_0jp784q" isHorizontal="true">
+        <dc:Bounds x="190" y="62" width="570" height="250" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0s229l6_di" bpmnElement="Lane_0s229l6" isHorizontal="true">
+        <dc:Bounds x="190" y="312" width="570" height="258" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1qewygr_di" bpmnElement="Lane_1qewygr" isHorizontal="true">
+        <dc:Bounds x="190" y="570" width="570" height="240" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_03tz7z4_di" bpmnElement="Event_03tz7z4">
+        <dc:Bounds x="262" y="172" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1su78ja_di" bpmnElement="Activity_00yhqnr">
+        <dc:Bounds x="420" y="150" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1au192q_di" bpmnElement="Activity_1s5y9xm">
+        <dc:Bounds x="420" y="390" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0o7dt0z_di" bpmnElement="Event_0o7dt0z">
+        <dc:Bounds x="642" y="672" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1cld9ri_di" bpmnElement="Activity_1kgwaxm">
+        <dc:Bounds x="420" y="650" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0ws129z_di" bpmnElement="Flow_0ws129z">
+        <di:waypoint x="298" y="190" />
+        <di:waypoint x="420" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1y1ffd0_di" bpmnElement="Flow_1y1ffd0">
+        <di:waypoint x="470" y="230" />
+        <di:waypoint x="470" y="390" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1l3qp01_di" bpmnElement="Flow_1l3qp01">
+        <di:waypoint x="470" y="470" />
+        <di:waypoint x="470" y="650" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0a0e2sc_di" bpmnElement="Flow_0a0e2sc">
+        <di:waypoint x="520" y="690" />
+        <di:waypoint x="642" y="690" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1vcjc0h">
+    <bpmndi:BPMNPlane id="BPMNPlane_1tv2ji1" bpmnElement="Activity_1kgwaxm" />
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
