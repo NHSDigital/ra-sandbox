@@ -12,8 +12,5 @@ Basic examples for CPIS and FGM to demo use of same profiles.
 
 ### FGM
 
-* [Consent](Consent-FGMConsentExample1.html)
 * [Patient flag](Flag-FGMPatientFlagExample1.html)
-* [FGM flag](Flag-FGMFlagExample1.html)
-* [Condition](Condition-FGMConditionExample1.html)
 * [Transaction Bundle](Bundle-AddFGMRecordTransactionExample1.html)
