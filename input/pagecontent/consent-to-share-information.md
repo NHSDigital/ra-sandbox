@@ -23,32 +23,7 @@ If the patient does not have the capacity to consent, then a patient advocate ma
 
 #### Scenarios
 
-```gherkin
-Given a practitioner has received consent from a patient
-And the consent is for reasonable adjustments
-When a practioner records the consent
-Then details of who obtained the consent will be recorded
-And the consent will be linked to the patient
-
-Given a patient or their advocate provides consent
-And the consent is for reasonable adjustments
-When a practioner records the consent
-Then consent will be marked as active
-And the consent will be linked to the patient
-
-Given a patient or their advocate does not provide consent
-And the consent is for reasonable adjustments
-When a practioner records the consent
-Then consent will be marked as inactive
-And the consent will be linked to the patient
-
-Given a patient or their advocate revokes consent
-And the consent is for reasonable adjustments
-When a practioner records the consent
-Then consent will be marked as inactive
-And all flags will be deleted
-And all conditions will be deleted
-```
+[Gherkin Scenarios](consent-to-share-scenarios.html)
 
 ### Workflow
 

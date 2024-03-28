@@ -83,6 +83,11 @@ menu:
     Add Reasonable Adjustment Record: add-reasonable-adjustment-record.html
     Retrieve Reasonable Adjustment Record: retrieve-reasonable-adjustment-record.html
     Remove Reasonable Adjustment Record: remove-reasonable-adjustment-record.html
+  Scenarios:
+    Consent to Share Scenarios: consent-to-share-scenarios.html
+    Add Reasonable Adjustment Record: todo.html
+    Retrieve Reasonable Adjustment Record: todo.html
+    Remove Reasonable Adjustment Record: todo.html
   Additional Examples: 
     CPIS/FGM demo: additional-examples.html
     Basic Query Examples: basic-query-examples.html
