@@ -69,7 +69,7 @@ Feature: Patient provides consent to share information
 
 #### Postman Scenario Test Stubs
 
-[Postman collection](assets/postman/Feature:-Patient-provides-consent-to-share-information.postman_collection.json)
+[Postman collection](assets/postman/Feature_Patient-provides-consent-to-share-information.postman_collection.json)
 
 ### Feature - Patient denys consent to share information
 
