@@ -1,0 +1,21 @@
+@startuml
+
+skinparam linetype ortho
+
+entity "Patient" as pat {
+  *NHS Number : number <<generated>>
+}
+package "Patient Flags API" {
+
+entity "Patient Flag" as pfg {
+  *patient : Patient
+  *code : CodeableConcept
+  *category : CodeableConcept
+  *contained : Provenance (Contained)
+}
+
+}
+
+pat ||--o| pfg : "has"
+
+@enduml

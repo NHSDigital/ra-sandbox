@@ -7,6 +7,15 @@ entity "Patient" as pat {
 }
 package "Patient Flags API" {
 
+entity "Patient Flag" as pfg {
+  *patient : Patient
+  *code : CodeableConcept
+  *category : CodeableConcept
+  *contained : Provenance (Contained)
+}
+
+package "Additional Detail" {
+
 entity "Consent" as con {
   *patient : Patient
   *category : CodeableConcept
@@ -14,13 +23,6 @@ entity "Consent" as con {
 }
 
 entity "Condition" as cod {
-  *patient : Patient
-  *code : CodeableConcept
-  *category : CodeableConcept
-  *contained : Provenance (Contained)
-}
-
-entity "Patient Flag" as pfg {
   *patient : Patient
   *code : CodeableConcept
   *category : CodeableConcept
@@ -39,6 +41,7 @@ entity "Provenance" as prov {
   *agent : Agent (backbone)
 }
 }
+}
 
 pat ||..|| con : provides
 pat ||--o{ cod : has
@@ -48,6 +51,6 @@ con ||--|| prov : contains
 cod ||--|| prov : contains
 pfg ||--|| prov : contains
 prfg ||--|| prov : contains
-pfg ||--o{ prfg : details
+pfg ||..o{ prfg : details
 
 @enduml
