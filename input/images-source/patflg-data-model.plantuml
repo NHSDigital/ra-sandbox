@@ -11,15 +11,18 @@ entity "Patient Flag" as pfg {
   *patient : Patient
   *code : CodeableConcept
   *category : CodeableConcept
-  *contained : Provenance (Contained)
 }
 
 package "Additional Detail" as AD {
+
+entity "Resource (Any)" as res {
+}
+
 }
 }
 
 pat ||--o{ pfg : has
-pat ||--o{ AD : provides
-pfg ||..o{ AD : details
+pat ||--o{ res : provides
+pfg ||..o{ res : details
 
 @enduml

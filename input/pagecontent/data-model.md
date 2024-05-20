@@ -1,4 +1,4 @@
-### Data Model
+### Patient Flag Data Model
 
 A Patient Flag API record is made up of a Flag resource and any other 'detail' resources that are provided as part of the Flag record in the specific domain 
 
