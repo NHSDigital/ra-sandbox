@@ -45,7 +45,7 @@ entity "Provenance" as prov {
 
 pat ||..|| con : provides
 pat ||--o{ cod : has
-pat ||--o| pfg : "has"
+pat ||--o| pfg : has
 pat ||--o{ prfg : has
 con ||--|| prov : contains
 cod ||--|| prov : contains
