@@ -1,6 +1,6 @@
 ### Overview
 
-For high level requirements, see [Key purposes of the Patient Flag](index.html#key-purposes)
+For high level requirements, see [Key purposes of the Patient Flag](index.html#pf-key-purposes)
 
 ### Usecase
 

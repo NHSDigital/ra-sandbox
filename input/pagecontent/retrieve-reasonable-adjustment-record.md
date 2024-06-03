@@ -2,7 +2,7 @@
 
 Patient consent must be obtained before retrieving any adjustment or impairment.  See [Consent to Share Information](consent-to-share-information.html) for details of requirements around consent.
 
-For high level requirements, see [Key purposes of the Reasonable Adjustment Flag](index.html#key-purposes)   
+For high level requirements, see [Key purposes of the Reasonable Adjustment Flag](index.html#ra-key-purposes)   
 
 ### Usecase
 
