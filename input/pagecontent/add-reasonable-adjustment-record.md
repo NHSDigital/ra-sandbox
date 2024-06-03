@@ -84,7 +84,7 @@ Then a freetext note may be added to the flag
 A practitioner performs an examination and determines that a condition and/or an adjustment should be recorded.  If the patient does not consent, no details are recorded.  If the patient consents, then the adjustment is recorded, and optionally the condition as well.
 
 <div style="text-align: left;">
-    <img style="max-width: 70%" alt="Add Reasonab le Adjustment record workflow BPMN diagram." src="add-ra-record-workflow.svg"/>
+    <img style="max-width: 70%" alt="Add Reasonable Adjustment record workflow BPMN diagram." src="add-ra-record-workflow.svg"/>
 </div>
 
 ### System Interactions
