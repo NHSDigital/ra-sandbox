@@ -18,7 +18,7 @@ alt Validation failed
   api -> api : rollback
 end
 
-loop "for each Additional Detail resource"
+loop for each Additional Detail resource
   api ->  add : Create/update resource (any)
   add ->  add : Validate
   api <-- add : return
