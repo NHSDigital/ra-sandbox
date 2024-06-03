@@ -11,7 +11,7 @@ If a Reasonable Adjustment Record exists, a Flag resource designated as the pati
 
 <div style="text-align: left;">
 
-  {%include add-record-usecase.svg%}
+  {%include add-ra-record-usecase.svg%}
 
 </div>
 
@@ -84,7 +84,7 @@ Then a freetext note may be added to the flag
 A practitioner performs an examination and determines that a condition and/or an adjustment should be recorded.  If the patient does not consent, no details are recorded.  If the patient consents, then the adjustment is recorded, and optionally the condition as well.
 
 <div style="text-align: left;">
-    <img style="max-width: 70%" alt="Add record workflow BPMN diagram." src="add-record-workflow.svg"/>
+    <img style="max-width: 70%" alt="Add Reasonab le Adjustment record workflow BPMN diagram." src="add-ra-record-workflow.svg"/>
 </div>
 
 ### System Interactions
@@ -92,7 +92,7 @@ A practitioner performs an examination and determines that a condition and/or an
 The practioner decides to record a condition with the patients consent.  This could be done with individual calls to the required endpoints, or can be done in a single transaction Bundle.  A transaction Bundle can help with data integrity requirements and also help to reduce required http calls.
 
 <div style="text-align: left;">
-  {%include add-record-sequence.svg%}
+  {%include add-ra-record-sequence.svg%}
 </div>
 
 ### Examples
