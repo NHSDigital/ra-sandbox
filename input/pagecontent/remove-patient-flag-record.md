@@ -1,17 +1,13 @@
 ### Overview
 
-A patient may deny or revoke their consent to share adjustment or impairment information at any point. See [Consent to Share Information](consent-to-share-information.html) for details of requirements around consent.
-
-For high level requirements, see [Key purposes of the Reasonable Adjustment Flag](index.html#key-purposes)   
+For high level requirements, see [Key purposes of the Patient Flag](index.html#key-purposes)
  
 
 #### UseCase
 
-If a patient denys consent, then this must be recorded and all adjustment records must be removed.
-
 <div style="text-align: left;">
 
-  {%include remove-record-usecase.svg%}
+  {%include remove-pf-record-usecase.svg%}
 
 </div>
 
@@ -34,7 +30,7 @@ A patient may revoke consent to share information about Reasonable Adjustment re
 </p>
 
 <div>
-    <img style="max-width: 70%" alt="Remove record workflow BPMN diagram." src="remove-record-workflow.svg"/>
+    <img style="max-width: 70%" alt="Remove Patient Flag record workflow BPMN diagram." src="remove-pf-record-workflow.svg"/>
 </div>
 
 ### System Interactions
@@ -43,7 +39,7 @@ In the following sequence diagram, a patient revokes consent.  The Consent resou
 
 <div style="text-align: left;">
 
-  {%include remove-record-sequence.svg%}
+  {%include remove-pf-record-sequence.svg%}
 
 </div>
 

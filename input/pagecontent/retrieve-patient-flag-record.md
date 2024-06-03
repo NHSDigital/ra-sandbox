@@ -1,16 +1,18 @@
 ### Overview
 
-Patient consent must be obtained before retrieving any adjustment or impairment.  See [Consent to Share Information](consent-to-share-information.html) for details of requirements around consent.
-
-For high level requirements, see [Key purposes of the Reasonable Adjustment Flag](index.html#key-purposes)   
+For high level requirements, see [Key purposes of the Patient Flag](index.html#key-purposes)
 
 ### Usecase
 
-After obtaining consent from a patient, a Reasonable Adjustment Record may be retrieved if it exists.  It will be possible to determine that a adjustment flags exist by searching for a [Patient Flag](StructureDefinition-PatientFlag.html) with the code [NRAF](CodeSystem-PatientFlagCategory.html#PatientFlagCategory-NRAF), or [Programme Flags](StructureDefinition-ProgrammeFlag.html) with a category of [NRAF](CodeSystem-PatientFlagCategory.html#PatientFlagCategory-NRAF).
+A Patient Flag Record may be retrieved if it exists.  It will be possible to determine that a adjustment flags exist by searching for a [Patient Flag](StructureDefinition-PatientFlag.html) with:
+
+- [Programme Flags](StructureDefinition-ProgrammeFlag.html)
+- [Programme Flags](StructureDefinition-ProgrammeFlag.html) with a category of [NRAF](CodeSystem-PatientFlagCategory.html#PatientFlagCategory-NRAF)
+- or the code [NRAF](CodeSystem-PatientFlagCategory.html#PatientFlagCategory-NRAF), 
 
 <div style="text-align: left;">
 
-  {%include retrieve-record-usecase.svg%}
+  {%include retrieve-pf-record-usecase.svg%}
 
 </div>
 
@@ -38,14 +40,14 @@ Then all other resources associated with reasonable adjustment records will be r
 A practitioner confirms that a patient consents to share information about Reasonable Adjustment records.  A patient may revoke consent to share information about Reasonable Adjustment records and if they do, all records must be removed.
 
 <div>
-    <img style="max-width: 70%" alt="Retrieve record workflow BPMN diagram." src="retrieve-record-workflow.svg"/>
+    <img style="max-width: 70%" alt="Retrieve Patient Flag record workflow BPMN diagram." src="retrieve-pf-record-workflow.svg"/>
 </div>
 
 ### System Interaction
 
 <div style="text-align: left;">
 
-  {%include retrieve-record-sequence.svg%}
+  {%include retrieve-pf-record-sequence.svg%}
 
 </div>
 

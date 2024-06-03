@@ -11,7 +11,7 @@ If a patient denys consent, then this must be recorded and all adjustment record
 
 <div style="text-align: left;">
 
-  {%include remove-record-usecase.svg%}
+  {%include remove-ra-record-usecase.svg%}
 
 </div>
 
@@ -34,7 +34,7 @@ A patient may revoke consent to share information about Reasonable Adjustment re
 </p>
 
 <div>
-    <img style="max-width: 70%" alt="Remove record workflow BPMN diagram." src="remove-record-workflow.svg"/>
+    <img style="max-width: 70%" alt="Remove Reasonable Adjustment record workflow BPMN diagram." src="remove-ra-record-workflow.svg"/>
 </div>
 
 ### System Interactions
@@ -43,7 +43,7 @@ In the following sequence diagram, a patient revokes consent.  The Consent resou
 
 <div style="text-align: left;">
 
-  {%include remove-record-sequence.svg%}
+  {%include remove-ra-record-sequence.svg%}
 
 </div>
 

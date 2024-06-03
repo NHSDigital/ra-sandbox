@@ -10,7 +10,7 @@ After obtaining consent from a patient, a Reasonable Adjustment Record may be re
 
 <div style="text-align: left;">
 
-  {%include retrieve-record-usecase.svg%}
+  {%include retrieve-ra-record-usecase.svg%}
 
 </div>
 
@@ -38,14 +38,14 @@ Then all other resources associated with reasonable adjustment records will be r
 A practitioner confirms that a patient consents to share information about Reasonable Adjustment records.  A patient may revoke consent to share information about Reasonable Adjustment records and if they do, all records must be removed.
 
 <div>
-    <img style="max-width: 70%" alt="Retrieve record workflow BPMN diagram." src="retrieve-record-workflow.svg"/>
+    <img style="max-width: 70%" alt="Retrieve Reasonable Adjustment record workflow BPMN diagram." src="retrieve-ra-record-workflow.svg"/>
 </div>
 
 ### System Interaction
 
 <div style="text-align: left;">
 
-  {%include retrieve-record-sequence.svg%}
+  {%include retrieve-ra-record-sequence.svg%}
 
 </div>
 

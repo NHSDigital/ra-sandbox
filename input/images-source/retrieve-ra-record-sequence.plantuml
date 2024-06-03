@@ -1,0 +1,39 @@
+@startuml
+
+skinparam actorStyle hollow
+
+actor        "Practitioner"     as pra
+actor        "Patient"          as pat
+participant  "FHIR API"         as api
+entity       "Consent"          as con
+entity       "Patient Flag"     as pfg
+entity       "Adjustment Flag"  as adj
+entity       "Condition"        as cod
+
+pra ->  pat : Request confirmation\n       of consent to\n  access information
+
+alt Consent provided
+  pra <-- pat : Provide consent
+
+  pra ->  api : Query for records
+  pra <-- api : SearchSet Bundle
+else Consent not provided
+  pra <-- pat : No consent provided
+else Consent revoked
+  pra <-- pat : Previous consent is revoked
+
+  pra ->  api : Record consent was revoked
+  api ->  con : Update resource
+  con ->  con : Validate
+  api <-- con : return
+  alt Validation failed
+    api -> api : rollback
+  else Consent updated
+    api ->  pfg : Delete adjustment patient flag
+    api ->  adj : Delete adjustment flag(s)
+    api ->  cod : Delete condition flag(s)
+  end
+  pra <-- api : OperationOutcome
+end
+
+@enduml

@@ -1,17 +1,12 @@
 ### Overview
 
-Patient consent must be obtained before recording any adjustment or impairment.  See [Consent to Share Information](consent-to-share-information.html) for details of requirements around consent.
-
-For high level requirements, see [Key purposes of the Reasonable Adjustment Flag](index.html#key-purposes) 
+For high level requirements, see [Key purposes of the Patient Flag](index.html#key-purposes)
 
 ### Usecase
-After obtaining consent from a patient, a Reasonable Adjustment Record may be created.  This consists of a Flag resource containing an adjustment and a Condition resource may also optionally be created to record the details of an impairment.  
-
-If a Reasonable Adjustment Record exists, a Flag resource designated as the patient flag must be created to indicate that there are reasonable adjustments recorded for the patient.  There is a single instance of this type of resource per patient.
 
 <div style="text-align: left;">
 
-  {%include add-record-usecase.svg%}
+  {%include add-pf-record-usecase.svg%}
 
 </div>
 
@@ -84,7 +79,7 @@ Then a freetext note may be added to the flag
 A practitioner performs an examination and determines that a condition and/or an adjustment should be recorded.  If the patient does not consent, no details are recorded.  If the patient consents, then the adjustment is recorded, and optionally the condition as well.
 
 <div style="text-align: left;">
-    <img style="max-width: 70%" alt="Add record workflow BPMN diagram." src="add-record-workflow.svg"/>
+    <img style="max-width: 70%" alt="Add Patient Flag record workflow BPMN diagram." src="add-pf-record-workflow.svg"/>
 </div>
 
 ### System Interactions
@@ -92,7 +87,7 @@ A practitioner performs an examination and determines that a condition and/or an
 The practioner decides to record a condition with the patients consent.  This could be done with individual calls to the required endpoints, or can be done in a single transaction Bundle.  A transaction Bundle can help with data integrity requirements and also help to reduce required http calls.
 
 <div style="text-align: left;">
-  {%include add-record-sequence.svg%}
+  {%include add-pf-record-sequence.svg%}
 </div>
 
 ### Examples
