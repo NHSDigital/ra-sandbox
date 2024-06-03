@@ -2,26 +2,14 @@
 
 skinparam actorStyle hollow
 
-actor        "Practitioner"     as pra
 actor        "Patient"          as pat
-participant  "FHIR API"         as api
-entity       "Consent"          as con
+actor        "Practitioner"     as pra
+boundary     "FHIR API"         as api
 entity       "Patient Flag"     as flg
-entity       "Adjustment Flag"  as adj
-entity       "Condition"        as cod
+entity       "Additional Detail"  as add
 
-pra ->  pat : Examine patient
-pra ->  pat : Suggest adjustments
-pra <-- pat : Provide consent\nto share information
-
+pra ->  pat : Consult patient
 pra ->  api : Record adjustment record (transaction Bundle)
-
-api ->  con : Create/update resource
-con ->  con : Validate
-api <-- con : return
-alt Validation failed
-  api -> api : rollback
-end
 
 api ->  flg : Create/update resource
 flg ->  flg : Validate
@@ -30,21 +18,14 @@ alt Validation failed
   api -> api : rollback
 end
 
-api ->  adj : Create/update resource
-adj ->  adj : Validate
-api <-- adj : return
-alt Validation failed
-  api -> api : rollback
-end
-
-alt Condition also to be recorded
-api ->  cod : Create/update resource
-cod ->  cod : Validate
-api <-- cod : return
-alt Validation failed
-  api -> api : rollback
+loop "for each Additional Detail resource"
+  api ->  add : Create/update resource (any)
+  add ->  add : Validate
+  api <-- add : return
+  alt Validation failed
+    api -> api : rollback
+  end
 end
 pra <-- api : OperationOutcome
 
 @enduml
-
