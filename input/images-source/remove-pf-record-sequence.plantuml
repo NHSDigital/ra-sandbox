@@ -2,29 +2,26 @@
 
 skinparam actorStyle hollow
 
-actor        "Practitioner"     as pra
 actor        "Patient"          as pat
+actor        "Practitioner"     as pra
 participant  "FHIR API"         as api
-entity       "Consent"          as con
 entity       "Patient Flag"     as pfg
-entity       "Adjustment Flag"  as adj
-entity       "Condition"        as cod
+entity       "Additional Detail"  as add
 
-  pra ->  pat : Request consent
-  pra <-- pat : Deny/revoke consent
+  pat ->  pra : Remove
+  pra ->  api : Remove
+  api ->  pfg : Remove resourc
+  
 
-  pra ->  api : Record consent was not given
-  api ->  con : Update resource
-  con ->  con : Validate
-  api <-- con : return
+loop for each Additional Detail resource
+  api ->  add : Remove resource (any)
+  add ->  add : Validate
+  api <-- add : return
   alt Validation failed
     api -> api : rollback
-    pra <-- api : OperationOutcome
-  else Validation passed
-    api ->  pfg : Delete adjustment patient flag
-    api ->  adj : Delete adjustment flag(s)
-    api ->  cod : Delete condition flag(s)
-    pra <-- api : OperationOutcome
   end
+end
+
+pra <-- api : OperationOutcome
 
 @enduml
