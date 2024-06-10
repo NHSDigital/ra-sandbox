@@ -1,21 +1,22 @@
 @startuml
 
 skinparam actorStyle awesome
+left to right direction
 
+rectangle "Patient Flag"{
 actor Practitioner as pra
-package Consenter {
-  actor "Patient Advocate" as pad
-  actor Patient as pat
+usecase "Record" as record <<abstract>>
+usecase "Remove Patient Flag record" as rem <<abstract>>
 }
 
-usecase  "Consent to share information" as CON
-usecase "Remove Reasonable Adjustment record" as RET
 
-pat -- CON
-pad -- CON
-pra -- CON
-pra -- RET
-CON <.. RET : include
+actor Patient as pat
 
+usecase "Consult" as consult <<abstract>>
+
+pat -- consult
+pra -- consult
+pra -- record
+record <.. rem : include
 
 @enduml
