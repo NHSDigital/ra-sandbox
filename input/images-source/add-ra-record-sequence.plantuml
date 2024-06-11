@@ -5,20 +5,14 @@ skinparam actorStyle hollow
 actor        "Practitioner"     as pra
 actor        "Patient"          as pat
 participant  "FHIR API"         as api
-entity       "Consent"          as con
 entity       "Patient Flag"     as flg
 entity       "Adjustment Flag"  as adj
 entity       "Condition"        as cod
 
 pra ->  pat : Examine patient
 pra ->  pat : Suggest adjustments
-pra <-- pat : Provide consent\nto share information
-
 pra ->  api : Record adjustment record (transaction Bundle)
 
-api ->  con : Create/update resource
-con ->  con : Validate
-api <-- con : return
 alt Validation failed
   api -> api : rollback
 end
@@ -47,4 +41,5 @@ end
 pra <-- api : OperationOutcome
 
 @enduml
+
 
