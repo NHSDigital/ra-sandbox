@@ -1,0 +1,15 @@
+@startuml
+
+skinparam actorStyle awesome
+left to right direction
+
+rectangle "Patient Flag"{
+actor Practitioner as pra
+usecase "Research" as res
+usecase "Retrieve FGM Flag record" as ret
+}
+
+pra -- res
+res <.. ret : include
+
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+
+skinparam actorStyle awesome
+left to right direction
+
+rectangle "Patient Flag"{
+actor Practitioner as pra
+usecase "Record" as record
+usecase "Add FGM Flag record" as add
+}
+
+
+actor Patient as pat
+
+usecase "Consult" as consult
+
+pat -- consult
+pra -- consult
+pra -- record
+record <.. add : include
+
+@enduml

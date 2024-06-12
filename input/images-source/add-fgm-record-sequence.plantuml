@@ -1,0 +1,21 @@
+@startuml
+
+skinparam actorStyle hollow
+
+actor        "Patient"          as pat
+actor        "Practitioner"     as pra
+boundary     "FHIR API"         as api
+entity       "Patient Flag"     as flg
+
+pra ->  pat : Consult patient
+pra ->  api : Record FGM Flag record
+api ->  flg : Create resource
+flg ->  flg : Validate
+api <-- flg : return
+alt Validation failed
+  api -> api : rollback
+end
+
+pra <-- api : OperationOutcome
+
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+
+skinparam actorStyle hollow
+
+actor        "Practitioner"     as pra
+boundary  "FHIR API"         as api
+entity       "Patient Flag"     as pfg
+
+pra ->  api : Query for records
+api ->  pfg : Query for records
+api <-- pfg : SearchSet Bundle
+pra <-- api : SearchSet Bundle
+
+@enduml

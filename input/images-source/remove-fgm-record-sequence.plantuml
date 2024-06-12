@@ -1,0 +1,15 @@
+@startuml
+
+skinparam actorStyle hollow
+
+actor        "Patient"          as pat
+actor        "Practitioner"     as pra
+participant  "FHIR API"         as api
+entity       "Patient Flag"     as pfg
+
+  pat ->  pra : Remove
+  pra ->  api : Remove
+  api ->  pfg : Remove resourc
+  pra <-- api : OperationOutcome
+
+@enduml
