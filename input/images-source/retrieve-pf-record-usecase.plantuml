@@ -5,8 +5,8 @@ left to right direction
 
 rectangle "Patient Flag"{
 actor Practitioner as pra
-usecase "Research" as res
-usecase "Retrieve FGM Flag record" as ret
+usecase "Research" as res <<abstract>>
+usecase "Retrieve Patient Flag record" as ret <<abstract>>
 }
 
 pra -- res

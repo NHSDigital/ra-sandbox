@@ -5,14 +5,14 @@ left to right direction
 
 rectangle "Patient Flag"{
 actor Practitioner as pra
-usecase "Record" as record
-usecase "Add FGM Flag record" as add
+usecase "Record" as record <<abstract>>
+usecase "Add Patient Flag record" as add <<abstract>>
 }
 
 
 actor Patient as pat
 
-usecase "Consult" as consult
+usecase "Consult" as consult <<abstract>>
 
 pat -- consult
 pra -- consult
