@@ -16,12 +16,6 @@ entity "Patient Flag" as pfg {
 
 package "Additional Detail" {
 
-entity "Consent" as con {
-  *patient : Patient
-  *category : CodeableConcept
-  *contained : Provenance (Contained)
-}
-
 entity "Condition" as cod {
   *patient : Patient
   *code : CodeableConcept
@@ -43,11 +37,9 @@ entity "Provenance" as prov {
 }
 }
 
-pat ||..|| con : provides
 pat ||--o{ cod : has
 pat ||--o| pfg : has
 pat ||--o{ prfg : has
-con ||--|| prov : contains
 cod ||--|| prov : contains
 pfg ||--|| prov : contains
 prfg ||--|| prov : contains
