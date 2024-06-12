@@ -25,7 +25,22 @@ Provenance of all resources that make up an RA record must be stored.  This is m
 
 ### Female Genital Mutilation
 
-The FGM record is made up of a Flag resource.
+The FGM record is made up of a PatientFlag resource.
+
+Authorised healthcare workers can:
+
+- query to determine if a patient has a FGM family history indicator
+- create a FGM family history indicator for a patient
+-- must be gender ‘female’, ‘unknown’ or indeterminate’ according to PDS
+-- must be under the age of 18 according to PDS
+-- must not already have a FGM family history indicator on FGM-IS
+-- must have a verified NHS number
+- delete a FGM family history indicator for a patient
+
+The FGM flag is interpreted as:
+- an indicator that a child with female genitalia has a family history of FGM
+- the date that the FGM assessment was carried out
+
 
 <div style="text-align: left;">
   {%include fgm-data-model.svg%}
