@@ -4,11 +4,9 @@ For high level requirements, see [Key purposes of the FGM Flag](index.html#fgm-k
 
 ### Usecase
 
-A Patient Flag Record may be retrieved if it exists.  It will be possible to determine that a adjustment flags exist by searching for a [Patient Flag](StructureDefinition-PatientFlag.html) with:
+An FGM Flag Record may be retrieved if it exists.  It will be possible to determine that an flags exist by searching for a [Patient Flag](StructureDefinition-PatientFlag.html) with:
 
-- [Programme Flags](StructureDefinition-ProgrammeFlag.html)
-- [Programme Flags](StructureDefinition-ProgrammeFlag.html) with a category of [NRAF](CodeSystem-PatientFlagCategory.html#PatientFlagCategory-NRAF)
-- or the code [NRAF](CodeSystem-PatientFlagCategory.html#PatientFlagCategory-NRAF), 
+- 
 
 <div style="text-align: left;">
 

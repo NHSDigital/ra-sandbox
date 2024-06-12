@@ -33,7 +33,21 @@ Share female genital mutilation (FGM) information for children under 18 with rel
 <a name="fgm-key-purposes"></a>
 Key purposes of the Female Genital Mutilation - Information Sharing include:
 
-* Share female genital mutilation (FGM) information for children under 18 with relevant NHS and scocial care professionals
+Authorised healthcare workers can:
+
+* query to determine if a patient has a FGM family history indicator
+* create a FGM family history indicator for a patient
+** must be gender ‘female’, ‘unknown’ or indeterminate’ according to PDS
+** must be under the age of 18 according to PDS
+** must not already have a FGM family history indicator on FGM-IS
+** must have a verified NHS number
+* delete a FGM family history indicator for a patient
+
+The FGM FLag record contains:
+
+* an indicator that a child with female genitalia has a family history of FGM
+* the date that the FGM assessment was carried out
+
 
 
 ### Dependencies
