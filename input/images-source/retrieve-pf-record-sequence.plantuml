@@ -5,18 +5,10 @@ skinparam actorStyle hollow
 actor        "Practitioner"     as pra
 boundary  "FHIR API"         as api
 entity       "Patient Flag"     as pfg
-entity       "Additional Detail"  as add
 
 pra ->  api : Query for records
 api ->  pfg : Query for records
 api <-- pfg : SearchSet Bundle
-opt
-  loop for each Additional Detail resource type
-  api ->  add : Query for records
-  api <-- add : SearchSet Bundle
-  end
-end
 pra <-- api : SearchSet Bundle
-pra <-- api : OperationOutcome
 
 @enduml
