@@ -15,28 +15,6 @@ If a patient denys consent, then this must be recorded and all adjustment record
 
 </div>
 
-#### Scenarios
-
-```gherkin
-Given a patient or their advocate revokes consent
-And the consent is for reasonable adjustments
-When a practioner records the consent
-Then consent will be marked as inactive
-And all flags will be deleted
-And all conditions will be deleted
-```
-
-#### Workflow
-<p>
-  
-A patient may revoke consent to share information about Reasonable Adjustment records and if they do, all records must be removed.
-
-</p>
-
-<div>
-    <img style="max-width: 70%" alt="Remove Reasonable Adjustment record workflow BPMN diagram." src="remove-ra-record-workflow.svg"/>
-</div>
-
 ### System Interactions
 
 In the following sequence diagram, a patient revokes consent.  The Consent resource is updated to reflect the patient dissent, and all adjustment records are deleted.

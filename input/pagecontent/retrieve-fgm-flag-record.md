@@ -14,33 +14,6 @@ An FGM Flag Record may be retrieved if it exists.  It will be possible to determ
 
 </div>
 
-#### Scenarios
-
-```gherkin
-Given a practitioner must access a patients reasonable adjustment records
-And consent has been provided
-When the practitioner retrieves the reasonable adjustment records
-Then all resources associated with reasonable adjustment records will be returned
-
-Given a practitioner must access a patients reasonable adjustment records
-And no consent has been provided
-When the practitioner attempts to retrieve the reasonable adjustment records
-Then no resources will be returned
-
-Given a practitioner must access a patients reasonable adjustment records
-And consent is revoked
-When the practitioner updates the Consent resource to revoked
-Then all other resources associated with reasonable adjustment records will be removed
-```
-
-### Workflow
-
-A practitioner confirms that a patient consents to share information about Reasonable Adjustment records.  A patient may revoke consent to share information about Reasonable Adjustment records and if they do, all records must be removed.
-
-<div>
-    <img style="max-width: 70%" alt="Retrieve Patient Flag record workflow BPMN diagram." src="retrieve-pf-record-workflow.svg"/>
-</div>
-
 ### System Interaction
 
 <div style="text-align: left;">
