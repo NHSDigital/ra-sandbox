@@ -68,7 +68,6 @@ This limits the search to patients that have Condition resources linked via pati
 
 The following queries will return all or some of the resources constituing a Reasonable Adjustments record, i.e.
 
-* [Flag Consent](StructureDefinition-FlagConsent.html) resource
 * [Patient Flag](StructureDefinition-PatientFlag.html) resources  
 * [Programme Flag](StructureDefinition-ProgrammeFlag.html) resources
 * [Flag Condition](StructureDefinition-FlagCondition.html) resources 
