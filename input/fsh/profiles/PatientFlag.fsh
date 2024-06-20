@@ -19,7 +19,7 @@ Description: "Record whether a Patient Flags exists"
 * extension[flagNotes].value[x] only Annotation
 * extension[flagNotes].valueAnnotation 1..
 
-* extension[flagDetail].valueReference only Reference(ProgrammeFlag or FlagConsent or FlagCondition or FlagProvenance)
+* extension[flagDetail].valueReference only Reference(ProgrammeFlag or FlagCondition or FlagProvenance)
 
 * contained ^slicing.discriminator.type = #profile
 * contained ^slicing.rules = #open
