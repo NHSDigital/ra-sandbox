@@ -12,7 +12,7 @@ Description: "Record details of the practitioner recording or removing an indivi
 
 * insert NHSEngland-Copyright
 
-* target only Reference(FlagCondition or ProgrammeFlag or PatientFlag)
+* target only Reference(FlagCondition or FlagConsent or ProgrammeFlag or PatientFlag)
 * agent.role from $ValueSetFlagProvenanceRole (extensible)
 * agent.who only Reference(Practitioner)
 * agent.onBehalfOf only Reference(Organization)
