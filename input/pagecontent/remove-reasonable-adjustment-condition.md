@@ -7,7 +7,7 @@ For high level requirements, see [Key purposes of the Patient Flag](index.html#p
 
 <div style="text-align: left;">
 
-  {%include remove-pf-record-usecase.svg%}
+  {%include remove-ra-condition-usecase.svg%}
 
 </div>
 
@@ -17,7 +17,7 @@ In the following sequence diagram, a patient revokes consent.  The Consent resou
 
 <div style="text-align: left;">
 
-  {%include remove-pf-record-sequence.svg%}
+  {%include remove-ra-condition-sequence.svg%}
 
 </div>
 

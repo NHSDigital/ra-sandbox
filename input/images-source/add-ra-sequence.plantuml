@@ -1,0 +1,31 @@
+@startuml
+
+skinparam actorStyle hollow
+
+actor        "Patient"          as pat
+actor        "Practitioner"     as pra
+boundary     "FHIR API"         as api
+entity       "Patient Flag"     as flg
+entity       "Additional Detail"  as add
+
+pra ->  pat : Consult patient
+pra ->  api : Record adjustment record (transaction Bundle)
+
+api ->  flg : Create/update resource
+flg ->  flg : Validate
+api <-- flg : return
+alt Validation failed
+  api -> api : rollback
+end
+
+loop for each Additional Detail resource
+  api ->  add : Create/update resource (any)
+  add ->  add : Validate
+  api <-- add : return
+  alt Validation failed
+    api -> api : rollback
+  end
+end
+pra <-- api : OperationOutcome
+
+@enduml
