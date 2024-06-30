@@ -78,6 +78,7 @@ dependencies:
 menu:
   Home: index.html
   Data Model: data-model.html
+  Technical Patterns: technical-patterns.html
   Use Cases:
     Add Patient Flag Record: add-patient-flag-record.html
     Retrieve Patient Flag Record: retrieve-patient-flag-record.html
