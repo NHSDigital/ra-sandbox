@@ -32,47 +32,23 @@ Using [FHIR search](https://www.hl7.org/fhir/search.html) capabilities, it is po
 
 This section describes how to query from the [Patient](http://www.hl7.org/fhir/R4/patient.html#search) endpoint using [FHIR search](https://www.hl7.org/fhir/search.html)
 
-This will return all associated flag resources for Reasonable Adjustments.
+This will return all associated Flag resources for Patient Flag.
 
 ```
-GET /Patient?identifier=9912003888&_has:Flag:patient:code=NRAF&_has:Flag:patient:category=NRAF&_revinclude=Flag:patient&_has:Consent:patient:category=NRAF&_revinclude=Consent:patient&_has:Condition:patient:category=NRAF&_revinclude=Condition:patient 
+GET /PatientFlag?patient=9449306753
 ```
 
-This limits the search to patients thant have the identifier `9912003888`
+This limits the search to Flags for the patient that has the identifier `9449306753`
 
 ```
-identifier=9912003888
+patient=9449306753
 ```
 
-This limits the search to patients that have Flag resources linked via patient and have the code NRAF, and also includes the resource in the returned searchset Bundle.
 
-```
-&_has:Flag:patient:code=NRAF&_revinclude=Flag:patient
-```
-
-This limits the search to patients that have Flag resources linked via patient and have the category NRAF, and also includes the resource in the returned searchset Bundle.
-
-```
-&_has:Flag:patient:category=NRAF&_revinclude=Flag:patient
-```
-
-This limits the search to patients that have Consent resources linked via patient and have the category NRAF, and also includes the resource in the returned searchset Bundle.
-
-```
-&_has:Consent:patient:category=NRAF&_revinclude=Consent:patient
-```
-
-This limits the search to patients that have Condition resources linked via patient and have the category NRAF, and also includes the resource in the returned searchset Bundle.
-
-```
-&_has:Condition:patient:category=NRAF&_revinclude=Condition:patient
-```
-
-The following queries will return all or some of the resources constituing a Reasonable Adjustments record, i.e.
+The following queries will return all or some of the resources constituing a Patient Flag record, i.e.
 
 * [Patient Flag](StructureDefinition-PatientFlag.html) resources  
-* [Programme Flag](StructureDefinition-ProgrammeFlag.html) resources
-* [Flag Condition](StructureDefinition-FlagCondition.html) resources 
+* Any Additional Supporting resources
 
 This query relies on the [FlagCategory](SearchParameter-FlagCategory.html) and [FlagCode](SearchParameter-FlagCode.html) SearchParameters.
 
@@ -81,12 +57,6 @@ This query relies on the [FlagCategory](SearchParameter-FlagCategory.html) and [
 This section describes how to query from the [Flag](http://www.hl7.org/fhir/R4/flag.html#search) endpoint using [FHIR search](https://www.hl7.org/fhir/search.html)
 
 **NOTE:** For every additional record/resource added, the flag-detail element in the Patient Flag resource will need updated. See **TODO -- link to add interaction diagram**.
-
-<div id="todo-notice" markdown="span" class="alert alert-danger" role="alert">
-  <i class="fa fa-tasks"></i>
-  <b>TODO: </b>
-  <i>Update all interaction diagrams that either add or remove records. Also add new specific diagrams for adding an additional record or removing a single record from a set, where the flag extension then needs updated :(</i>
-</div>
 
 If the [flag-detail extension](http://hl7.org/fhir/StructureDefinition/flag-detail) is used, then references to all Reasonable Adjustment resources can be included the [Patient Flag](StructureDefinition-PatientFlag.html) resource.
 

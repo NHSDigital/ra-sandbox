@@ -1,12 +1,10 @@
 ### Overview
 
-Patient consent must be obtained before retrieving any adjustment or impairment.  See [Consent to Share Information](consent-to-share-information.html) for details of requirements around consent.
-
 For high level requirements, see [Key purposes of the Reasonable Adjustment Flag](index.html#ra-key-purposes)   
 
 ### Usecase
 
-After obtaining consent from a patient, a Reasonable Adjustment Record may be retrieved if it exists.  It will be possible to determine that a adjustment flags exist by searching for a [Patient Flag](StructureDefinition-PatientFlag.html) with the code [NRAF](CodeSystem-PatientFlagCategory.html#PatientFlagCategory-NRAF), or [Programme Flags](StructureDefinition-ProgrammeFlag.html) with a category of [NRAF](CodeSystem-PatientFlagCategory.html#PatientFlagCategory-NRAF).
+A Reasonable Adjustment Record may be retrieved if it exists.  It will be possible to determine that a adjustment flags exist by searching for a [Patient Flag](StructureDefinition-PatientFlag.html) with the code [NRAF](CodeSystem-PatientFlagCategory.html#PatientFlagCategory-NRAF), or [Programme Flags](StructureDefinition-ProgrammeFlag.html) with a category of [NRAF](CodeSystem-PatientFlagCategory.html#PatientFlagCategory-NRAF).
 
 <div style="text-align: left;">
 
@@ -33,7 +31,7 @@ This section describes how to query from the [Patient](http://www.hl7.org/fhir/R
 This will return all associated flag resources for Reasonable Adjustments.
 
 ```
-GET /Patient?identifier=9912003888&_has:Flag:patient:code=NRAF&_has:Flag:patient:category=NRAF&_revinclude=Flag:patient&_has:Consent:patient:category=NRAF&_revinclude=Consent:patient&_has:Condition:patient:category=NRAF&_revinclude=Condition:patient 
+GET /Patient?identifier=9912003888&_has:Flag:patient:code=NRAF&_has:Flag:patient:category=NRAF&_revinclude=Flag:patient&_has:Condition:patient:category=NRAF&_revinclude=Condition:patient 
 ```
 
 This limits the search to patients thant have the identifier `9912003888`
@@ -52,12 +50,6 @@ This limits the search to patients that have Flag resources linked via patient a
 
 ```
 &_has:Flag:patient:category=NRAF&_revinclude=Flag:patient
-```
-
-This limits the search to patients that have Consent resources linked via patient and have the category NRAF, and also includes the resource in the returned searchset Bundle.
-
-```
-&_has:Consent:patient:category=NRAF&_revinclude=Consent:patient
 ```
 
 This limits the search to patients that have Condition resources linked via patient and have the category NRAF, and also includes the resource in the returned searchset Bundle.
@@ -79,12 +71,6 @@ This query relies on the [FlagCategory](SearchParameter-FlagCategory.html) and [
 This section describes how to query from the [Flag](http://www.hl7.org/fhir/R4/flag.html#search) endpoint using [FHIR search](https://www.hl7.org/fhir/search.html)
 
 **NOTE:** For every additional record/resource added, the flag-detail element in the Patient Flag resource will need updated. See **TODO -- link to add interaction diagram**.
-
-<div id="todo-notice" markdown="span" class="alert alert-danger" role="alert">
-  <i class="fa fa-tasks"></i>
-  <b>TODO: </b>
-  <i>Update all interaction diagrams that either add or remove records. Also add new specific diagrams for adding an additional record or removing a single record from a set, where the flag extension then needs updated :(</i>
-</div>
 
 If the [flag-detail extension](http://hl7.org/fhir/StructureDefinition/flag-detail) is used, then references to all Reasonable Adjustment resources can be included the [Patient Flag](StructureDefinition-PatientFlag.html) resource.
 
