@@ -6,7 +6,7 @@ left to right direction
 rectangle "Patient Flag"{
 actor Practitioner as pra
 usecase "Record" as record <<abstract>>
-usecase "Add Patient Flag record" as add <<abstract>>
+usecase "Add Reasonable Adjustment" as add <<abstract>>
 }
 
 

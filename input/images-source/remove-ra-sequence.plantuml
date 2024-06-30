@@ -4,23 +4,19 @@ skinparam actorStyle hollow
 
 actor        "Patient"          as pat
 actor        "Practitioner"     as pra
-participant  "FHIR API"         as api
-entity       "Patient Flag"     as pfg
-entity       "Additional Detail"  as add
+boundary     "FHIR API"         as api
+entity       "Additional Detail\n(Adjustment)"  as add
 
   pat ->  pra : Remove
   pra ->  api : Remove
-  api ->  pfg : Remove resourc
+  api ->  add : Remove resourc
   
-
-loop for each Additional Detail resource
   api ->  add : Remove resource (any)
   add ->  add : Validate
   api <-- add : return
   alt Validation failed
     api -> api : rollback
   end
-end
 
 pra <-- api : OperationOutcome
 
