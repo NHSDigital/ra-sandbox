@@ -13,7 +13,7 @@ For high level requirements, see [Key purposes of the Patient Flag](index.html#p
 
 ### System Interactions
 
-In the following sequence diagram, a patient revokes consent.  The Consent resource is updated to reflect the patient dissent, and all adjustment records are deleted.
+In the following sequence diagram, a patient and/or practitioner decide to remove the patient flag.
 
 <div style="text-align: left;">
 
@@ -21,11 +21,10 @@ In the following sequence diagram, a patient revokes consent.  The Consent resou
 
 </div>
 
-The following resource types will be deleted from the record if consent is not granted i.e.
+The following resource types will be deleted from the record: 
 
 * [Patient Flag](StructureDefinition-PatientFlag.html)  
-* [Programme Flag](StructureDefinition-ProgrammeFlag.html)  
-* [Condition Flag](StructureDefinition-FlagCondition.html) 
+* any resources detailing supporting information
 
 #### Example
 

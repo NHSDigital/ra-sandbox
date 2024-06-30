@@ -1,6 +1,6 @@
 ### Overview
 
-For high level requirements, see [Key purposes of the Patient Flag](index.html#pf-key-purposes)
+For high level requirements, see [Key purposes of the Reasonable Adjustment Flag](index.html#ra-key-purposes)
  
 
 #### UseCase
@@ -13,7 +13,8 @@ For high level requirements, see [Key purposes of the Patient Flag](index.html#p
 
 ### System Interactions
 
-In the following sequence diagram, a patient revokes consent.  The Consent resource is updated to reflect the patient dissent, and all adjustment records are deleted.
+In the following sequence diagram, a patient and/or practitioner decide to remove the condition information as supporting detail on th reasonable adjustment record.
+
 
 <div style="text-align: left;">
 

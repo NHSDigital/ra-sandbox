@@ -12,7 +12,9 @@ For high level requirements, see [Key purposes of the Patient Flag](index.html#p
 
 ### System Interactions
 
-The practioner decides to record a condition with the patients consent.  This could be done with individual calls to the required endpoints, or can be done in a single transaction Bundle.  A transaction Bundle can help with data integrity requirements and also help to reduce required http calls.
+The practioner decides to record patient flag information.
+
+This could be done with individual calls to the required endpoints, or can be done in a single transaction Bundle.  A transaction Bundle can help with data integrity requirements and also help to reduce required http calls.
 
 <div style="text-align: left;">
   {%include add-pf-record-sequence.svg%}
@@ -26,7 +28,6 @@ The following set of examples constitute the individual associated resources wit
 
 A transaction Bundle is also given that allows these resources (plus the patient) to be entered in an atomic traction.  It uses PUTs, where in the case of an intial update, it may be done as a [conditional update](https://www.hl7.org/fhir/http.html#cond-update)
 
-* [Consent](Consent-RAConsentExample1.html)
 * [Patient flag](Flag-RAPatientFlagExample1.html)
 * [Reasonable Adjustment flag 1](Flag-RAFlagExample1.html)
 * [Condition 1](Condition-RAConditionExample1.html)

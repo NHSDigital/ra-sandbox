@@ -1,13 +1,11 @@
 ### Overview
 
-A patient may deny or revoke their consent to share adjustment or impairment information at any point. See [Consent to Share Information](consent-to-share-information.html) for details of requirements around consent.
+A patient and/or practitioner decide to remove the reasonable adjustment record.
 
 For high level requirements, see [Key purposes of the Reasonable Adjustment Flag](index.html#ra-key-purposes)   
  
 
 #### UseCase
-
-If a patient denys consent, then this must be recorded and all adjustment records must be removed.
 
 <div style="text-align: left;">
 
@@ -17,7 +15,7 @@ If a patient denys consent, then this must be recorded and all adjustment record
 
 ### System Interactions
 
-In the following sequence diagram, a patient revokes consent.  The Consent resource is updated to reflect the patient dissent, and all adjustment records are deleted.
+In the following sequence diagram, a patient and/or practitioner decide to remove the reasonable adjustment record. All adjustment records are deleted.
 
 <div style="text-align: left;">
 

@@ -10,7 +10,7 @@ usecase "Remove Reasonable Adjustment record" as add
 }
 
 
-package Consenter {
+package "Patient or Proxy" {
   actor Patient as pat
   actor "Patient Advocate" as pad
 }
