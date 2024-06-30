@@ -23,7 +23,7 @@ In the following sequence diagram, a patient and/or practitioner decide to remov
 
 </div>
 
-The following resource types will be deleted from the record if consent is not granted i.e.
+The following resource types will be deleted from the record:
 
 * [Patient Flag](StructureDefinition-PatientFlag.html)  
 * [Programme Flag](StructureDefinition-ProgrammeFlag.html)  

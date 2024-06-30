@@ -25,7 +25,7 @@ The practioner decides to record a condition with the patients consent.  This co
 
 * [Patient example](Patient-PatientExample1.html)
 
-The following set of examples constitute the individual associated resources with the intial addition of a flag for Reasonable Adjustment.  This includes the Consent resource where the patient has agreed to share information.  Also a patient Flag resource, the adjustment Flag resource and the associated Condition resource.  All resources have contained provenances.
+The following set of examples constitute the individual associated resources with the intial addition of a flag for Reasonable Adjustment.  This includes a patient Flag resource, the adjustment Flag resource and the associated Condition resource.  All resources have contained provenances.
 
 A transaction Bundle is also given that allows these resources (plus the patient) to be entered in an atomic traction.  It uses PUTs, where in the case of an intial update, it may be done as a [conditional update](https://www.hl7.org/fhir/http.html#cond-update)
 

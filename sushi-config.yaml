@@ -85,13 +85,13 @@ menu:
     Add Reasonable Adjustment Record: add-reasonable-adjustment-record.html
     Retrieve Reasonable Adjustment Record: retrieve-reasonable-adjustment-record.html
     Remove Reasonable Adjustment Record: remove-reasonable-adjustment-record.html
-    Add FGM Flag Record: add-fgm-flag-record.html
-    Retrieve FGM Flag Record: retrieve-fgm-flag-record.html
-    Remove FGM Flag Record: remove-fgm-flag-record.html 
     Add Reasonable Adjustment: add-reasonable-adjustment.html
     Remove Reasonable Adjustment: remove-reasonable-adjustment.html
     Add Reasonable Adjustment Condition: add-reasonable-adjustment-condition.html
     Remove Reasonable Adjustment Condition: remove-reasonable-adjustment-condition.html
+    Add FGM Flag Record: add-fgm-flag-record.html
+    Retrieve FGM Flag Record: retrieve-fgm-flag-record.html
+    Remove FGM Flag Record: remove-fgm-flag-record.html 
   Artifacts: artifacts.html
   About: 
     Downloads: todo.html
