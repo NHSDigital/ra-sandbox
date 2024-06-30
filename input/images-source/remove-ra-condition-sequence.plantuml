@@ -9,7 +9,7 @@ entity       "Additional Detail\n(Condition)"  as add
 
   pat ->  pra : Remove
   pra ->  api : Remove
-  api ->  add : Remove resourc
+  api ->  add : Remove resource
   
   add ->  add : Validate
   api <-- add : return

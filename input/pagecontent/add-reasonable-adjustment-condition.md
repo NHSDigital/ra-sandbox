@@ -6,7 +6,7 @@ For high level requirements, see  [Key purposes of the Reasonable Adjustment Fla
 
 <div style="text-align: left;">
 
-  {%include add-pf-record-usecase.svg%}
+  {%include add-ra-condition-usecase.svg%}
 
 </div>
 
@@ -17,7 +17,7 @@ The practioner decides to record condition information on a reasonable adjustmen
 This could be done with individual calls to the required endpoints, or can be done in a single transaction Bundle.  A transaction Bundle can help with data integrity requirements and also help to reduce required http calls.
 
 <div style="text-align: left;">
-  {%include add-pf-record-sequence.svg%}
+  {%include add-ra-condition-sequence.svg%}
 </div>
 
 ### Examples
