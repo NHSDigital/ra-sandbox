@@ -22,5 +22,3 @@ For high level requirements, see [Key purposes of the FGM Flag](index.html#fgm-k
 
 #### Example
 
-### Relevant Documentation
-

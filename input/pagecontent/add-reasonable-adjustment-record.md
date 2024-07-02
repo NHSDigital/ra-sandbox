@@ -41,8 +41,3 @@ The following set of examples are for the same patient, and constitute an additi
 * [Condition 2](Condition-RAConditionExample2.html)
 * [Transaction Bundle 2](Bundle-AddRARecordTransactionExample2.html)
 
-### Relevant Documentation
-
-* [Bundle](https://hl7.org/fhir/r4/bundle.html)  
-* [Transaction](https://hl7.org/fhir/r4/http.html#transaction)  
-* [Upsert](https://hl7.org/fhir/r4/http.html#upsert)  

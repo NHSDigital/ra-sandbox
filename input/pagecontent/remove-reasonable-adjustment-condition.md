@@ -36,7 +36,3 @@ Multiple resources can be deleted using a transaction bundle.  This [example del
 * [Programme Flag](Flag-RAFlagExample1.html) example.  
 * [Condition Flag](Condition-RAConditionExample1.html) example.  
 
-### Relevant Documentation
-
-* [Bundle](https://hl7.org/fhir/r4/bundle.html)  
-* [Transaction](https://hl7.org/fhir/r4/http.html#transaction)  

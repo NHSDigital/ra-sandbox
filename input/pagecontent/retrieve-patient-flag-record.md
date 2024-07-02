@@ -87,7 +87,3 @@ This includes the associated patient resource.
 This query relies on the [FlagCategory](SearchParameter-FlagCategory.html), [FlagCode](SearchParameter-FlagCode.html) and [FlagDetail](SearchParameter-FlagDetail.html) SearchParameters.
 
 
-### Relevant Documentation
-
-* FHIR [Search](http://www.hl7.org/fhir/R4/search.html)
-* [SearchParameters](https://www.hl7.org/fhir/R4/searchparameter.html)

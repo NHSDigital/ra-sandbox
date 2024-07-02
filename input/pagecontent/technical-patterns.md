@@ -10,6 +10,16 @@ Implementations SHALL provide capability to offer and consume basic CRUD (create
 
 Implementations SHALL provide capability to offer and consume additional FHIR REST functionality, e.g. Transaction support, Conditional Update etc. as required in the relevant, specific Implementation guidance in play for a given integration.
 
+Implementers SHALL be aware of and compliant with standard FHIR REST functionality defined in the HL7 FHIR Specification on topics:
+
+* [FHIR Search](http://www.hl7.org/fhir/R4/search.html)
+* [SearchParameters](https://www.hl7.org/fhir/R4/searchparameter.html)
+
+and in using:
+
+* [Bundle](https://hl7.org/fhir/r4/bundle.html)  
+* [Transaction](https://hl7.org/fhir/r4/http.html#transaction)  
+* [Upsert](https://hl7.org/fhir/r4/http.html#upsert)  
 
 ### Capability statements
 
